@@ -15,8 +15,6 @@ RUN npm run build
 FROM python:bookworm
 
 # Set up pip configuration
-RUN mkdir -p /root/.pip
-COPY ./fastapi/pip.conf /root/.pip/pip.conf
 COPY ./fastapi/api/requirements.txt /requirements.txt
 
 # Install FastAPI dependencies
