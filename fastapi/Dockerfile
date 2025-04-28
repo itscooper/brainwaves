@@ -14,10 +14,6 @@ RUN npm run build
 # Stage 2: Build and run the FastAPI server
 FROM python:bookworm
 
-# Set up pip configuration
-RUN mkdir -p /root/.pip
-COPY fastapi/pip.conf /root/.pip/pip.conf
-
 # Create app directory structure
 WORKDIR /app
 
