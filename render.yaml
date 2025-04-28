@@ -8,15 +8,21 @@ services:
     healthCheckPath: /docs
     envVars:
       - key: POSTGRES_USER
-        value: postgres
+        fromDatabase:
+          name: brainwaves-db
+          property: user
       - key: POSTGRES_DB
-        value: fastapi_db
+        fromDatabase:
+          name: brainwaves-db
+          property: database
       - key: POSTGRES_HOST
         fromDatabase:
           name: brainwaves-db
           property: host
       - key: POSTGRES_PORT
-        value: "5432"
+        fromDatabase:
+          name: brainwaves-db
+          property: port
       - key: POSTGRES_PASSWORD
         fromDatabase:
           name: brainwaves-db
@@ -32,5 +38,5 @@ services:
 databases:
   - name: brainwaves-db
     plan: free
+    ipAllowList: [] # Global allow all
     region: frankfurt
-    ipAllowList: []
