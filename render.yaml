@@ -31,6 +31,6 @@ services:
 
 databases:
   - name: brainwaves-db
-    plan: starter
+    plan: free
     region: frankfurt
     ipAllowList: []
