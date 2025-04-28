@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: brainwaves-api
+    env: docker
+    dockerfilePath: ./fastapi/Dockerfile
+    buildDirectory: ./fastapi
+    plan: free
+    healthCheckPath: /docs
+    envVars:
+      - key: POSTGRES_USER
+        value: postgres
+      - key: POSTGRES_DB
+        value: fastapi_db
+      - key: POSTGRES_HOST
+        fromService:
+          type: postgres
+          name: brainwaves-db
+          property: host
+      - key: POSTGRES_PORT
+        value: 5432
+      - key: POSTGRES_PASSWORD
+        fromService:
+          type: postgres
+          name: brainwaves-db
+          property: password
+      - key: DATABASE_URL
+        fromService:
+          type: postgres
+          name: brainwaves-db
+          envVarKey: DATABASE_URL
+      - key: INIT_DB
+        value: true
+    autoDeploy: false
+
+  - type: postgres
+    name: brainwaves-db
+    plan: free
+    ipAllowList: []

@@ -2,6 +2,8 @@
 
 Brainwaves is an intelligent profiling system designed to help educators understand and support learners through data-driven insights and personalized practice recommendations. The system collects structured profile data via online forms and provides targeted recommendations from educational frameworks.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/yourusername/brainwaves)
+
 ## Features
 
 - Profile-based learner assessment

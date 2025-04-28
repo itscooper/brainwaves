@@ -58,3 +58,4 @@ Thumbs.db
 
 # Docker local development
 **/Dockerfile.local.env
+**/Dockerfile.local
