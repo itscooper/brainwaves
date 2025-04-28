@@ -3,7 +3,6 @@ services:
     name: brainwaves-api
     env: docker
     dockerfilePath: ./fastapi/Dockerfile
-    buildDirectory: ./fastapi
     rootDir: ./fastapi
     plan: starter
     healthCheckPath: /docs
