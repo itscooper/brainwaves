@@ -42,15 +42,14 @@ services:
   fastapi:
     image: brainwaves-fastapi:latest
     build:
-      context: ./fastapi
-      dockerfile: ${DOCKER_FILE:-Dockerfile}
+      context: .
+      dockerfile: fastapi/${DOCKER_FILE:-Dockerfile}
     container_name: fastapi_container
     environment:
       - POSTGRES_USER=${POSTGRES_USER:-postgres}
       - POSTGRES_DB=${POSTGRES_DB:-fastapi_db}
       - POSTGRES_HOST=postgres
       - POSTGRES_PORT=5432
-      # Read password from file after check-env creates it
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-$$(cat .env | grep POSTGRES_PASSWORD | cut -d '=' -f2)}
       - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-$$(cat .env | grep POSTGRES_PASSWORD | cut -d '=' -f2)}@postgres:5432/${POSTGRES_DB:-fastapi_db}
       - INIT_DB=${INIT_DB:-false}
@@ -65,7 +64,8 @@ services:
       - internal_network
       - public_network
     volumes:
-      - ./fastapi:/app
+      - ./fastapi/api:/app/api
+      - ./fastapi/client:/app/client
 
 volumes:
   postgres_data:

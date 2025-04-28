@@ -17,6 +17,9 @@ FROM python:bookworm
 # Create app directory structure
 WORKDIR /app
 
+# Copy setup.py first
+COPY fastapi/setup.py /app/setup.py
+
 # Copy the entire api directory first
 COPY fastapi/api /app/api
 
