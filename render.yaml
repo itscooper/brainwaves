@@ -3,7 +3,7 @@ services:
     name: brainwaves-api
     env: docker
     dockerfilePath: fastapi/Dockerfile
-    rootDir: .
+    rootDir: fastapi
     plan: starter
     healthCheckPath: /docs
     envVars:
@@ -27,8 +27,8 @@ services:
           property: connectionString
       - key: INIT_DB
         value: "true"
-    autoDeploy: false
-
+          autoDeploy: false
+    
 databases:
   - name: brainwaves-db
     plan: free
