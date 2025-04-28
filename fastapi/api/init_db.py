@@ -20,8 +20,8 @@ from sqlalchemy.schema import MetaData
 from sqlalchemy.ext.asyncio import async_sessionmaker
 from sqlalchemy.ext.declarative import DeclarativeMeta
 
-sys.path.append(os.path.abspath("/app/app"))
-from models import (
+sys.path.append(os.path.abspath("/app"))
+from api.models import (
     Answer, 
     Base, 
     Group, 
@@ -32,7 +32,7 @@ from models import (
     get_async_session,
     get_user_db,
 )
-from auth import get_user_manager, UserCreate, SuperCreateUser
+from api.auth import get_user_manager, UserCreate, SuperCreateUser
 
 # Database engine configuration
 engine: Engine = sync_engine
