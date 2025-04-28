@@ -1,0 +1,27 @@
+{
+    "name": "client",
+    "version": "0.0.1",
+    "source": [
+        "index.html",
+        "form/index.html",
+        "admin/index.html",
+        "login/index.html",
+        "group/index.html",
+        "profile/index.html"
+    ],
+    "license": "MIT",
+    "scripts": {
+      "dev": "parcel",
+      "build": "parcel build --log-level verbose --detailed-report --public-url /"
+    },
+    "devDependencies": {
+      "parcel": "latest",
+      "posthtml-doctype": "latest",
+      "posthtml-include": "latest"
+    },
+    "targets": {
+      "default": {
+        "publicUrl": "/c/"
+      }
+    }
+}

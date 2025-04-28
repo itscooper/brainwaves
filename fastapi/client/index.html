@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top" data-theme="light">
+<head>
+    <title>Dashboard 🧠 Brainwaves</title>
+    <include src="components/head.html"></include>
+</head>
+<body x-data="profilerDashboard()">
+
+    <include src="components/notifications.html"></include>
+
+    <include src="components/navbar.html"></include>
+
+    <section class="section">
+        <div class="level">
+            <!-- Left side -->
+            <div class="level-left">
+                <div class="level-item">
+                    <p class="title is-3">Groups</p>
+                </div>
+            </div>
+        
+            <!-- Right side -->
+            <div class="level-right">
+                <div class="level-item">
+                    <label class="checkbox">
+                        <input type="checkbox" x-model="includeArchivedGroups" />
+                        Show Archived
+                      </label>
+                </div>
+                <div class="level-item">
+                    <button class="button is-success is-light" @click="isModalOpen=true">
+                        <span class="icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                        <span>New</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pt-0">
+        <div class="container">
+            <div class="grid is-col-min-10">
+
+                <!-- Dynamically rendered group cells -->
+                <template x-for="group in groups" :key="group.name">
+                    <div class="cell">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left is-centered">
+                                        <div class="is-size-3" x-text="group.emoji"></div>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4" x-text="group.name"></p>
+                                        <p class="subtitle is-6" x-text="group.displayAs"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content pt-0">
+                                <div class="field is-grouped is-grouped-multiline">
+                                    <div class="control">
+                                      <div class="tags has-addons">
+                                        <div class="tag is-dark">Profiles</div>
+                                        <b class="tag is-primary" x-text="group.profile_count"></b>
+                                      </div>
+                                    </div>
+                                    <div class="control">
+                                        <div class="tags has-addons">
+                                            <div class="tag is-dark">Form</div>
+                                            <b class="tag is-info" 
+                                               x-text="shortenText(group.profilerTypeName)"
+                                               x-tooltip.placement.bottom="group.profilerTypeName.length > 15 ? group.profilerTypeName : false"></b>
+                                        </div>
+                                    </div>
+                                    <div class="control" x-show="group.archived">
+                                        <div class="tags">
+                                            <b class="tag is-danger">Archived</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a :href="`/c/group/?name=${encodeURIComponent(group.name)}`" class="card-footer-item">Open &nbsp;<i class="fas fa-eye"></i></a>
+                                <a href="#" @click="copyLink(group.token,group.name)" class="card-footer-item"><span x-text="copyingUrlFor == group.name ? 'Copying' : 'Copy Link'"></span> &nbsp;<i class="fas fa-link"></i></a>
+                            </footer>
+                        </div>
+                    </div>
+                </template>
+
+            </div>
+        </div>
+    </section>
+
+     <!-- Modal for adding new group -->
+     <div class="modal" :class="{ 'is-active': isModalOpen }">
+        <div class="modal-background" @click="closeModal"></div>
+        <div class="modal-content">
+            <form @submit.prevent="addGroup">
+                <div class="box">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <input class="input" type="text" x-model="newGroup.name" required />
+                    </div>
+                    <div class="field">
+                        <label class="label">Display Name</label>
+                        <input class="input" type="text" x-model="newGroup.displayAs" required />
+                    </div>
+                    <div class="field">
+                        <label class="label">Profiler Type</label>
+                        <div class="select">
+                            <select x-model="newGroup.profilerTypeName" required>
+                                <option value="" disabled>Select type</option>
+                                <template x-for="type in profilerTypes" :key="type">
+                                    <option :value="type" x-text="type"></option>
+                                </template>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <button class="button is-success is-light" type="submit">Add Group</button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-light" type="button" @click="closeModal">Cancel</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button class="modal-close is-large" @click="closeModal"></button>
+    </div>
+
+    <include src="components/scripts.html"></include>
+    <script src="js/profilerDashboard.js"></script>
+</body>
+</html>

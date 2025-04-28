@@ -1,0 +1,6 @@
+FROM brainwaves-fastapi:latest
+
+# Add Zscaler certificate to trust store
+COPY zscaler-cert.pem /usr/local/share/ca-certificates/zscaler-cert.pem
+RUN apt-get update && apt-get install -y ca-certificates && \
+    update-ca-certificates

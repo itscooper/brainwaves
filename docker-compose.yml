@@ -1,0 +1,77 @@
+services:
+  check-env:
+    image: debian:latest
+    volumes:
+      - .:/workdir
+    working_dir: /workdir
+    command: |
+      bash -c '
+      if [ ! -f .env ]; then
+        apt-get update && apt-get install -y openssl
+        RANDOM_PASSWORD=$$(openssl rand -base64 32)
+        echo "POSTGRES_PASSWORD=$$RANDOM_PASSWORD" > .env
+        echo "Created new .env file with secure random password"
+      else
+        echo ".env file already exists, keeping existing configuration"
+      fi'
+
+  postgres:
+    image: ankane/pgvector:v0.5.1
+    container_name: postgres17_container
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_DB=${POSTGRES_DB:-fastapi_db}
+      - POSTGRES_EXTENSIONS=vector
+      # Read password from file after check-env creates it
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-$$(cat .env | grep POSTGRES_PASSWORD | cut -d '=' -f2)}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - internal_network
+    ports: []
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-fastapi_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    depends_on:
+      check-env:
+        condition: service_completed_successfully
+
+  fastapi:
+    image: brainwaves-fastapi:latest
+    build:
+      context: ./fastapi
+      dockerfile: ${DOCKER_FILE:-Dockerfile}
+    container_name: fastapi_container
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_DB=${POSTGRES_DB:-fastapi_db}
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      # Read password from file after check-env creates it
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-$$(cat .env | grep POSTGRES_PASSWORD | cut -d '=' -f2)}
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-$$(cat .env | grep POSTGRES_PASSWORD | cut -d '=' -f2)}@postgres:5432/${POSTGRES_DB:-fastapi_db}
+      - INIT_DB=${INIT_DB:-false}
+    ports:
+      - "8000:8000"
+    depends_on:
+      check-env:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_healthy
+    networks:
+      - internal_network
+      - public_network
+    volumes:
+      - ./fastapi:/app
+
+volumes:
+  postgres_data:
+
+networks:
+  internal_network:
+    driver: bridge
+  public_network:
+    driver: bridge

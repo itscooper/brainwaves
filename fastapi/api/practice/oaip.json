@@ -1,0 +1,1846 @@
+[
+    {
+      "id": "CL",
+      "name": "Cognition and learning",
+      "children": [
+        {
+          "id": "CL-WB",
+          "name": "Working below age related expectations",
+          "children": [
+            {
+              "id": "CL-WB-1",
+              "text": "ensure the \u2018assess, plan, do, review\u2019 process is understood and used consistently across the setting - clearly record each cycle and evidence of impact"
+            },
+            {
+              "id": "CL-WB-2",
+              "text": "assess through teaching to identify the areas of need in co-production with the child or young person and collect the child or young person\u2019s views about their areas of strength and need to ensure that support is impactful"
+            },
+            {
+              "id": "CL-WB-3",
+              "text": "use open-ended simple statements such as \u2018I wonder\u2026 or what if\u2019 rather than closed questions"
+            },
+            {
+              "id": "CL-WB-4",
+              "text": "give clear and simple instructions, breaking down longer instructions and giving one at a time - support these with visuals or a checklist where appropriate"
+            },
+            {
+              "id": "CL-WB-5",
+              "text": "use multi-sensory approaches, such as: visual timetables, visual cues and prompts, objects, pictures, photos, symbols, choice boards, sequences"
+            },
+            {
+              "id": "CL-WB-6",
+              "text": "develop \u2018social stories\u2019 to reinforce understanding of learning behaviours and routines - use these to increase relevance and to develop appropriate learning behaviours"
+            },
+            {
+              "id": "CL-WB-7",
+              "text": "give time to process information before a response is needed"
+            },
+            {
+              "id": "CL-WB-8",
+              "text": "pre-teach core vocabulary and knowledge to help prepare the children and young people for a new topic or concept and provide opportunities to explore learning material and be introduced to new concepts, ideas and language prior to whole class teaching"
+            },
+            {
+              "id": "CL-WB-9",
+              "text": "re-teach core vocabulary and knowledge in a timely manner to address misconceptions or gaps in understanding"
+            },
+            {
+              "id": "CL-WB-10",
+              "text": "work with parent carers to provide additional repetition, pre-teaching, and re-teaching opportunities at home, to target core knowledge, skills and vocabulary"
+            },
+            {
+              "id": "CL-WB-11",
+              "text": "make explicit links to prior learning"
+            },
+            {
+              "id": "CL-WB-12",
+              "text": "share next steps explicitly, so children and young people know what to expect and make links between concepts"
+            },
+            {
+              "id": "CL-WB-13",
+              "text": "use adapted resources to ensure that the curriculum is accessible to all and teach the curriculum appropriately according to the developmental stage of the child or young person"
+            },
+            {
+              "id": "CL-WB-14",
+              "text": "use meaningful strategies to boost self-esteem and confidence, whilst bearing in mind that some neurodivergent children and young people find public praise uncomfortable"
+            },
+            {
+              "id": "CL-WB-15",
+              "text": "provide specific meaningful feedback when a child or young person perseveres or achieves something new"
+            }
+          ]
+        },
+        {
+          "id": "CL-UP",
+          "name": "Uneven profile across the curriculum, with some areas of strength",
+          "children": [
+            {
+              "id": "CL-UP-1",
+              "text": "ensure the \u2018assess, plan, do, review\u2019 process is understood and used consistently across the setting - clearly record each cycle and evidence of impact"
+            },
+            {
+              "id": "CL-UP-2",
+              "text": "adapt teaching and learning proactively, so that the child or young person has full access to the breadth of learning - adjust and make modifications to adapt the curriculum, across the board"
+            },
+            {
+              "id": "CL-UP-3",
+              "text": "scaffold learning to support positive learning experiences"
+            },
+            {
+              "id": "CL-UP-4",
+              "text": "place emphasis on self-efficacy and use meta-cognition to develop skills which will support children and young people to become independent learners"
+            },
+            {
+              "id": "CL-UP-5",
+              "text": "support them to develop their self-esteem through celebration and reinforcement of strengths and successes"
+            },
+            {
+              "id": "CL-UP-6",
+              "text": "where possible, use the child or young person\u2019s strengths to make links to and support areas of difficulty"
+            }
+          ]
+        },
+        {
+          "id": "CL-SL",
+          "name": "Specific learning difficulties affecting one or more specific area of learning",
+          "children": [
+            {
+              "id": "CL-SL-1",
+              "text": "formatively assess through teaching to identify the areas of need and work in co-production with the child or young person - observation of learning behaviours and independence might be used where appropriate to inform the next steps"
+            },
+            {
+              "id": "CL-SL-2",
+              "text": "teach metacognition approaches and understand the child or young person\u2019s needs and asking them what helps - support them to self-reflect"
+            },
+            {
+              "id": "CL-SL-3",
+              "text": "recognise success in effort and self-efficacy - showing interest in other areas of the child or young person\u2019s life"
+            },
+            {
+              "id": "CL-SL-4",
+              "text": "use evidence-based interventions to develop skills for example, for areas of specific needs such as spelling, handwriting, literacy, or numeracy"
+            },
+            {
+              "id": "CL-SL-5",
+              "text": "link learning to real life situations and use their interests to make learning irresistible"
+            },
+            {
+              "id": "CL-SL-6",
+              "text": "work closely with the special educational needs co-ordinator (SENCO) and other specialist staff to understand what strategies or approaches to use in line with advice from specialist assessments or consultation - embed strategies informed by specialists within day-to-day practice"
+            },
+            {
+              "id": "CL-SL-7",
+              "text": "if a child or young person has difficulty transferring information from a board to their desk work, provide a copy of instructions and visuals at their desk to improve accessibility"
+            },
+            {
+              "id": "CL-SL-8",
+              "text": "reduce the impacts of visual stress by providing printed text on pastel-coloured backgrounds - this may involve the background colour of an interactive whiteboard or other printed resources"
+            }
+          ]
+        },
+        {
+          "id": "CL-WM",
+          "name": "Working memory needs",
+          "children": [
+            {
+              "id": "CL-WM-1",
+              "text": "provide memory aids such as alphabet strips, number squares, post-its, key word lists, times table squares - ensure that these are readily available for children and young people to access, as and when they are needed"
+            },
+            {
+              "id": "CL-WM-2",
+              "text": "explicitly teach strategies to support memory, for example, giving information in manageable chunks, providing visuals to support verbal and written information and use of mind maps"
+            },
+            {
+              "id": "CL-WM-3",
+              "text": "reduce cognitive load by providing task boards or \u2018to do lists\u2019 that the child or young person is supported to access with increasing levels of independence"
+            }
+          ]
+        },
+        {
+          "id": "CL-LN",
+          "name": "Specific literacy needs",
+          "children": [
+            {
+              "id": "CL-LN-1",
+              "text": "make simple changes to ensure visual accessibility - consider: font style and size, coloured paper, line spacing, lighting, overlays, appropriate use of assistive technology"
+            },
+            {
+              "id": "CL-LN-2",
+              "text": "use \u2018think, pair, share\u2019 opportunities to provide time to think and verbally rehearse"
+            },
+            {
+              "id": "CL-LN-3",
+              "text": "carefully plan peer groupings so the child or young person has access to good role models for language and communication"
+            },
+            {
+              "id": "CL-LN-4",
+              "text": "use appropriate adaptive learning resources such as pencil grips, spelling aids and alternative methods for recording information"
+            },
+            {
+              "id": "CL-LN-5",
+              "text": "provide additional opportunities of over learning and repetition to support reinforcement of core knowledge, skills, and vocabulary - this may include a mastery approach or games"
+            },
+            {
+              "id": "CL-LN-6",
+              "text": "support access to language in all areas of the curriculum, for example, in maths solving word problems could be supported by text-to-speech software so that cognitive load is not impacted by phonological decoding"
+            },
+            {
+              "id": "CL-LN-7",
+              "text": "use artificial intelligence (AI) to reduce the reading age of texts, so that children and young people can access text independently at their level - use reading age assessment data where available to inform adaptations"
+            },
+            {
+              "id": "CL-LN-8",
+              "text": "reduce the use of unnecessary, additional language in other areas of the curriculum, for example, when solving word problems"
+            }
+          ]
+        },
+        {
+          "id": "CL-SN",
+          "name": "Specific numeracy needs",
+          "children": [
+            {
+              "id": "CL-SN-1",
+              "text": "provide access to manipulatives and concrete resources, for example, counters, hundred squares, number lines, Numicon, Cuisenaire, Rekenrek counting frames, place value charts and everyday objects - explicitly model how to use these and ensure that the child or young person can use them with increasing independence"
+            },
+            {
+              "id": "CL-SN-2",
+              "text": "provide a meaningful context for learning so that the child or young person can understand the relevance of each concept and make links to their experiences"
+            },
+            {
+              "id": "CL-SN-3",
+              "text": "teach in the sequence of language, concrete resources, and diagrams before symbols - use concrete, pictorial, and abstract support sequencing"
+            },
+            {
+              "id": "CL-SN-4",
+              "text": "explicitly teach visualisation skills, for example by using barrier games, or create a picture in your mind to support problem solving and the following of instructions"
+            },
+            {
+              "id": "CL-SN-5",
+              "text": "teach the child or young person to use a calculator when mental calculation is not the focus of the session, for example, when solving word problems"
+            },
+            {
+              "id": "CL-SN-6",
+              "text": "solving word problems could be supported by text-to-speech software so that cognitive load is not impacted by phonological decoding"
+            }
+          ]
+        },
+        {
+          "id": "CL-DC",
+          "name": "Developmental coordination difficulties",
+          "children": [
+            {
+              "id": "CL-DC-1",
+              "text": "See the sensory and physical needs section for developmental co-ordination difficulties (DCD) previously known as dyspraxia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CI",
+      "name": "Communication and interaction",
+      "children": [
+        {
+          "id": "CI-SW",
+          "name": "Difficulties saying what they need or want, and being understood",
+          "children": [
+            {
+              "id": "CI-SW-1",
+              "text": "allow time for children and young people to process and respond (10 second rule)"
+            },
+            {
+              "id": "CI-SW-2",
+              "text": "model language \u2013 reflect and reframe correct speech or grammar rather than correcting"
+            },
+            {
+              "id": "CI-SW-3",
+              "text": "repeat what the child or young person has said and add one word"
+            },
+            {
+              "id": "CI-SW-4",
+              "text": "organise small group or individual target language sessions - to facilitate this, adults have phonological awareness and understand the impact that processing difficulties may have on phonics acquisition - adapt teaching accordingly"
+            },
+            {
+              "id": "CI-SW-5",
+              "text": "teach in a way that links with language programmes devised by a speech and language therapist"
+            },
+            {
+              "id": "CI-SW-6",
+              "text": "introduce a variety of language through rhymes and songs"
+            },
+            {
+              "id": "CI-SW-7",
+              "text": "support and encourage the child or young person to communicate verbally"
+            },
+            {
+              "id": "CI-SW-8",
+              "text": "use alternative methods of communication where appropriate, for example, Makaton, technology, communication books and boards - you may also want to consider the use of a symbol communication system, speak to your special educational needs (SENCO) for further advice"
+            },
+            {
+              "id": "CI-SW-9",
+              "text": "use visual choice boards to enable the child or young person to communicate, for example if they need the toilet or a break"
+            }
+          ]
+        },
+        {
+          "id": "CI-SP",
+          "name": "Difficulties with speech sound production and intelligibility",
+          "children": [
+            {
+              "id": "CI-SP-1",
+              "text": "provide the child with a good model for correct speech, for example, if your child or young person says \"dun\" instead of 'sun', simply say, \"yes, there's the sun\" and repeat this often so that the child has multiple opportunities to hear correct speech"
+            },
+            {
+              "id": "CI-SP-2",
+              "text": "emphasise the sounds that are difficult for the child or young person, for example \"sss-sun\""
+            },
+            {
+              "id": "CI-SP-3",
+              "text": "get down to the child or young person\u2019s level before you model speech"
+            },
+            {
+              "id": "CI-SP-4",
+              "text": "ensure that the child or young person\u2019s hearing has been checked - they will struggle to produce sounds that they are not hearing if this is the case"
+            },
+            {
+              "id": "CI-SP-5",
+              "text": "avoid telling the child to say a word which you know they find difficult (for example, \"say fish\") - children or young people tend to just repeat their incorrect way of saying the word and may become upset or frustrated if you put them under pressure"
+            },
+            {
+              "id": "CI-SP-6",
+              "text": "avoid saying \"no\" when correcting the child or young person's speech, as this can be frustrating or can put them off trying again, especially when they think they are already saying it the right way"
+            },
+            {
+              "id": "CI-SP-7",
+              "text": "don't talk above background noise - children are more easily distracted by noises that adults can more easily ignore or tune out, for example, turn off the television when you want to focus on talking; find a quieter space to speak"
+            },
+            {
+              "id": "CI-SP-8",
+              "text": "develop phonological awareness skills such as rhyme identification, syllable awareness and identifying the first and last sounds in a word"
+            }
+          ]
+        },
+        {
+          "id": "CI-US",
+          "name": "Difficulties understanding what is being said to them",
+          "children": [
+            {
+              "id": "CI-US-1",
+              "text": "consider how many information carrying words a child or young person can manage when giving instructions"
+            },
+            {
+              "id": "CI-US-2",
+              "text": "adapt the use of language and method, for example, by giving simple choices, or by reducing complexity and sentence length"
+            },
+            {
+              "id": "CI-US-3",
+              "text": "provide visual prompts if necessary, including: key vocabulary, visual timetables, now and next, gestures, labelling equipment with pictures"
+            },
+            {
+              "id": "CI-US-4",
+              "text": "ensure the adult is physically at the child or and young person\u2019s level"
+            },
+            {
+              "id": "CI-US-5",
+              "text": "give extra or allow take up time for the child or young person to process what has been said"
+            },
+            {
+              "id": "CI-US-6",
+              "text": "audit the environment and limit any distractions, in line with the child or young person\u2019s needs"
+            },
+            {
+              "id": "CI-US-7",
+              "text": "check you have engaged the child\u2019s attention before talking to them, by using their name"
+            },
+            {
+              "id": "CI-US-8",
+              "text": "check that hearing has been tested"
+            },
+            {
+              "id": "CI-US-9",
+              "text": "pre-teach topic vocabulary and provide opportunities to re-visit understanding and use of words"
+            },
+            {
+              "id": "CI-US-10",
+              "text": "introduce new language through a structured, repetitive approach - use visuals and phonological awareness to support"
+            },
+            {
+              "id": "CI-US-11",
+              "text": "use a \u2018first, then, now, next\u2019 visual framework"
+            },
+            {
+              "id": "CI-US-12",
+              "text": "use an aided language board to support the child or young person\u2019s understanding - adults may need to model this approach, with access to the aided language board at all times"
+            },
+            {
+              "id": "CI-US-13",
+              "text": "ensure access to an oral language modifier for assessments"
+            }
+          ]
+        },
+        {
+          "id": "CI-PV",
+          "name": "The child or young person is a pre-verbal communicator",
+          "children": [
+            {
+              "id": "CI-PV-1",
+              "text": "acknowledge and value all forms of communication, for example vocalisations, body movements and eye gaze"
+            },
+            {
+              "id": "CI-PV-2",
+              "text": "use intensive interaction strategies to develop shared communication"
+            },
+            {
+              "id": "CI-PV-3",
+              "text": "before giving an instruction, use the child or young person\u2019s name to draw their attention, followed by key word instructions, for example, \u201cJamie, break time\u201d"
+            },
+            {
+              "id": "CI-PV-4",
+              "text": "give simple, single step instructions - avoid the use of unnecessary or complex description"
+            },
+            {
+              "id": "CI-PV-5",
+              "text": "use literal language (avoiding sarcasm, idiom, and figures of speech)"
+            },
+            {
+              "id": "CI-PV-6",
+              "text": "use a total communication approach - this could include: objects of reference, photos, symbols, drawings, signs, words to support pre-verbal communication"
+            },
+            {
+              "id": "CI-PV-7",
+              "text": "use symbol communication such as Picture Exchange Communication System (PECS) or similar"
+            },
+            {
+              "id": "CI-PV-8",
+              "text": "use communication libraries to try out a variety of resources, which can be accessed through the library service"
+            },
+            {
+              "id": "CI-PV-9",
+              "text": "be aware of body language: a high percentage of what we communicate is non-verbal"
+            },
+            {
+              "id": "CI-PV-10",
+              "text": "use an appropriate tone of voice (calm, not too loud)"
+            },
+            {
+              "id": "CI-PV-11",
+              "text": "be aware of environmental factors that may impact upon communication (noise, temperature, lighting, layout)"
+            },
+            {
+              "id": "CI-PV-12",
+              "text": "support verbal communication with gestures and signs, which may include Makaton"
+            }
+          ]
+        },
+        {
+          "id": "CI-IM",
+          "name": "Difficulties with imagination",
+          "children": [
+            {
+              "id": "CI-IM-1",
+              "text": "use role play and drama, starting with re-telling familiar stories - progress to changing one or two parts of a well-known story"
+            },
+            {
+              "id": "CI-IM-2",
+              "text": "use props, for example puppets"
+            },
+            {
+              "id": "CI-IM-3",
+              "text": "model imaginative storytelling (both adults and peers)"
+            },
+            {
+              "id": "CI-IM-4",
+              "text": "support storytelling with visual cues or actions"
+            },
+            {
+              "id": "CI-IM-5",
+              "text": "use photos to talk through what might be happening"
+            },
+            {
+              "id": "CI-IM-6",
+              "text": "harness the use of the child or young person\u2019s interests when considering your approach"
+            }
+          ]
+        },
+        {
+          "id": "CI-SC",
+          "name": "Difficulty with social communication and developing relationships",
+          "children": [
+            {
+              "id": "CI-SC-1",
+              "text": "plan supportive class groupings and opportunities for children and young people to work with different peers"
+            },
+            {
+              "id": "CI-SC-2",
+              "text": "plan explicit opportunities to develop social understanding and inference - use photos to talk through what might be happening or what people might be feeling"
+            },
+            {
+              "id": "CI-SC-3",
+              "text": "plan group work and use this flexibly to promote independence from adults"
+            },
+            {
+              "id": "CI-SC-4",
+              "text": "organise small group or one to one tasks and activities, for example Lego based therapy or social skills groups"
+            },
+            {
+              "id": "CI-SC-5",
+              "text": "promote a calm learning environment"
+            },
+            {
+              "id": "CI-SC-6",
+              "text": "be clear in your communication of expectations - model positive interactions and be specific about feedback provided to children and young people"
+            },
+            {
+              "id": "CI-SC-7",
+              "text": "ensure that staff or play leaders monitor at break and lunchtime and intervene with strategies to support peer interactions, for example through teaching structured games"
+            }
+          ]
+        },
+        {
+          "id": "CI-SU",
+          "name": "Child or young person needs support to develop social understanding",
+          "children": [
+            {
+              "id": "CI-SU-1",
+              "text": "use role play or comic strip conversations to gain insights into a situation, where a child or young person needs support to develop social understanding"
+            },
+            {
+              "id": "CI-SU-2",
+              "text": "use structured problem solving to unpick social misunderstandings or concerns"
+            },
+            {
+              "id": "CI-SU-3",
+              "text": "be aware of the possibility that double empathy may be impacting upon a child or young person"
+            },
+            {
+              "id": "CI-SU-4",
+              "text": "use small interest-based peer support sessions, for example Circle of Friends or Lego-based therapy"
+            },
+            {
+              "id": "CI-SU-5",
+              "text": "use social stories for specific situations where social understanding needs development, for example, turn taking"
+            },
+            {
+              "id": "CI-SU-6",
+              "text": "give prompts, for example, symbols or gestures"
+            },
+            {
+              "id": "CI-SU-7",
+              "text": "use visual supports for routines, for example, now (you are doing this) and next (you are going to be doing that) boards - work towards the child or young person using this independently"
+            },
+            {
+              "id": "CI-SU-8",
+              "text": "use modelling to rehearse and practise social situations"
+            }
+          ]
+        },
+        {
+          "id": "CI-AN",
+          "name": "Anxiety in busy unpredictable environments",
+          "children": [
+            {
+              "id": "CI-AN-1",
+              "text": "prepare for change of activity or routines and use visual or concrete resources and objects of reference"
+            },
+            {
+              "id": "CI-AN-2",
+              "text": "organise small group activities and use flexible grouping to build relationships with a range of peers"
+            },
+            {
+              "id": "CI-AN-3",
+              "text": "ensure that there is a calm learning environment or access to a low arousal space - collect the child or young person\u2019s views about the environment and low arousal space to ensure that this is impactful"
+            },
+            {
+              "id": "CI-AN-4",
+              "text": "communicate expectations clearly, both verbally and visually"
+            },
+            {
+              "id": "CI-AN-5",
+              "text": "provide regular mentor support, including key adults and peers"
+            },
+            {
+              "id": "CI-AN-6",
+              "text": "use a visual timetable or \u2018now and next\u2019 cards - keep these up to date and explicitly explain what is the same or different if the child or young person needs this"
+            },
+            {
+              "id": "CI-AN-7",
+              "text": "monitor key transition points, for example, home and school, break and lunchtime with strategies and resources to reduce anxiety"
+            },
+            {
+              "id": "CI-AN-8",
+              "text": "provide a \u2018get out\u2019 option or a way of asking for help and alerting adults to dysregulation"
+            },
+            {
+              "id": "CI-AN-9",
+              "text": "provide a soft start or end to lessons, allowing children or young people to arrive or leave a few minutes early to avoid busy corridors"
+            }
+          ]
+        },
+        {
+          "id": "CI-SS",
+          "name": "Over or under sensitivity to sensory stimuli",
+          "children": [
+            {
+              "id": "CI-SS-1",
+              "text": "provide sensory, physical or movement breaks - these may be scheduled or used flexibly depending on the child or young person\u2019s needs"
+            },
+            {
+              "id": "CI-SS-2",
+              "text": "allow snacks to aid regulation at suitable intervals in the day"
+            },
+            {
+              "id": "CI-SS-3",
+              "text": "be aware of the significance of sensory processing needs on eating, this can include: food colour, texture, taste, meal size, mixing of food on plates and so on"
+            },
+            {
+              "id": "CI-SS-4",
+              "text": "be flexible with the uniform policy when necessary"
+            },
+            {
+              "id": "CI-SS-5",
+              "text": "consider the environment: noise, room temperature, visual stimuli, proximity - use an audit tool to make suitable adjustments"
+            },
+            {
+              "id": "CI-SS-6",
+              "text": "have a flexible approach to transitions - explicitly prepare children and young people to manage foreseen changes"
+            },
+            {
+              "id": "CI-SS-7",
+              "text": "provide access to a calming or low arousal space, if needed and collect the child or young person\u2019s views about the environment and low arousal space to ensure that this is impactful"
+            },
+            {
+              "id": "CI-SS-8",
+              "text": "develop a sensory profile for individual children and young people, to better understand their areas of sensory need"
+            }
+          ]
+        },
+        {
+          "id": "CI-DR",
+          "name": "Significant dysregulation, with risk of harm to others, self or damage to property",
+          "children": [
+            {
+              "id": "CI-DR-1",
+              "text": "ensure that policies and practice follow a trauma-informed approach and prioritise relational practice"
+            },
+            {
+              "id": "CI-DR-2",
+              "text": "explicitly teach and support the development of emotional literacy - some settings use programmes such as zones of regulation, others have emotional literacy planned into their curriculum - some children need more repeats and opportunities to develop emotional literacy"
+            },
+            {
+              "id": "CI-DR-3",
+              "text": "use wondering aloud approaches to support children and young people to recognise their emotions, for example, \u201cI wonder if you are tired today? You are yawning\u201d"
+            },
+            {
+              "id": "CI-DR-4",
+              "text": "communicate with parent carers to find out what helps and what may trigger dysregulation - work with the family to ensure consistency for the child or young person"
+            },
+            {
+              "id": "CI-DR-5",
+              "text": "develop two-way communication with families - this could include changes within the family (for example, divorce, bereavement, illness) - ensure this information is shared with all staff"
+            },
+            {
+              "id": "CI-DR-6",
+              "text": "risk assess and proactively plan to mitigate the risk of harm to the child or young person, staff, or the peer group - ensure that this is kept up to date and is shared with all staff and parent carers - co-produce risk management plans with the child or young person, if possible"
+            },
+            {
+              "id": "CI-DR-7",
+              "text": "implement a clear plan of action, agreed with parent carers regarding positive handling (if necessary - a risk assessment must be in place if the child or young person is at risk, or dysregulated behaviours pose a risk to others"
+            },
+            {
+              "id": "CI-DR-8",
+              "text": "ensure that staff are trained to use an approved positive handling approach, where necessary, to support a dysregulated child or young person and update this training accordingly and proactively plan to train new members of staff (educators do not need parental permission to use reasonable force on children and young people)"
+            },
+            {
+              "id": "CI-DR-9",
+              "text": "implement a risk management plan which includes proactive strategies and early interventions to reduce anxiety and the risk of harm - use this to de-escalate by intervening at the earliest opportunity, with methods that the child or young person responds positively to"
+            },
+            {
+              "id": "CI-DR-10",
+              "text": "ensure appropriate de-escalation strategies are in place (for example, a time out card) - all staff should know about these if they work with the child or young person"
+            },
+            {
+              "id": "CI-DR-11",
+              "text": "use a consistent approach, with reasonable adjustments made to the behaviour policy as required by individuals"
+            },
+            {
+              "id": "CI-DR-12",
+              "text": "continue to implement strategies that are reassuring - collect the child or young person\u2019s views about these strategies to ensure that support is impactful"
+            },
+            {
+              "id": "CI-DR-13",
+              "text": "give clear guidance, using clear language to provide explicit messages and make expectations clear, with visual support if required - ensure that rules and expectations are explicitly taught and revisited whilst the child or young person is regulated"
+            },
+            {
+              "id": "CI-DR-14",
+              "text": "provide a \u2018get out with dignity\u2019 choice, allowing the child or young person to leave the situation whilst managing self-esteem"
+            },
+            {
+              "id": "CI-DR-15",
+              "text": "develop understanding of the frequency and location of triggers: monitor using frequency charts; situation, trigger, action, response (STAR) observation sheet and antecedent, behaviour, consequence, communication (ABCC) observation sheet"
+            },
+            {
+              "id": "CI-DR-16",
+              "text": "use informal observations to analyse incidents, develop understanding and plan for adjustments accordingly"
+            },
+            {
+              "id": "CI-DR-17",
+              "text": "put preventative strategies in place, for example, by avoiding high arousal situations such as busy corridors"
+            },
+            {
+              "id": "CI-DR-18",
+              "text": "arrange a low arousal area, chosen in agreement with the child or young person and collect the child or young person\u2019s views about this space to ensure that provision is impactful"
+            },
+            {
+              "id": "CI-DR-19",
+              "text": "devise and implement a pastoral support plan (PSP) in co-production with parent carers and the child or young person - ensure this is read and consistently implemented by relevant staff, and feedback given to pastoral lead"
+            },
+            {
+              "id": "CI-DR-20",
+              "text": "use a script which is understood and used by all appropriate adults, to ensure a consistent approach to supporting regulation"
+            },
+            {
+              "id": "CI-DR-21",
+              "text": "change the adult supporting the child or young person as part of a planned approach and ensure that this is seen as a positive and effective strategy"
+            },
+            {
+              "id": "CI-DR-22",
+              "text": "ensure all adults are aware of the need for the child or young person to process and respond before any type of discussion or reflection takes place - children and young people need to regulate before they reflect"
+            },
+            {
+              "id": "CI-DR-23",
+              "text": "consider suspension a \u2018last resort\u2019 whilst referring to West Sussex guidance and follow any suspensions with robust reintegration planning alongside parent carers, to support the child or young person returning to full time education"
+            },
+            {
+              "id": "CI-DR-24",
+              "text": "assess whether a reduced or part time timetable is in the best interest of the child or young person and work in partnership with parent carers to support the child or young person returning to full time education - refer to West Sussex guidance for reduced or part time timetabling arrangements"
+            }
+          ]
+        },
+        {
+          "id": "CI-AS",
+          "name": "Limited attention span compared to developmental age",
+          "children": [
+            {
+              "id": "CI-AS-1",
+              "text": "use the child or young person\u2019s interests as a motivator and to extend engagement"
+            },
+            {
+              "id": "CI-AS-2",
+              "text": "implement regular breaks as required"
+            },
+            {
+              "id": "CI-AS-3",
+              "text": "further adapt teaching and learning opportunities to promote accessibility of the curriculum, in line with the child or young person\u2019s development"
+            },
+            {
+              "id": "CI-AS-4",
+              "text": "use chunking and scaffolding to break tasks down into smaller, manageable steps"
+            },
+            {
+              "id": "CI-AS-5",
+              "text": "use visual timetables or now and next boards to focus attention"
+            },
+            {
+              "id": "CI-AS-6",
+              "text": "use backward chaining and break the overall task down into smaller steps - the adult helps the child or young person with all but that last step, with the child or young person being taught to do the last step themselves - once the last step is learnt, the child or young person and adult work backwards learning other steps of the sequence until they can do the entire task"
+            },
+            {
+              "id": "CI-AS-7",
+              "text": "plan opportunities for repetition and reinforcement, so that fluency and confidence grow over time"
+            },
+            {
+              "id": "CI-AS-8",
+              "text": "plan to gradually fade out support appropriately over time, to promote independence"
+            },
+            {
+              "id": "CI-AS-9",
+              "text": "use the child\u2019s or young person\u2019s name when giving instructions to ensure that they are attending"
+            },
+            {
+              "id": "CI-AS-10",
+              "text": "ask the child or young person to repeat back what activity they are going to do to check their understanding"
+            },
+            {
+              "id": "CI-AS-11",
+              "text": "support the child or young person to create a \u2018to do list\u2019, which they can use to keep themselves on track with increasing independence"
+            },
+            {
+              "id": "CI-AS-12",
+              "text": "explicitly teach and model active listening strategies"
+            },
+            {
+              "id": "CI-AS-13",
+              "text": "use timers, so children and young people know they must focus for a finite and comfortable amount of time"
+            },
+            {
+              "id": "CI-AS-14",
+              "text": "plan individualised timetables as required to promote access in line with the child or young person\u2019s developmental stage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SE",
+      "name": "Social, emotional and mental health",
+      "children": [
+        {
+          "id": "SE-WI",
+          "name": "Difficulties participating and presenting as withdrawn or isolated",
+          "children": [
+            {
+              "id": "SE-WI-1",
+              "text": "use assessment through teaching and learning \u2013 for example, are there parts of the curriculum that they find easier to manage than others? Use these to develop confidence"
+            },
+            {
+              "id": "SE-WI-2",
+              "text": "analyse informal observations; frequency observations and other observation sheets- use this information to inform planning"
+            },
+            {
+              "id": "SE-WI-3",
+              "text": "discuss the child or young person with key adults and your special educational needs coordinator (SENCO) - check if there are staff members who seem to get a more positive response - what are the strategies or approaches they use with the child or young person? Can these be more widely replicated?"
+            },
+            {
+              "id": "SE-WI-4",
+              "text": "adapt tasks to ensure that all children and young people feel successful and have positive learning experiences"
+            },
+            {
+              "id": "SE-WI-5",
+              "text": "model and explicitly teach behaviour expectations"
+            },
+            {
+              "id": "SE-WI-6",
+              "text": "try small group work, for example friendship or social skills, or nurture groups"
+            },
+            {
+              "id": "SE-WI-7",
+              "text": "give the child or young person responsibility for looking after someone else"
+            },
+            {
+              "id": "SE-WI-8",
+              "text": "use a backward chaining approach to activities, such as bringing children and young people in at the end of assembly"
+            },
+            {
+              "id": "SE-WI-9",
+              "text": "use play-based activities, matched to the level of the child or young person\u2019s emotional and cognitive development"
+            },
+            {
+              "id": "SE-WI-10",
+              "text": "use buddying or peer mentoring - support the child or young person to take on both roles, enabling them to receive support from a peer and provide support to a peer"
+            },
+            {
+              "id": "SE-WI-11",
+              "text": "provide activities which help the child or young person to develop an increased sense of belonging or importance within the group, for example by giving them a job to do within the classroom, giving them a responsibility within the wider school, or giving them a role as an expert in an area of strength"
+            },
+            {
+              "id": "SE-WI-12",
+              "text": "provide alternative methods of contributing to class or group discussions"
+            }
+          ]
+        },
+        {
+          "id": "SE-DB",
+          "name": "Dysregulated behaviour that results in disruption to learning or harm to others",
+          "children": [
+            {
+              "id": "SE-DB-1",
+              "text": "give a consistent message but flexible approach, for example \u2018I want you to be in class learning\u2019 is the consistent message - the approach to support this happening may vary or be flexible depending on individual needs"
+            },
+            {
+              "id": "SE-DB-2",
+              "text": "ensure that reasonable adjustments are made, to provide access to social, emotional, and mental health needs in the same way that we adapt for cognition and learning - some children or young people require support to develop emotional literacy"
+            },
+            {
+              "id": "SE-DB-3",
+              "text": "ensure learning needs are being met"
+            },
+            {
+              "id": "SE-DB-4",
+              "text": "understand the basis for the behaviour, for example: what is the history or context?"
+            },
+            {
+              "id": "SE-DB-5",
+              "text": "continue to implement evidence-based strategies consistently"
+            },
+            {
+              "id": "SE-DB-6",
+              "text": "offer clear guidance \u2013 explicit messages letting the child or young person know what is expected of them"
+            },
+            {
+              "id": "SE-DB-7",
+              "text": "offer a \u2018get out with dignity\u2019 choice letting the child or young person leave the situation without increasing feelings of shame or humiliation"
+            },
+            {
+              "id": "SE-DB-8",
+              "text": "monitor so that you have a good understanding of the frequency and location of triggers \u2013 frequency charts, situation, trigger, action, response (STAR) observation sheet, antecedent, behaviour, consequence, communication (ABCC) observation sheets; informal observations can be carried out to inform understanding"
+            },
+            {
+              "id": "SE-DB-9",
+              "text": "understand that behaviour is a method of communication - what purpose is the behaviour trying to achieve for the child or young person? What are they trying to tell us with their behaviour? Is there an unmet need? Help the child or young person to learn to substitute with more pro-social behaviours"
+            },
+            {
+              "id": "SE-DB-10",
+              "text": "devise a safety plan which includes proactive strategies, early interventions to reduce anxiety or harm and reactive strategies to ensure a consistent approach - involve the child or young person in making plans"
+            },
+            {
+              "id": "SE-DB-11",
+              "text": "use reintegration plans and meetings to support the child or young person in returning to full time education - a gradual reintegration, with ongoing review is most effective"
+            },
+            {
+              "id": "SE-DB-12",
+              "text": "employ a clear plan of action, agreed with parent carers regarding positive handling (settings do not need parental permission to use reasonable force on a child or young person) - a risk assessment must be in place if the child or young person is at risk, or if dysregulation may pose a risk to others"
+            },
+            {
+              "id": "SE-DB-13",
+              "text": "use choices to allow the child or young person to have some control with the same result, for example \u201cwould you like to talk to me now or in one minute?\u201d"
+            },
+            {
+              "id": "SE-DB-14",
+              "text": "teach the child or young person ways to get their needs met, such as developing social skills, emotional literacy, or strategies to self-regulate - use visuals to support where required"
+            },
+            {
+              "id": "SE-DB-15",
+              "text": "use readiness to learn strategies and routines, for example, after breaks or between tasks"
+            },
+            {
+              "id": "SE-DB-16",
+              "text": "consider the impact of the timetable and how you prepare children and young people for transitions - some children or young people need prior notice of things that may be the same or different to their usual routine"
+            },
+            {
+              "id": "SE-DB-17",
+              "text": "plan for transition between year groups or phases of education as early as possible - communicate \u2018what works well\u2019 in terms of in-class adaptation, and support colleagues to analyse behaviour"
+            },
+            {
+              "id": "SE-DB-18",
+              "text": "communicate effectively with home and the family and be aware of what is going on at home - are other services involved?"
+            },
+            {
+              "id": "SE-DB-19",
+              "text": "create a pastoral support plan with your special educational needs coordinator (SENCO) or inclusion lead if a child or young person shows regular episodes of dysregulated behaviour, or persistent disruptive behaviour, or is at risk of exclusion"
+            },
+            {
+              "id": "SE-DB-20",
+              "text": "discuss the need for getting advice from the Fair Access team, Educational Psychology Service, Mental Health in Schools team or Specialist Teacher Advisory teams if difficulties persist"
+            },
+            {
+              "id": "SE-DB-21",
+              "text": "ensure that advice is consistently implemented, analysed, and reviewed for effective impact"
+            },
+            {
+              "id": "SE-DB-22",
+              "text": "review individual plans regularly, in co-production with the child or young person, parent carers and any professionals who are providing support"
+            },
+            {
+              "id": "SE-DB-23",
+              "text": "use scripts, so that responses to dysregulation are predictable and consistent even if there is a change of face"
+            }
+          ]
+        },
+        {
+          "id": "SE-MU",
+          "name": "Physical symptoms that are medically unexplained, for example, soiling and stomach pains",
+          "children": [
+            {
+              "id": "SE-MU-1",
+              "text": "use activities that are stress reducing, for example: games, dance, colouring, gardening, animals, forest school"
+            },
+            {
+              "id": "SE-MU-2",
+              "text": "monitor to see whether the symptom is persistent and consider contributory factors, for example sensory processing differences or anxiety impacting on eating"
+            },
+            {
+              "id": "SE-MU-3",
+              "text": "keep a log and analyse pattern or trends to identify triggers and talk to designated lead (special educational needs co-ordinator, pastoral or safeguarding lead) regarding your concerns if the issue persists"
+            },
+            {
+              "id": "SE-MU-4",
+              "text": "liaise with parent carers and the school nurse if underlaying medical needs are suspected"
+            },
+            {
+              "id": "SE-MU-5",
+              "text": "remember that pain can affect autistic children and young people or those who have experienced trauma in ways that are different to people who are neurotypical"
+            },
+            {
+              "id": "SE-MU-6",
+              "text": "gather the views of the child or young person to develop an individual plan"
+            }
+          ]
+        },
+        {
+          "id": "SE-AD",
+          "name": "Attention difficulties",
+          "children": [
+            {
+              "id": "SE-AD-1",
+              "text": "have a clear structure to the day and support the child or young person to access this with visual supports if required"
+            },
+            {
+              "id": "SE-AD-2",
+              "text": "explicitly explain any changes to routine"
+            },
+            {
+              "id": "SE-AD-3",
+              "text": "sit the child or young person away from distractions and near good \u201clearning\u201d role models"
+            },
+            {
+              "id": "SE-AD-4",
+              "text": "have clear expectations and a consistent approach to encourage positive behaviour for learning"
+            },
+            {
+              "id": "SE-AD-5",
+              "text": "think about potential reasons, is there a pattern?"
+            },
+            {
+              "id": "SE-AD-6",
+              "text": "record behaviour and remember to analyse and review trends -use this information to plan support"
+            },
+            {
+              "id": "SE-AD-7",
+              "text": "allow plenty of time for movement between frequent small concentration periods - short bursts of focus could be supported by a timer and built up gradually as the child or young person develops their attention skills"
+            },
+            {
+              "id": "SE-AD-8",
+              "text": "plan lessons in small manageable chunks"
+            },
+            {
+              "id": "SE-AD-9",
+              "text": "be aware of times of the day that may be more difficult"
+            },
+            {
+              "id": "SE-AD-10",
+              "text": "use a \u2018time out\u2019 card to enable a child or young person to re-regulate and do not assume the \u2018time out\u2019 card is being \u201cabused\u201d if it is used often for one lesson of the week - it may be that there are certain barriers to learning for the child or young person in the lesson, for example, sensory which requires further exploration"
+            },
+            {
+              "id": "SE-AD-11",
+              "text": "make reasonable adjustments to behaviour policies and ensure these are in line with equalities legislation"
+            },
+            {
+              "id": "SE-AD-12",
+              "text": "remember to consult with the child or young person so they can share their perspectives about what may help them to focus"
+            }
+          ]
+        },
+        {
+          "id": "SE-AT",
+          "name": "Attachment difficulties",
+          "children": [
+            {
+              "id": "SE-AT-1",
+              "text": "be aware that a child or young person with attachment difficulties may respond differently to behaviour strategies which work with others - discuss this with your special educational needs coordinator (SENCO) if needed"
+            },
+            {
+              "id": "SE-AT-2",
+              "text": "be aware that the child or young person may say they do not want the support offered - this doesn\u2019t always mean that they don\u2019t need it - seek to support in more subtle ways, but do not withdraw support"
+            },
+            {
+              "id": "SE-AT-3",
+              "text": "listen to the child or young person and proactively seek their views to find strategies to support without making them feel different"
+            },
+            {
+              "id": "SE-AT-4",
+              "text": "liaise with parent carers for shared understanding and use this information to proactively plan support and build a one page profile"
+            },
+            {
+              "id": "SE-AT-5",
+              "text": "consider the family context and the range of children and young people who may have attachment differences, for example: adopted, forces children, child in need, a child who has experienced care"
+            },
+            {
+              "id": "SE-AT-6",
+              "text": "ensure there is a well planned transition when the child or young person starts in a new setting and check the history of how transitions have been in the past"
+            },
+            {
+              "id": "SE-AT-7",
+              "text": "use attachment and trauma informed strategies within class and if required, develop a nurture group, or foster a nurture ethos"
+            },
+            {
+              "id": "SE-AT-8",
+              "text": "review the appropriateness of existing discipline procedures and behaviour policies - discuss an individual support plan if necessary - the law states that \u2018reasonable adjustments\u2019 must be made"
+            },
+            {
+              "id": "SE-AT-9",
+              "text": "liaise with the virtual school for care experienced children, educational psychology service (EPS), learning behaviour advisory team (LBAT) or autism and social communication team (ASCT) for training"
+            }
+          ]
+        },
+        {
+          "id": "SE-LL",
+          "name": "Low level disruption or attention needing",
+          "children": [
+            {
+              "id": "SE-LL-1",
+              "text": "adapt your use of voice, gesture, and body language - position yourself where the child or young person is comfortable"
+            },
+            {
+              "id": "SE-LL-2",
+              "text": "focus on reducing anxiety and thereby behaviours - work with the child or young person to understand and support anxiety triggers"
+            },
+            {
+              "id": "SE-LL-3",
+              "text": "positive reinforcement of expectations through verbal scripts and visual prompts"
+            },
+            {
+              "id": "SE-LL-4",
+              "text": "ensure that everyone working with the child or young person understands their needs and consistently uses the agreed strategies to support - consider whether anyone needs more training to develop therapeutic relationships"
+            },
+            {
+              "id": "SE-LL-5",
+              "text": "have a \u2018time in and out\u2019 or quiet area and ensure that this is a space that the child or young person is comfortable with"
+            },
+            {
+              "id": "SE-LL-6",
+              "text": "focus on the behaviour and what it is you would like the child or young person to do \u2013 what is it you (the adult) wants to achieve? Provide support to achieve the aim"
+            },
+            {
+              "id": "SE-LL-7",
+              "text": "ensure a pro-social relational approach to managing behaviour is taken, not a punitive behaviourist approach, for example, therapeutic thinking, thrive or trauma-informed practice"
+            }
+          ]
+        },
+        {
+          "id": "SE-MH",
+          "name": "Difficulty in making and maintaining healthy relationships",
+          "children": [
+            {
+              "id": "SE-MH-1",
+              "text": "use small group or nurture group activities to support personal, social, and emotional development"
+            },
+            {
+              "id": "SE-MH-2",
+              "text": "model appropriate emotional responses to disagreements or difficulties, for example sharing or turn taking"
+            },
+            {
+              "id": "SE-MH-3",
+              "text": "think about who the child or young person can maintain a relationship with, for example, adults only, younger children - why might that be? Can you use this information to build the child or young person\u2019s capacity to maintain relationships?"
+            },
+            {
+              "id": "SE-MH-4",
+              "text": "try adapted opportunities for social and emotional development for example, a buddy system, paired learning activities or by scaffolding group work"
+            },
+            {
+              "id": "SE-MH-5",
+              "text": "use restorative approaches when relationships break down, for example comic strip conversations or social stories"
+            },
+            {
+              "id": "SE-MH-6",
+              "text": "use a key worker to rehearse and replay more appropriate social communication methods, provide opportunities to practise the social communication skill being learned in class"
+            },
+            {
+              "id": "SE-MH-7",
+              "text": "discuss the use of dedicated and planned time with your special educational needs coordinator (SENCO) to support the child or young person where necessary, such as during unstructured break and lunch times"
+            },
+            {
+              "id": "SE-MH-8",
+              "text": "do not use the school or settings \u2018special educational needs\u2019 base purely as a reactive strategy when friendship issues arise - use the views of the child or young person alongside their parent carers to consider proactive strategies to promote healthy friendships"
+            },
+            {
+              "id": "SE-MH-9",
+              "text": "consider using a \u2018circle of friends\u2019 technique or similar"
+            }
+          ]
+        },
+        {
+          "id": "SE-FA",
+          "name": "Difficulties following and accepting adult direction",
+          "children": [
+            {
+              "id": "SE-FA-1",
+              "text": "look for patterns and triggers to identify what may be causing behaviours for example, the use of language"
+            },
+            {
+              "id": "SE-FA-2",
+              "text": "use clear language and ensure that instruction or direction is not too complicated for the child or young person to process"
+            },
+            {
+              "id": "SE-FA-3",
+              "text": "be aware that these behaviours may underlie an unmet need for safety - use the views of the child or young person and their parent carers to unpick what makes them feel safer"
+            },
+            {
+              "id": "SE-FA-4",
+              "text": "use positive scripts \u2013 positive language to redirect and reinforce expectations and ensure that these are consistently used by all adults working with the child or young person"
+            },
+            {
+              "id": "SE-FA-5",
+              "text": "consider calming scripts to de-escalate, including for example, use of sand timers for \u2018thinking time\u2019 - ensure that these are consistently used by all adults working with the child or young person"
+            },
+            {
+              "id": "SE-FA-6",
+              "text": "provide limited choices to give the child or young person a sense of control whilst following adult led activities"
+            },
+            {
+              "id": "SE-FA-7",
+              "text": "allow take up time for the child or young person to process instructions or direction, rather than expecting an immediate response - repeat instruction or direction if necessary"
+            },
+            {
+              "id": "SE-FA-8",
+              "text": "use meaningful rewards and consequences flexibly and creatively such as \u2018catch them being good\u2019 sticker charts or whatever the child or young person is personally motivated by, for example hair care, personal care, sports, shooting baskets, controlled access to iPad, YouTube and so on"
+            },
+            {
+              "id": "SE-FA-9",
+              "text": "create a visual timetable and use visual cues such as sand timers to support the end of activities and sharing - be aware that for some children and young people, a visual timetable may be perceived as an additional demand - in this case, the child or young person may need more ownership of their timetable, with an adaption to decide what to do when"
+            }
+          ]
+        },
+        {
+          "id": "SE-US",
+          "name": "Presenting as significantly unhappy or stressed",
+          "children": [
+            {
+              "id": "SE-US-1",
+              "text": "identify a key adult within class or the special educational needs and disabilities (SEND) team who can provide an emotional secure base and build on preferred learning styles"
+            },
+            {
+              "id": "SE-US-2",
+              "text": "establish a calm place or quiet area which is chosen and agreed with the child or young person"
+            },
+            {
+              "id": "SE-US-3",
+              "text": "ensure feedback is used to collaborate and plan with parent carers, to ensure consistency between the home and school or setting"
+            },
+            {
+              "id": "SE-US-4",
+              "text": "consider the use of comic strip conversations to identify triggers and identify an alternative action or ways to approach similar situations in the future"
+            },
+            {
+              "id": "SE-US-5",
+              "text": "provide opportunities to reflect emotional states and develop strategies to support self-regulation and build emotional literacy so that the child or young person builds self-awareness and can recognise when they begin to feel unhappy or stressed"
+            }
+          ]
+        },
+        {
+          "id": "SE-NA",
+          "name": "Patterns of non-attendance",
+          "children": [
+            {
+              "id": "SE-NA-1",
+              "text": "talk to parent carers to identify barriers and possible reasons for non-attendance"
+            },
+            {
+              "id": "SE-NA-2",
+              "text": "think about \u2018push and pull\u2019 factors - what factors are driving non-attendance? What motivators would support them to attend?"
+            },
+            {
+              "id": "SE-NA-3",
+              "text": "use the West Sussex Emotionally Based School Avoidance (EBSA) materials, as these can be useful diagnostic tools for early intervention"
+            },
+            {
+              "id": "SE-NA-4",
+              "text": "collaborate and plan with parent carers, to ensure consistency between the home and the school or setting"
+            },
+            {
+              "id": "SE-NA-5",
+              "text": "consider the impact of suspensions and exclusions on individual attendance in the long run \u2013 will the child or young person learn that certain behaviour enables them to go home?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PS",
+      "name": "Physical and sensory",
+      "children": [
+        {
+          "id": "PS-DC",
+          "name": "Developmental co-ordination difficulties or motor delays",
+          "children": [
+            {
+              "id": "PS-DC-1",
+              "text": "develop the child or young person\u2019s core stability for example, through using a wobble cushion, exercises, and games"
+            },
+            {
+              "id": "PS-DC-2",
+              "text": "ensure correct seating position with appropriately sized table and chairs"
+            },
+            {
+              "id": "PS-DC-3",
+              "text": "provide support for letter formation through using a multi-sensory handwriting scheme, pencil grips or sloping boards for example"
+            },
+            {
+              "id": "PS-DC-4",
+              "text": "provide physical activities to support development of gross motor skills (throwing, catching, hopping and so on)"
+            },
+            {
+              "id": "PS-DC-5",
+              "text": "develop fine motor skills through: hand and arm exercises, specialist scissors, pegboards, threading, play dough, pincer grip activities (for example, placing pegs onto a washing line)"
+            },
+            {
+              "id": "PS-DC-6",
+              "text": "provide support for sequencing and organisational skills for example now or next boards, writing frames or visual timetables"
+            },
+            {
+              "id": "PS-DC-7",
+              "text": "adapt PE and sports day activities by scaffolding and grading tasks - if required, use adapted apparatus"
+            },
+            {
+              "id": "PS-DC-8",
+              "text": "use the school age occupational therapy (OT) resource pack - this gives comprehensive guidance to support and develop a range of functional needs, including: postural control, attention and concentration, handwriting, using scissors, managing at mealtimes, dressing, ball skills"
+            }
+          ]
+        },
+        {
+          "id": "PS-DD",
+          "name": "The child or young person is D/deaf",
+          "children": [
+            {
+              "id": "PS-DD-1",
+              "text": "remove or reduce background noise - establish a quiet working environment, particularly for specific listening work"
+            },
+            {
+              "id": "PS-DD-2",
+              "text": "employ techniques to monitor and support all children and young people with ambient noise levels"
+            },
+            {
+              "id": "PS-DD-3",
+              "text": "check amplification equipment daily - as the child or young person gets older, support them to develop independence in checking their equipment - keep spare batteries on site"
+            },
+            {
+              "id": "PS-DD-4",
+              "text": "seat the child or young person away from any source of noise, for example: the window, corridor, fan heater, projector, the centre of the classroom"
+            },
+            {
+              "id": "PS-DD-5",
+              "text": "give the child or young person access to a D/deaf awareness programme - this may include equipment management, understanding of deafness, D/deaf role models and D/deaf identity"
+            },
+            {
+              "id": "PS-DD-6",
+              "text": "ensure that the child or young person has access to D/deaf role models"
+            },
+            {
+              "id": "PS-DD-7",
+              "text": "attract the child or young person\u2019s attention before speaking to them, for example with a tap on the shoulder and ask the child or young person if they have a preferred way of attracting their attention"
+            },
+            {
+              "id": "PS-DD-8",
+              "text": "where appropriate, use acoustic materials to support sound clarity - hard surfaces cause echoes and may lead to sensory overload or processing difficulties - where possible, use sound absorbing materials such as hessian, felt or carpet"
+            },
+            {
+              "id": "PS-DD-9",
+              "text": "during PE or games lessons, it may be more difficult to access and follow instructions, particularly in large open spaces or in halls with echoes"
+            },
+            {
+              "id": "PS-DD-10",
+              "text": "the child or young person may use lip-reading and visual clues to support their hearing - ensure that they are face on when you are giving instructions and try not to move around the room whilst talking"
+            },
+            {
+              "id": "PS-DD-11",
+              "text": "avoid standing in front of a light source when speaking (for example windows) - this can make lip-reading difficult"
+            },
+            {
+              "id": "PS-DD-12",
+              "text": "stand or sit still when speaking to the child or young person"
+            },
+            {
+              "id": "PS-DD-13",
+              "text": "pre-warn the child or young person about fire alarm testing and if appropriate use an alternative exit route or devise a personal evacuation plan for the child or young person - ensure that alarms flash as well as ringing if the child or young person is severely or profoundly D/deaf and consider fire evacuation procedures and make plans for the eventuality that the child or young person does not hear the fire alarm"
+            },
+            {
+              "id": "PS-DD-14",
+              "text": "complete robust risk assessments for school trips - consider traffic noises, alarms and listening to unfamiliar adults"
+            },
+            {
+              "id": "PS-DD-15",
+              "text": "ensure staff work together with other professionals for example, the sensory support team and ensure all staff and visitors who work with the child are aware of how best to support them - they should be familiar with the child\u2019s one-page profile or equivalent"
+            },
+            {
+              "id": "PS-DD-16",
+              "text": "ensure instructions are delivered clearly and at an appropriate pace and volume (raised voices and shouting distorts speech and lip pattern, whispering and mumbling are a challenge to hear)"
+            },
+            {
+              "id": "PS-DD-17",
+              "text": "check the lesson content has been effectively communicated and understood, particularly when delivering new information, instructions, or homework; or using unfamiliar vocabulary"
+            },
+            {
+              "id": "PS-DD-18",
+              "text": "ensure that the child or young person has heard comments by peers in group activities - this may be done by repeating or rephrasing and asking open questions to check understanding"
+            },
+            {
+              "id": "PS-DD-19",
+              "text": "explicitly teach new vocabulary with physical objects or visuals to support - D/deaf children and young people may not be able to overhear language so will not pick this up as quickly as peers with hearing in the normal range"
+            },
+            {
+              "id": "PS-DD-20",
+              "text": "always use subtitles when showing videos and support access to audio clips by providing a transcript - words spoken on an audio or visual recording may need a person to repeat what is being said - provide a written copy or use subtitles"
+            },
+            {
+              "id": "PS-DD-21",
+              "text": "repeat or rephrase pertinent comments made by other children and young people ensuring the child can access"
+            },
+            {
+              "id": "PS-DD-22",
+              "text": "repeat, rephrase or model the child or young person\u2019s comments back to them, using correct grammar"
+            },
+            {
+              "id": "PS-DD-23",
+              "text": "use a variety of communication strategies - this includes good eye contact, body language and facial expressions"
+            },
+            {
+              "id": "PS-DD-24",
+              "text": "use visual reinforcement (pictures and handouts), to support learning and use gesture, British Sign Language (BSL) signs or Makaton as appropriate"
+            },
+            {
+              "id": "PS-DD-25",
+              "text": "use visual timetables and visual cues such as sand timers"
+            },
+            {
+              "id": "PS-DD-26",
+              "text": "encourage and model good listening behaviour: sitting still, looking, and listening"
+            },
+            {
+              "id": "PS-DD-27",
+              "text": "support children and young people to ask when they are not sure what to do - they may need a visual way of letting adults know that they need support"
+            },
+            {
+              "id": "PS-DD-28",
+              "text": "ensure all staff who work with a child or young person with hearing impairment (HI) are aware how best to support in school and settings"
+            },
+            {
+              "id": "PS-DD-29",
+              "text": "ensure all staff who work with a child or young person with hearing needs are aware of how best to support them in school, through deaf awareness training (delivered by the sensory support team)"
+            },
+            {
+              "id": "PS-DD-30",
+              "text": "arrange for adults working directly with children and young people with hearing impairment to have appropriate training - where the child or young person uses British Sign Language as their communication preference, staff need to be appropriately trained and they will need at least British Sign Language (BSL) level 1 or 2 proficiency"
+            }
+          ]
+        },
+        {
+          "id": "PS-VI",
+          "name": "Visual impairment",
+          "children": [
+            {
+              "id": "PS-VI-1",
+              "text": "work together with other professionals for example, the sensory support team, to share strategies and advice to enable the child or young person to access the learning environment, for example, using technology, alternative visual resources, or pre-learning"
+            },
+            {
+              "id": "PS-VI-2",
+              "text": "consider lighting and position for child or young person and how it supports their vision"
+            },
+            {
+              "id": "PS-VI-3",
+              "text": "provide uncluttered space and plain backgrounds to help the child or young person focus on the appropriate object or text"
+            },
+            {
+              "id": "PS-VI-4",
+              "text": "use auditory reinforcements and cues"
+            },
+            {
+              "id": "PS-VI-5",
+              "text": "use talking books and literature and use books with braille if the child or young person is a braille reader"
+            },
+            {
+              "id": "PS-VI-6",
+              "text": "use apps that can support text-to-speech functionality, so that the child or young person can access texts with independence"
+            },
+            {
+              "id": "PS-VI-7",
+              "text": "use talking equipment for life skills or curriculum activities"
+            },
+            {
+              "id": "PS-VI-8",
+              "text": "create a folder or toolkit of frequently used (transferable) resources, which the child or young person can access during lessons"
+            },
+            {
+              "id": "PS-VI-9",
+              "text": "provide additional resources for inclusive play, for example a bell in the ball, so all can play together"
+            },
+            {
+              "id": "PS-VI-10",
+              "text": "ensure the child or young person has time to map the room daily and allow re-mapping to occur when furniture and resources change place to reduce confusion and potential injury"
+            },
+            {
+              "id": "PS-VI-11",
+              "text": "consider lighting and position at group time or lunchtime"
+            },
+            {
+              "id": "PS-VI-12",
+              "text": "use a 3D printer to create tactile representations for the child or young person to feel"
+            },
+            {
+              "id": "PS-VI-13",
+              "text": "as appropriate, provide access for the child or young person to develop their mobility needs - they may need to access mobility or cane training"
+            },
+            {
+              "id": "PS-VI-14",
+              "text": "provide access to low light visual aids"
+            },
+            {
+              "id": "PS-VI-15",
+              "text": "provide access to quieter learning environments when the child or young person needs this"
+            }
+          ]
+        },
+        {
+          "id": "PS-SP",
+          "name": "Sensory processing differences, including over or under sensitivity",
+          "children": [
+            {
+              "id": "PS-SP-1",
+              "text": "speak to parent carers to identify potential trigger times and activities"
+            },
+            {
+              "id": "PS-SP-2",
+              "text": "conduct a sensory audit of the school or setting environment - some children or young people may need an individual sensory checklist assessment to identify their needs and inform which strategies to use"
+            },
+            {
+              "id": "PS-SP-3",
+              "text": "use sensory reduction planning if necessary to manage the triggers for over or under stimulation"
+            },
+            {
+              "id": "PS-SP-4",
+              "text": "provide individual workstations, where the child or young person would find this supportive"
+            },
+            {
+              "id": "PS-SP-5",
+              "text": "liaise with an autism and social communication advisory teacher to access sensory environment bitesize training - access further staff training (such as sensory integration) if needed"
+            },
+            {
+              "id": "PS-SP-6",
+              "text": "share strategies and advice with all members of staff to support the child or young person\u2019s sensory diet"
+            },
+            {
+              "id": "PS-SP-7",
+              "text": "consider referral to the occupational therapy service"
+            },
+            {
+              "id": "PS-SP-8",
+              "text": "work together with other professionals to share strategies and advice to support the children and young people\u2019s sensory diet"
+            },
+            {
+              "id": "PS-SP-9",
+              "text": "identify activities which help the child or young person to regulate and use these at appropriate times of day to promote access to learning"
+            },
+            {
+              "id": "PS-SP-10",
+              "text": "consider the impact of break times, lunch time and transitions - work with the child to develop strategies which help them feel ready to learn"
+            },
+            {
+              "id": "PS-SP-11",
+              "text": "build independence using timers"
+            }
+          ]
+        },
+        {
+          "id": "PS-TG",
+          "name": "Tasting (gustatory) differences",
+          "children": [
+            {
+              "id": "PS-TG-1",
+              "text": "consider the eating environment and discuss this with the child or young person - is it too loud, too messy or too busy?"
+            },
+            {
+              "id": "PS-TG-2",
+              "text": "speak to parent carers about eating preferences at home - are there particular foods or textures that the child or young person prefers or avoids?"
+            },
+            {
+              "id": "PS-TG-3",
+              "text": "use visual supports to support with choices and awareness of what is for lunch, snack, dinner"
+            },
+            {
+              "id": "PS-TG-4",
+              "text": "have a consistent mealtime routine involving opportunities for positive adult role modelling and support - support positive interactions with peers and staff to build confidence"
+            },
+            {
+              "id": "PS-TG-5",
+              "text": "offer an element of choice, for example peas or carrots"
+            },
+            {
+              "id": "PS-TG-6",
+              "text": "if supportive, separate foods of different types or texture on a plate"
+            },
+            {
+              "id": "PS-TG-7",
+              "text": "allow and provide opportunities for the child or young person to explore food texture with their hands"
+            },
+            {
+              "id": "PS-TG-8",
+              "text": "ensure that there are alternatives available at mealtimes and foods that suit a sensory preference"
+            },
+            {
+              "id": "PS-TG-9",
+              "text": "keep pressure to eat low, especially when trying new foods and plan how the child or young person will access meals and snacks to reduce stress and any pressure to eat - involve them when making this plan"
+            },
+            {
+              "id": "PS-TG-10",
+              "text": "try a range of cutlery to support the child or young person to find a preference - be mindful of cultural differences"
+            }
+          ]
+        },
+        {
+          "id": "PS-OL",
+          "name": "Smelling (olfactory) differences",
+          "children": [
+            {
+              "id": "PS-OL-1",
+              "text": "set up a \u2018no scent\u2019 zone, free from air fresheners, flowers, perfumes and so on"
+            },
+            {
+              "id": "PS-OL-2",
+              "text": "staff should consider the perfume or aftershave and other products that have a smell that they wear"
+            },
+            {
+              "id": "PS-OL-3",
+              "text": "consider if the cleaning materials used in the setting have a strong smell"
+            },
+            {
+              "id": "PS-OL-4",
+              "text": "provide access to scented resources, if the child or young person is sensory seeking in this way"
+            },
+            {
+              "id": "PS-OL-5",
+              "text": "allow the child or young person to have opportunities to bake and cook to create different smells"
+            },
+            {
+              "id": "PS-OL-6",
+              "text": "be aware of smells from the outdoor environment, for example refuse collection and mitigate these smells where possible"
+            }
+          ]
+        },
+        {
+          "id": "PS-TT",
+          "name": "Touch (tactile) differences",
+          "children": [
+            {
+              "id": "PS-TT-1",
+              "text": "consider the proximity of others - would a carpet tile or a chair help?"
+            },
+            {
+              "id": "PS-TT-2",
+              "text": "if helpful, allow the child or young person to be at the front or the back of a line"
+            },
+            {
+              "id": "PS-TT-3",
+              "text": "approach the child or young person within their visual field"
+            },
+            {
+              "id": "PS-TT-4",
+              "text": "consider the challenges that the child or young person may face with different floor surfaces"
+            },
+            {
+              "id": "PS-TT-5",
+              "text": "allow the child or young person to transition to another place a few minutes before their peers, to avoid busy spaces"
+            },
+            {
+              "id": "PS-TT-6",
+              "text": "ensure that there are opportunities for the child or young person to engage in sensory opportunities to meet their tactile seeking needs - provide a sensory box of items to feel"
+            },
+            {
+              "id": "PS-TT-7",
+              "text": "adjust and adapt uniform policies for individuals who experience tactile differences"
+            }
+          ]
+        },
+        {
+          "id": "PS-PR",
+          "name": "Proprioceptive differences",
+          "children": [
+            {
+              "id": "PS-PR-1",
+              "text": "offer need-appropriate movement opportunities for the child or young person to regulate, for example: run, jump, join in weight bearing, deep pressure activities"
+            },
+            {
+              "id": "PS-PR-2",
+              "text": "recognise that a child or young person may seek further sensory input via leaning and provide an opportunity for them to access table or wall pushes"
+            },
+            {
+              "id": "PS-PR-3",
+              "text": "the child or young person may rock on their chair or place the chair legs on their feet to seek grounding - gym bands around the front chair legs may help to provide feedback"
+            },
+            {
+              "id": "PS-PR-4",
+              "text": "provide a weighted lap pad or jacket to support grounding"
+            },
+            {
+              "id": "PS-PR-5",
+              "text": "ask the child or young person to carry a box or bag (heavy) of toys or work to their next activity"
+            },
+            {
+              "id": "PS-PR-6",
+              "text": "offer jumping on a trampette or provide a space hopper or alternatively, a wobble cushion may be used"
+            },
+            {
+              "id": "PS-PR-7",
+              "text": "use timers to support the start and finish of the activity"
+            },
+            {
+              "id": "PS-PR-8",
+              "text": "provide sensory circuits or regular access to a gym trail"
+            },
+            {
+              "id": "PS-PR-9",
+              "text": "offer alternative seating arrangements or a standing desk"
+            }
+          ]
+        },
+        {
+          "id": "PS-VS",
+          "name": "Vestibular differences",
+          "children": [
+            {
+              "id": "PS-VS-1",
+              "text": "give the child or young person daily opportunities to perform gentle stretches, rocking back and forth, slowly marching; or try yoga activities"
+            },
+            {
+              "id": "PS-VS-2",
+              "text": "provide opportunities to work in pairs with another child or young person working on \u2018rowing\u2019 (sitting opposite, legs in a \u2018V\u2019 touching feet with partner, holding hands, gently \u2018row\u2019 forward and back) or wheelbarrows"
+            },
+            {
+              "id": "PS-VS-3",
+              "text": "a child or young person may need support negotiating space, for example, walking up the stairs and with balancing activities"
+            },
+            {
+              "id": "PS-VS-4",
+              "text": "allow the child or young person to transition to another place a few minutes before their peers, to avoid busy spaces"
+            },
+            {
+              "id": "PS-VS-5",
+              "text": "vestibular activities can help to raise a child or young person\u2019s level of arousal or alertness - activities may include: jumping or working against gravity, hanging upside down, swinging, crunchy strong-tasting foods, climbing, running, movement breaks, moving furniture"
+            }
+          ]
+        },
+        {
+          "id": "PS-IN",
+          "name": "Interoceptive differences",
+          "children": [
+            {
+              "id": "PS-IN-1",
+              "text": "ensure adults regularly talk about internal feelings both physical and emotional - model through description, for example \u201cI wonder if you are tired today, because you are yawning\u201d"
+            },
+            {
+              "id": "PS-IN-2",
+              "text": "build mindful activities into daily routine"
+            },
+            {
+              "id": "PS-IN-3",
+              "text": "use body mapping to support the child or young person in developing their interoceptive awareness"
+            },
+            {
+              "id": "PS-IN-4",
+              "text": "plan activities that link physical sensations to labelling emotions"
+            }
+          ]
+        },
+        {
+          "id": "PS-PD",
+          "name": "Physical disability",
+          "children": [
+            {
+              "id": "PS-PD-1",
+              "text": "ensure that transition arrangements have been put into place prior to the child or young person joining the setting - this would include ensuring that the necessary adaptations are in place: refer to the child or young person\u2019s individual health care plan if they have one - check in with parent carers if you are unsure whether there is a plan in place, undertake appropriate moving and manual handling training, use support equipment for example work chairs, walkers, standing frames and hoists, ensure that appropriate accessibility plans are in place for example, a personal emergency evacuation plan, undertake appropriate care training and use of school and setting\u2019s hygiene facilities, procure and learn how to use and maintain (where necessary) specialist or supportive equipment"
+            },
+            {
+              "id": "PS-PD-2",
+              "text": "use adapted equipment to facilitate access specific activities throughout the day for example cutlery, crockery or scissors"
+            },
+            {
+              "id": "PS-PD-3",
+              "text": "maintain progress by having a detailed handover with the child or young person\u2019s previous setting or teacher to have a clear understanding of their strengths, coping strategies, and any areas of need - consider those that also relate more broadly to their development or emotional well-being such as opportunities to develop confidence or developing and maintaining friendships"
+            },
+            {
+              "id": "PS-PD-4",
+              "text": "keep a focus on promoting independence and resilience within planning and adaptation"
+            },
+            {
+              "id": "PS-PD-5",
+              "text": "provide accessible \u2018stretch\u2019 opportunities if the child or young person needs this - some children and young people require support to change their position to ensure comfort and readiness to learn"
+            },
+            {
+              "id": "PS-PD-6",
+              "text": "refer to an occupational therapist for support, and consistently implement suggested strategies and advice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MN",
+      "name": "Medical needs",
+      "children": [
+        {
+          "id": "MN-SC",
+          "name": "Severe and complex medical needs, or a life-threatening diagnosis or condition",
+          "children": [
+            {
+              "id": "MN-SC-1",
+              "text": "ensure that staff have the equipment they need, for example support equipment such as lockable medicine cabinets, first aid bags and fridges"
+            },
+            {
+              "id": "MN-SC-2",
+              "text": "ensure that transition arrangements have been put into place prior to the child or young person\u2019s entry to the setting: consider how staff establish and maintain good communication links with parent carers and share information in a timely manner, read all documents related to managing medical needs and speak with parent carers if you are unsure whether a child or young person has a personal plan - establish contact with the oncology service if a child or young person has cancer, access relevant training prior to transition, such as rotated medication sites, care training, or manual handling, identify what additional support may be required for example, with diet, toileting, swimming, use of PE and science equipment, cooking, breaktime and to attend clubs and trips, if the child is just starting school in reception, refer to the specialist advisory teachers for early years special education needs and disability (SEND) transition for support"
+            },
+            {
+              "id": "MN-SC-3",
+              "text": "if a child or young person has a terminal or life-limiting condition, ensure staff feel supported and equipped to support the child or young person, their family, and the peer group through bereavement - discuss this with your special educational needs coordinator (SENCO) or lead professional for support - you may need access to bereavement training - the educational psychology service can help with this"
+            },
+            {
+              "id": "MN-SC-4",
+              "text": "review and update individual support plans to ensure that they reflect the level of need being presented and are informative for other members of staff (for example cover teachers)"
+            },
+            {
+              "id": "MN-SC-5",
+              "text": "discuss use of assistive technology with the SENCO to support communication and learning"
+            },
+            {
+              "id": "MN-SC-6",
+              "text": "provide achievable opportunities for child or young person to experience success and be as independent as possible - for example, provide scaffolding opportunities to take part in paired or small group work"
+            },
+            {
+              "id": "MN-SC-7",
+              "text": "consider fatigue levels when making adaptations - some children and young people may require frequent rest breaks"
+            },
+            {
+              "id": "MN-SC-8",
+              "text": "maintain regular home school contact if the child or young person is not attending the setting (for health reasons) - maintain a sense of belonging with peers and the community"
+            },
+            {
+              "id": "MN-SC-9",
+              "text": "where appropriate, provide blended and online learning opportunities for the child or young person to access the curriculum during periods of absence"
+            },
+            {
+              "id": "MN-SC-10",
+              "text": "absence due to medical needs or hospitalisation may require a reintegration plan to address learning gaps"
+            },
+            {
+              "id": "MN-SC-11",
+              "text": "authorise absence for planned medical appointments and consider the impact of the child not being able to achieve attendance awards - they may need adjustments to the usual procedure, so that they are recognised for attending as much as they are medically able"
+            },
+            {
+              "id": "MN-SC-12",
+              "text": "ensure advice from medical professionals is recorded along with support received in the child or young person\u2019s individual support plan and regularly review and update this"
+            },
+            {
+              "id": "MN-SC-13",
+              "text": "children and young people with mobility needs may need a personal emergency evacuation plan (PEEP) - the sensory support team can advise and support with this if required and if the child or young person has a degenerative condition, their mobility may worsen over time, therefore updates to the PEEP are crucial"
+            }
+          ]
+        },
+        {
+          "id": "MN-DI",
+          "name": "Diabetes",
+          "children": [
+            {
+              "id": "MN-DI-1",
+              "text": "communicate with parent carers regularly, in a mutually agreed way - most are happy for education staff to shadow or watch them administering medication if the child or young person is new to your setting."
+            },
+            {
+              "id": "MN-DI-2",
+              "text": "access the free of charge JDRF training modules prior to having the specialist nurse\u2019s training. These modules include basic awareness and information about insulin pump care"
+            },
+            {
+              "id": "MN-DI-3",
+              "text": "access the DigiBete website for information and video learning: there is a section for education professionals. Some children or young people use the DigiBete app for support."
+            },
+            {
+              "id": "MN-DI-4",
+              "text": "prepare to facilitate daily handover of medication and testing kits between home and school"
+            },
+            {
+              "id": "MN-DI-5",
+              "text": "keep snacks on site for treatment in the event of hypo-glycemia (low blood sugar levels) and provide access to these when necessary"
+            },
+            {
+              "id": "MN-DI-6",
+              "text": "support the child or young person to develop independence to check that insulin is in date - medication in pumps should be changed monthly"
+            }
+          ]
+        }
+      ]
+    }
+  ]

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top" data-theme="light">
+<head>
+    <title>Group 🧠 Brainwaves</title>
+    <include src="components/head.html"></include>
+</head>
+<body x-data="profilerGroup()">
+
+    <include src="components/notifications.html"></include>
+
+    <include src="components/navbar.html"></include>
+
+    <section class="section">
+        <div class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <p>
+                        <div class="emoji-wrapper" @mouseover="showEditIcon = true" @mouseout="showEditIcon = false" @click="openEmojiModal">
+                            <span class="emoji title is-3" x-text="group.emoji"></span>
+                            <span class="edit-icon" :class="showEditIcon ? 'is-visible': ''">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                        </div>
+                    </p>
+                </div>
+                <div class="level-item">
+                    <span class="title is-3" x-text="group.name"></span>
+                </div>
+                <div class="level-item">
+                    <span class="subtitle is-5" x-text="group.displayAs"></span>
+                </div>
+            </div>
+            <div class="level-right">
+                <div class="level-item">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <button class="button is-light" @click="openEditModal">
+                                <span class="icon">
+                                    <i class="fas fa-edit"></i>
+                                </span>
+                                <span>Edit</span>
+                            </button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-light" @click="toggleArchive">
+                                <span class="icon">
+                                    <i class="fas" :class="group.archived ? 'fa-box-open' : 'fa-archive'"></i>
+                                </span>
+                                <span x-text="group.archived ? 'Unarchive' : 'Archive'"></span>
+                            </button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-danger is-light" @click="openDeleteModal">
+                                <span class="icon">
+                                    <i class="fas fa-trash"></i>
+                                </span>
+                                <span>Delete</span>
+                            </button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-light" :class="copyingUrl ? 'is-loading' : ''" @click="copyLink">
+                                <span class="icon">
+                                    <i class="fas fa-link"></i>
+                                </span>
+                                <span>Copy URL</span>
+                            </button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-light" @click="openRefreshModal">
+                                <span class="icon">
+                                    <i class="fas fa-sync-alt"></i>
+                                </span>
+                                <span>Refresh URL</span>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section pt-0">
+        <div class="container">
+            <table class="table is-striped is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th @click="sortTable('name')" class="is-clickable">
+                            <span>Profile Name</span>
+                            <span class="icon is-small" :class="sortColumn == 'name' ? '' : 'is-invisible'">
+                                <i class="fas" :class="sortDirection == 'asc' ? 'fa-caret-up' : 'fa-caret-down'"></i>
+                            </span>
+                        </th>
+                        <template x-for="domain in uniqueDomains" :key="domain">
+                            <th @click="sortTable(domain)" class="is-clickable">
+                                <span x-text="domain"></span>
+                                <span class="icon is-small" :class="sortColumn == domain ? '' : 'is-invisible'">
+                                    <i class="fas" :class="sortDirection == 'asc' ? 'fa-caret-up' : 'fa-caret-down'"></i>
+                                </span>
+                            </th>
+                        </template>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template x-for="profile in sortedProfiles" :key="profile.id">
+                        <tr @click="navigateToProfile(profile.id)" class="is-clickable">
+                            <td x-text="profile.name"></td>
+                            <template x-for="domain in uniqueDomains" :key="domain">
+                                <td x-text="profile.domain_scores[domain] || '0'"></td>
+                            </template>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="section pt-0">
+        <div class="container">
+            <!-- Two column layout that stacks on tablet -->
+            <div class="columns is-desktop">
+                <!-- Chart Column -->
+                <div class="column">
+                    <div class="box">
+                        <div class="chart-container" id="groupRadarContainer">
+                            <canvas id="groupRadar"
+                                x-bind:width="width || 400"
+                                x-bind:height="height || 400">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Practices Column -->
+                <div class="column">
+                    <h3 class="title is-4">Recommended <span class="tooltip" x-tooltip.raw.placement.bottom="Ordinarily Available Inclusive Practice">OAIP</span></h3>
+                    <div class="content">
+                        <template x-if="practiceItems.length > 0">
+                            <div>
+                                <template x-for="(practice, index) in displayedPractices" :key="practice.id">
+                                    <div class="box mb-4">
+                                        <div class="tags mb-2">
+                                            <template x-for="category in practice.categories" :key="category">
+                                                <span class="tag is-info is-light" x-text="category"></span>
+                                            </template>
+                                            <span class="tag is-primary" x-text="'Score: ' + practice.score"></span>
+                                        </div>
+                                        <div :class="{'is-clickable': practice.strategies?.length > 0}" @click="togglePractice(practice.id)">
+                                            <div class="is-flex is-justify-content-space-between is-align-items-center">
+                                                <div>
+                                                    <span class="has-text-weight-bold" x-text="practice.name"></span>
+                                                </div>
+                                                <span class="icon" x-show="practice.strategies?.length > 0">
+                                                    <i class="fas" :class="practice.isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                                                </span>
+                                            </div>
+                                            <div x-show="practice.isExpanded" x-transition class="mt-3">
+                                                <ul>
+                                                    <template x-for="strategy in practice.strategies" :key="strategy">
+                                                        <li x-text="strategy"></li>
+                                                    </template>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                                <div class="has-text-centered">
+                                    <template x-if="practiceItems.length > 5 && !showAllPractices">
+                                        <button class="button is-light" @click="showAllPractices = true">
+                                            <span class="icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                            <span>Show More Practices</span>
+                                        </button>
+                                    </template>
+                                    <template x-if="showAllPractices && practiceItems.length > 5">
+                                        <button class="button is-light" @click="showAllPractices = false">
+                                            <span class="icon">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                            <span>Show Less</span>
+                                        </button>
+                                    </template>
+                                </div>
+                            </div>
+                        </template>
+                        <template x-if="practiceItems.length === 0">
+                            <p>No practices have been identified yet.</p>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Emoji Picker -->
+    <div class="modal" :class="{ 'is-active': isEmojiModalVisible }">
+        <div class="modal-background" @click="closeEmojiModal"></div>
+        <div class="modal-content">
+            <div id="emoji-picker" class="is-flex is-justify-content-center"></div>
+        </div>
+        <button class="modal-close is-large" @click="closeEmojiModal"></button>
+    </div>
+
+    <!-- Modal for editing a group -->
+    <div class="modal" :class="{ 'is-active': isEditModalOpen }">
+        <div class="modal-background" @click="closeEditModal"></div>
+        <div class="modal-content">
+            <form @submit.prevent="editGroup">
+                <div class="box">
+                    <h3 class="title is-3">New Group</h3>
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <input class="input" type="text" x-model="groupNewName" required />
+                    </div>
+                    <div class="field">
+                        <label class="label">Display Name</label>
+                        <input class="input" type="text" x-model="groupNewDisplayAs" required />
+                    </div>
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <button class="button is-success is-light" type="submit">Save</button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-light" type="button" @click="closeEditModal">Cancel</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button class="modal-close is-large" @click="closeEditModal"></button>
+    </div>
+
+    <!-- Delete modal -->
+    <div class="modal" :class="{ 'is-active': isDeleteModalOpen }">
+        <div class="modal-background" @click="closeDeleteModal"></div>
+        <div class="modal-content">
+            <form @submit.prevent="deleteGroup">
+                <div class="box">
+                    <p class="block">You are about to permenantly delete this group. This action cannot be undone.</p>
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <button class="button is-danger is-light" type="submit">DELETE</button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-light" type="button" @click="closeDeleteModal">Cancel</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button class="modal-close is-large" @click="closeDeleteModal"></button>
+    </div>
+
+    <!-- Refresh URL modal -->
+    <div class="modal" :class="{ 'is-active': isRefreshModalOpen }">
+        <div class="modal-background" @click="closeRefreshModal"></div>
+        <div class="modal-content">
+            <form @submit.prevent="refreshUrl">
+                <div class="box">
+                    <p class="block">Are you sure you want to refresh the URL for this group's form? The old link will no longer work.</p>
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <button class="button is-warning is-light" type="submit">REFRESH</button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-light" type="button" @click="closeRefreshModal">Cancel</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button class="modal-close is-large" @click="closeRefreshModal"></button>
+    </div>
+
+    <include src="components/scripts.html"></include>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/profilerGroup.js"></script>
+</body>
+</html>

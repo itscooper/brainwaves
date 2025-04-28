@@ -1,0 +1,85 @@
+<script src="/js/navbar.js"></script>
+<nav class="navbar is-fixed-top is-light is-spaced has-shadow" x-data="navbar">
+    <div class="navbar-brand">
+        <div class="navbar-item">
+            <h1 class="title is-4">🧠 Brainwaves</h1>
+        </div>
+        <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" 
+            :class="touchMenuOpen ? 'is-active' : ''"
+            @click="touchMenuOpen = !touchMenuOpen"
+        >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu" :class="touchMenuOpen ? 'is-active' : ''">
+        <div class="navbar-start">
+            <div class="navbar-item">
+                <nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
+                    <ul>
+                        <template x-for="breadcrumb in breadcrumbs">
+                            <li><a :href="breadcrumb.url" x-text="breadcrumb.name"></a></li>
+                        </template>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" href="/c/admin" x-show="me.is_superuser">
+                        <span class="icon">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </span>
+                        <span>Admin</span>
+                    </a>
+                    <a class="button is-light" @click="openPasswordModal" x-tooltip.raw.placement.bottom="Change Password">
+                        <span class="icon">
+                            <i class="fa-solid fa-key"></i>
+                        </span>
+                    </a>
+                    <a class="button is-light" @click="logout" x-tooltip.raw.placement.bottom="Logout">
+                        <span class="icon">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Change Modal -->
+    <div class="modal" :class="{'is-active': passwordModalOpen}">
+        <div class="modal-background" @click="closePasswordModal"></div>
+        <div class="modal-content">
+            <form @submit.prevent="changePassword">
+                <div class="box">
+                    <h4 class="title is-4">Change Password</h4>
+                    <div class="field">
+                        <label class="label">New Password</label>
+                        <div class="control">
+                            <input class="input" type="password" x-model="newPassword" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Confirm Password</label>
+                        <div class="control">
+                            <input class="input" type="password" x-model="confirmPassword" required>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <button type="submit" class="button is-primary is-light">Change Password</button>
+                        </p>
+                        <p class="control">
+                            <button type="button" class="button is-light" @click="closePasswordModal">Cancel</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button class="modal-close is-large" aria-label="close" @click="closePasswordModal"></button>
+    </div>
+</nav>

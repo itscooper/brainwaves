@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile and Answers</title>
+    <include src="components/head.html"></include>
+</head>
+<body x-data="profilerApp()">
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="container is-max-tablet">
+                <div class="columns is-centered">
+                    <div class="column">
+
+                        <section class="block">
+                            <h1 class="title">🧠 Brainwaves</h1>
+                            <h2 class="subtitle">
+                                A profiler that helps us to understand your child and how they learn best.
+                            </h2>
+                        </section>
+
+                        <section class="box" x-show="currentQuestion==0">
+                            <div class="field">
+                                <h2 class="subtitle">Child's Name</h2>
+                                <div class="control">
+                                    <input 
+                                        class="input" 
+                                        type="text" 
+                                        placeholder="Enter child's name" 
+                                        x-model="profile.name" 
+                                        @input="
+                                            debouncedUpdateProfileName(); 
+                                        "
+                                    />
+                                </div>
+                            </div>
+                            <div class="field">
+                                <h2 class="subtitle">Group</h2>
+                                <div class="control">
+                                    <input 
+                                        class="input" 
+                                        type="text" 
+                                        x-model="groupDisplayAs"
+                                        readonly 
+                                    />
+                                </div>
+                            </div>
+                        </section>
+
+                        <template x-for="(question, index) in questions">
+                            <div class="box" x-show="currentQuestion == index+1">
+                                <div class="field">
+                                    <p><span class="is-size-4" x-text="question"></span></p>
+                                </div>
+                                <div class="field">
+                                    <div class="buttons has-addons alpinefix is-centered">
+                                        <template x-for="[label, value] in Object.entries(options)" :key="value">
+                                            <button 
+                                                class="button is-rounded" 
+                                                :class="{'is-primary': answers[question] === value}" 
+                                                @click="
+                                                    $nextTick(() => { 
+                                                        validation.fields.questions_unanswered = (countUnansweredQuestions() > 0) 
+                                                    });
+                                                    submitAnswer(question, value);
+                                                ">
+                                                <span x-text="label"></span>
+                                            </button>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+
+                        <section class="box content" x-show="currentQuestion == questions.length + 1">
+                            <p class="has-text-centered	is-size-5 has-text-weight-bold">You're at the end! 🎉</p>
+                            <p class="has-text-centered	is-size-5">Click below to check that the form is complete and submit your answers.</p>
+                            <div class="buttons is-centered">
+                                <button class="button is-rounded is-medium is-primary is-centered" @click="finalizeProfile">Finalise</button>
+                            </div>
+                        </section>
+
+                        <section class="block content" x-show="validation.show">
+                            <div class="notification is-danger">
+                                <ul>
+                                    <li x-show="validation.fields.name_blank"><a @click='currentQuestion=0'>Name</a> cannot be blank</li>
+                                    <li x-show="validation.fields.questions_unanswered">Some questions are unanswered: 
+                                        <span>
+                                            <template x-for="(unansweredQuestion, uqi) in unansweredQuestions">
+                                                <span>
+                                                    <a x-text="unansweredQuestion+1" @click="currentQuestion=unansweredQuestion+1"></a><span x-show="uqi < unansweredQuestions.length-1">,</span>
+                                                </span>
+                                            </template>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="level is-mobile">
+                            <div class="level-left">
+                                <button class="button" @click="prevQuestion" :disabled="currentQuestion <= 0">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="level-item has-text-centered" style="flex-grow: 1;">
+                                <progress class="progress is-primary" :value="currentQuestion+1" :max="totalQuestions"></progress>
+                            </div>
+                            <div class="level-right">
+                                <button class="button" @click="nextQuestion" :disabled="currentQuestion+1 >= totalQuestions">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </section>
+
+                        <section class="block content is-size-6 has-text-centered" x-show="showSkip">
+                            <a class="has-text-primary" @click="skipAnswered">
+                                <span class="icon is-small">
+                                    <i class="fas fa-forward"></i>
+                                </span>
+                                Skip to next unanswered question
+                            </a>
+                        </section>
+
+                        <section class="block content is-size-6 has-text-centered">
+                            <p class="has-text-grey-light">
+                                <span class="icon is-small">
+                                    <i class="fa-solid fa-floppy-disk"></i>
+                                </span>
+                                Your answers are saved - you can come back to this form later
+                            </a>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" :class="{'is-active': modal.active}">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p x-text="modal.message"></p>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close" @click="modal.active = false" x-show="modal.showX"></button>
+    </div>
+
+    <script src="../js/profilerApp.js" defer></script>
+    <include src="components/scripts.html"></include>
+</body>
+</html>

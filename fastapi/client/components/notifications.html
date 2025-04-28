@@ -1,0 +1,9 @@
+<script src="/js/notifications.js"></script>
+<div x-data="notificationSystem" class="notification-container" style="position: fixed; top: 1.5rem; right: 1.5rem; z-index: 1050;">
+    <template x-for="(notification, index) in notifications" :key="index">
+        <div class="notification is-light" :class="notification.type" x-show="true" x-transition.opacity.out.duration.500ms
+            @click="removeNotification(index)">
+            <span x-text="notification.message"></span>
+        </div>
+    </template>
+</div>

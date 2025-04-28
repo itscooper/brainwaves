@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile and Answers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body x-data="profilerApp()">
+    <section class="section">
+        <div class="container is-max-desktop">
+            <section class="block">
+                <h1 class="title">🧠 Brainwaves</h1>
+                <h2 class="subtitle">
+                    A profiler that helps us to understand your child and how they learn best.
+                </h2>
+            </section>
+            
+            <section class="block">
+                <div class="field">
+                    <h2 class="subtitle">Child's Name</h2>
+                    <div class="control">
+                        <input 
+                            class="input" 
+                            type="text" 
+                            placeholder="Enter child's name" 
+                            x-model="profile.name" 
+                            @input="
+                                debouncedUpdateProfileName(); 
+                            "
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <h2 class="subtitle">Group</h2>
+                    <div class="control">
+                        <input 
+                            class="input" 
+                            type="text" 
+                            x-model="groupDisplayAs"
+                            readonly 
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section class="block">
+                <h2 class="subtitle">Questions</h2>
+                <template x-for="question in questions">
+
+                    <div class="block">
+                        <div class="level">
+                            <div class="level-left" style="flex-grow: 1;">
+                                <div class="level-item">
+                                    <p><b x-text="question"></b></p>
+                                </div>
+                            </div>
+                            <div class="level-right">
+                                <div class="buttons has-addons alpinefix">
+                                    <template x-for="[label, value] in Object.entries(options)" :key="value">
+                                        <button 
+                                            class="button is-rounded" 
+                                            :class="{'is-primary': answers[question] === value}" 
+                                            @click="
+                                                $nextTick(() => { 
+                                                    validation.fields.questions_unanswered = (countUnansweredQuestions() > 0) 
+                                                });
+                                                submitAnswer(question, value);
+                                            ">
+                                            <span x-text="label"></span>
+                                        </button>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </section>
+            
+            <section class="block content">
+                <div class="notification is-danger" x-show="validation.show">
+                    <ul>
+                        <li x-show="validation.fields.name_blank">Name cannot be blank</li>
+                        <li x-show="validation.fields.questions_unanswered">All questions must be answered</li>
+                    </ul>
+                </div>
+                <button class="button is-rounded is-medium is-primary" @click="finalizeProfile">Finalise</button>
+            </section>
+        </div>
+    </section>
+
+
+    <!-- Modal -->
+    <div class="modal" :class="{'is-active': modal.active}">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <p x-text="modal.message"></p>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close" @click="modal.active = false" x-show="modal.showX"></button>
+    </div>
+
+    <script src="../js/profilerApp.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+</html>

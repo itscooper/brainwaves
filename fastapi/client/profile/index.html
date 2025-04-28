@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top" data-theme="light">
+<head>
+    <title>Profile 🧠 Brainwaves</title>
+    <include src="components/head.html"></include>
+</head>
+<body x-data="profilerProfile()" @resize.window="updateChartSize">
+
+    <include src="components/notifications.html"></include>
+    <include src="components/navbar.html"></include>
+
+    <section class="section">
+        <div class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <span class="title is-3" x-text="profile.name"></span>
+                </div>
+                <div class="level-item">
+                    <span class="subtitle is-5" x-text="profile.groupName"></span>
+                </div>
+            </div>
+            <div class="level-right">
+                <div class="level-item">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <button class="button is-light" @click="openEditModal">
+                                <span class="icon">
+                                    <i class="fas fa-edit"></i>
+                                </span>
+                                <span>Edit</span>
+                            </button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-danger is-light" @click="openDeleteModal">
+                                <span class="icon">
+                                    <i class="fas fa-trash"></i>
+                                </span>
+                                <span>Delete</span>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section pt-0">
+        <div class="container">
+            <!-- Two column layout that stacks on tablet -->
+            <div class="columns is-desktop">
+                <!-- Chart Column -->
+                <div class="column">
+                    <div class="box">
+                        <div class="chart-container" id="profileRadarContainer">
+                            <canvas id="profileRadar"
+                            x-bind:style="'width: ' + width + 'px; height: ' + height + 'px;'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Practices Column -->
+                <div class="column">
+                    <h3 class="title is-4">Recommended <span class="tooltip" x-tooltip.raw.placement.bottom="Ordinarily Available Inclusive Practice">OAIP</span></h3>
+                    <div class="content">
+                        <template x-if="isLoading">
+                            <progress class="progress is-small is-primary" max="100">15%</progress>
+                        </template>
+                        <template x-if="!isLoading">
+                            <template x-if="practiceItems.length > 0">
+                                <div>
+                                    <template x-for="(practice, index) in displayedPractices" :key="practice.id">
+                                        <div class="box mb-4">
+                                            <div class="tags mb-2">
+                                                <template x-for="category in practice.categories" :key="category">
+                                                    <span class="tag is-info is-light" x-text="category"></span>
+                                                </template>
+                                                <span class="tag is-primary" x-text="'Score: ' + practice.score"></span>
+                                            </div>
+                                            <div :class="{'is-clickable': practice.strategies.length > 0}" @click="togglePractice(practice.id)">
+                                                <div class="is-flex is-justify-content-space-between is-align-items-center">
+                                                    <div>
+                                                        <span class="has-text-weight-bold" x-text="practice.name"></span>
+                                                    </div>
+                                                    <span class="icon" x-show="practice.strategies.length > 0">
+                                                        <i class="fas" :class="practice.isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                                                    </span>
+                                                </div>
+                                                <div x-show="practice.isExpanded" x-transition class="mt-3">
+                                                    <ul>
+                                                        <template x-for="strategy in practice.strategies" :key="strategy">
+                                                            <li x-text="strategy"></li>
+                                                        </template>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                    <div class="has-text-centered">
+                                        <template x-if="practiceItems.length > 5 && !showAllPractices">
+                                            <button class="button is-light" @click="showAllPractices = true">
+                                                <span class="icon">
+                                                    <i class="fas fa-plus"></i>
+                                                </span>
+                                                <span>Show More Practices</span>
+                                            </button>
+                                        </template>
+                                        <template x-if="showAllPractices && practiceItems.length > 5">
+                                            <button class="button is-light" @click="showAllPractices = false">
+                                                <span class="icon">
+                                                    <i class="fas fa-minus"></i>
+                                                </span>
+                                                <span>Show Less</span>
+                                            </button>
+                                        </template>
+                                    </div>
+                                </div>
+                            </template>
+                            <template x-if="practiceItems.length === 0">
+                                <p>No practices have been identified yet.</p>
+                            </template>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full width answers table -->
+            <div class="column is-full mt-5">
+                <h3 class="title is-4">Answers</h3>
+                <template x-if="isLoading">
+                    <progress class="progress is-small is-primary" max="100">15%</progress>
+                </template>
+                <template x-if="!isLoading">
+                        <table class="table is-striped is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>Question</th>
+                                    <th>Answer</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template x-for="answer in profile.answers">
+                                    <tr>
+                                        <td x-text="answer.question"></td>
+                                        <td x-text="getAnswerText(answer.score)"></td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                </template>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Modal for editing a profile -->
+    <div class="modal" :class="{ 'is-active': isEditModalOpen }">
+        <div class="modal-background" @click="closeEditModal"></div>
+        <div class="modal-content">
+            <form @submit.prevent="editProfile">
+                <div class="box">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <input class="input" type="text" x-model="profileNewName" required />
+                    </div>
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <button class="button is-success is-light" type="submit">Save</button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-light" type="button" @click="closeEditModal">Cancel</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button class="modal-close is-large" @click="closeEditModal"></button>
+    </div>
+
+    <!-- Delete modal -->
+    <div class="modal" :class="{ 'is-active': isDeleteModalOpen }">
+        <div class="modal-background" @click="closeDeleteModal"></div>
+        <div class="modal-content">
+            <form @submit.prevent="deleteProfile">
+                <div class="box">
+                    <p class="block">You are about to permenantly delete this profile. This action cannot be undone.</p>
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <button class="button is-danger is-light" type="submit">DELETE</button>
+                        </p>
+                        <p class="control">
+                            <button class="button is-light" type="button" @click="closeDeleteModal">Cancel</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button class="modal-close is-large" @click="closeDeleteModal"></button>
+    </div>
+
+    <include src="components/scripts.html"></include>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/profilerProfile.js"></script>
+</body>
+</html>

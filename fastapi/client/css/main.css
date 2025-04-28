@@ -1,0 +1,57 @@
+/* General helpers */
+.has-ellipsis-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+}
+
+/* Rounded group button fix in alpine.js where <template> is the first child */
+.buttons.has-addons.alpinefix .button:first-of-type {
+    border-end-start-radius: var(--bulma-radius-rounded) !important;
+    border-start-start-radius: var(--bulma-radius-rounded) !important;
+}
+
+/* Stacked notifications */
+.notification-container .notification {
+    margin-bottom: 0.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Emoji edit mouseover */
+.emoji-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.emoji-wrapper:hover .emoji {
+    opacity: 0.5;
+}
+.edit-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4a4a4a; /* Adjust color if needed */
+    opacity: 0; /* Hidden by default */
+    pointer-events: none;
+}
+.emoji-wrapper:hover .edit-icon {
+    opacity: 1;
+}
+.edit-icon.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Chart */
+.chart-container {
+    position: relative;
+    margin: auto;
+}
+
+/* Tooltip indicators */
+span.tooltip {
+    border-bottom: 1px dashed currentColor;
+    cursor: help;
+    display: inline-block;  /* Ensure the border spans the full width */
+}

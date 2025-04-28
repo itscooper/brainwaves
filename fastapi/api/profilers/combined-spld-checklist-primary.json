@@ -1,0 +1,761 @@
+{
+    "questions": [
+      {
+        "question": "Do any of your family members share the same types of difficulties as your child?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-SL"
+        ]
+      },
+      {
+        "question": "Does your child have trouble working with the individual sounds in words (sometimes called ‘phonological awareness’)?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-LN"
+        ]
+      },
+      {
+        "question": "Does your child find it hard to follow instructions that are given to them?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-WM"
+        ]
+      },
+      {
+        "question": "Does your child read in a slow or choppy way, making it harder to understand what they read?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-LN"
+        ]
+      },
+      {
+        "question": "Does your child find it difficult to work out new or tricky words when reading?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-LN"
+        ]
+      },
+      {
+        "question": "Does your child have ongoing and noticeable trouble with spelling?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-LN"
+        ]
+      },
+      {
+        "question": "Does your child find it hard to think of the right words to say or write?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CI-SW"
+        ]
+      },
+      {
+        "question": "Does your child often say words incorrectly, such as mixing up sounds within the word?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CI-SP"
+        ]
+      },
+      {
+        "question": "Does your child struggle with short-term or ‘working’ memory (for example, holding information in mind while doing a task)?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-WM"
+        ]
+      },
+      {
+        "question": "Does your child take longer than most children to finish written work?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-LN"
+        ]
+      },
+      {
+        "question": "Does your child find it difficult to copy words or sentences from the board at school?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-SL"
+        ]
+      },
+      {
+        "question": "Does your child seem to have ‘good days’ and ‘bad days’ with their learning, without a clear reason?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-UP"
+        ]
+      },
+      {
+        "question": "Does your child often show signs of low self-esteem, such as lacking confidence in their abilities?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-WB"
+        ]
+      },
+      {
+        "question": "Does your child’s writing seem weaker than their speaking skills would suggest?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-LN"
+        ]
+      },
+      {
+        "question": "Does your child need extra time to answer questions out loud?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-WB"
+        ]
+      },
+      {
+        "question": "Does your child appear to dislike or avoid reading for pleasure?",
+        "domain": "Dyslexia",
+        "practice": [
+          "CL-LN"
+        ]
+      },
+      {
+        "question": "Does your child seem physically clumsy or uncoordinated compared to others?",
+        "domain": "Dyslexia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child find hopping or skipping more difficult than other children their age?",
+        "domain": "Dyslexia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Do any of your family members share the same sorts of challenges your child faces?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Did your child reach milestones (like crawling or walking) later than most children?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child still struggle with dressing themselves (for example, managing buttons or zips)?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child often bump into objects or people by accident?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child have difficulty running, hopping, jumping, or riding a bike?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child struggle with handwriting on a regular basis?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child find it hard to use scissors, cutlery, or other small tools?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child seem unaware of possible dangers around them, like not noticing moving cars?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Does your child often fail to finish their classwork on time?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child have trouble with ball games or sports because of poor coordination?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child find it difficult to follow multi-step instructions?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child have poor posture (for example, slouching) or very flexible joints (sometimes called hypermobility)?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child get tired (lack stamina) more quickly than other children?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Is your child’s performance sometimes very inconsistent, changing from day to day?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-DC"
+        ]
+      },
+      {
+        "question": "Does your child struggle to pay attention to what they’re doing?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Was your child’s speech and language development slower than usual?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "CI-SW"
+        ]
+      },
+      {
+        "question": "Does your child have strong reactions to certain sounds, textures, or other sensory experiences?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "PS-SP"
+        ]
+      },
+      {
+        "question": "Does your child need extra time to understand or respond to information?",
+        "domain": "Dyspraxia",
+        "practice": [
+          "CL-WB"
+        ]
+      },
+      {
+        "question": "Do any of your family members show similar difficulties to what your child experiences?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Does your child sometimes act like they are not listening when you speak to them directly?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Does your child frequently fail to finish tasks or chores after being told what to do?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Does your child find it difficult to plan tasks or figure out how to start them?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Is your child easily distracted by what’s going on around them?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Does your child often forget things they need to do each day (for example, homework or personal items)?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Does your child lose things and appear disorganised (for example, always misplacing school supplies)?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Does your child find it hard to remain seated when it’s expected?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-LL"
+        ]
+      },
+      {
+        "question": "Does your child call out answers or speak before you finish asking a question?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-LL"
+        ]
+      },
+      {
+        "question": "Does your child find it difficult to engage in quiet, calm activities?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-LL"
+        ]
+      },
+      {
+        "question": "Does your child struggle to control their emotions, perhaps getting upset easily?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-DB"
+        ]
+      },
+      {
+        "question": "Does your child seem to be constantly on the go, as though they can’t sit still?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-LL"
+        ]
+      },
+      {
+        "question": "Does your child talk very quickly or seem unable to stop talking?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-LL"
+        ]
+      },
+      {
+        "question": "Does your child often interrupt others or jump into conversations at the wrong time?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-LL"
+        ]
+      },
+      {
+        "question": "Does your child sometimes seem to be daydreaming or ‘in their own world’?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Does your child find it difficult to wait for their turn in games or conversations?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-LL"
+        ]
+      },
+      {
+        "question": "Does your child struggle to stay focused on tasks they find less interesting?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Does your child fail to notice when a situation might be risky or dangerous?",
+        "domain": "ADHD",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Do any of your family members share similar challenges to your child?",
+        "domain": "ASD",
+        "practice": [
+          "CI-SC"
+        ]
+      },
+      {
+        "question": "Does your child respond when others talk to them but rarely start conversations on their own?",
+        "domain": "ASD",
+        "practice": [
+          "CI-SC"
+        ]
+      },
+      {
+        "question": "Does your child find it hard to understand jokes or phrases that aren’t meant to be taken literally (like “it’s raining cats and dogs”)?",
+        "domain": "ASD",
+        "practice": [
+          "CI-SU"
+        ]
+      },
+      {
+        "question": "Does your child struggle to read other people’s body language or social cues?",
+        "domain": "ASD",
+        "practice": [
+          "CI-SC"
+        ]
+      },
+      {
+        "question": "Does your child get too close to others without noticing personal space?",
+        "domain": "ASD",
+        "practice": [
+          "CI-SC"
+        ]
+      },
+      {
+        "question": "Does your child say things that are true but might seem rude or inappropriate in certain situations?",
+        "domain": "ASD",
+        "practice": [
+          "CI-SU"
+        ]
+      },
+      {
+        "question": "Does your child make eye contact in ways that seem unusual, for example staring or avoiding it altogether?",
+        "domain": "ASD",
+        "practice": [
+          "CI-SC"
+        ]
+      },
+      {
+        "question": "Does your child often appear overactive or uncooperative when asked to take part in group activities?",
+        "domain": "ASD",
+        "practice": [
+          "CI-AN"
+        ]
+      },
+      {
+        "question": "Does your child find it difficult to keep friends or make new ones?",
+        "domain": "ASD",
+        "practice": [
+          "CI-SC"
+        ]
+      },
+      {
+        "question": "Is your child especially bothered by certain sounds (like loud noises) or textures (like itchy clothes)?",
+        "domain": "ASD",
+        "practice": [
+          "PS-SP"
+        ]
+      },
+      {
+        "question": "Does your child get upset or anxious when their usual routine changes?",
+        "domain": "ASD",
+        "practice": [
+          "CI-AN"
+        ]
+      },
+      {
+        "question": "Does your child find it hard to use skills they learned in one setting when they’re in a new setting?",
+        "domain": "ASD",
+        "practice": [
+          "CI-SU"
+        ]
+      },
+      {
+        "question": "Does your child struggle to understand the meaning of what they read, even if they can read the words correctly?",
+        "domain": "ASD",
+        "practice": [
+          "CI-IM"
+        ]
+      },
+      {
+        "question": "Does your child speak in a way that sounds unusual (for example, using a very flat or very sing-song voice)?",
+        "domain": "ASD",
+        "practice": [
+          "CI-SC"
+        ]
+      },
+      {
+        "question": "Does your child like to do the same task or activity over and over, or follow certain rituals in a strict way?",
+        "domain": "ASD",
+        "practice": [
+          "CI-AN"
+        ]
+      },
+      {
+        "question": "Does your child move in an unusual way, such as flapping their hands or spinning around frequently?",
+        "domain": "ASD",
+        "practice": [
+          "PS-SP"
+        ]
+      },
+      {
+        "question": "Does your child become especially anxious or show more extreme behaviours than usual in unfamiliar situations?",
+        "domain": "ASD",
+        "practice": [
+          "CI-AN"
+        ]
+      },
+      {
+        "question": "Does your child fail to recognise when something might be dangerous?",
+        "domain": "ASD",
+        "practice": [
+          "SE-AD"
+        ]
+      },
+      {
+        "question": "Do any of your family members share your child’s difficulties with numbers or maths?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child struggle to count in the correct order (for example, skipping numbers)?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child mix up the order of digits in a number (for example, writing 29 instead of 92)?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child find it hard to remember how numbers look or how to write them?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child struggle to understand maths symbols (for example, +, −, ×, ÷)?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child find it difficult to understand ideas about space or direction (like knowing left from right)?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child take a long time to finish maths work?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child have trouble making sensible guesses or estimates in maths (for example, estimating the number of objects)?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child struggle to plan out how to solve maths tasks or problems?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child find it hard to remember basic maths facts (for example, 2 + 2 = 4)?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child seem very anxious or worried whenever they do maths?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child have trouble knowing where they are in a space or which direction to go in?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child mix up numbers that look alike (like 6 and 9)?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child seem unsure about place value (for example, what the ‘2’ in ‘20’ means)?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child struggle to recognise or remember common shapes (like triangles or squares)?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child find it hard to count backwards (for example, counting down from 10)?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child have difficulty reading a clock with hands (analogue) or understanding time?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Does your child find it difficult to quickly see how many items are in a small group without counting them one by one?",
+        "domain": "Dyscalculia",
+        "practice": [
+          "CL-SN"
+        ]
+      },
+      {
+        "question": "Do any of your family members share the same types of language or communication challenges as your child?",
+        "domain": "SLI",
+        "practice": [
+          "CI-SW"
+        ]
+      },
+      {
+        "question": "Does your child seem to listen but still not understand what was said?",
+        "domain": "SLI",
+        "practice": [
+          "CI-US"
+        ]
+      },
+      {
+        "question": "Does your child pause or struggle to respond when you give them an instruction or ask a question?",
+        "domain": "SLI",
+        "practice": [
+          "CI-US"
+        ]
+      },
+      {
+        "question": "Does your child only seem to understand things that are happening right now, and struggle with ideas about past or future events?",
+        "domain": "SLI",
+        "practice": [
+          "CI-US"
+        ]
+      },
+      {
+        "question": "Does your child find it difficult to understand phrases that aren’t literal (like ‘pull your socks up’) or words that have more than one meaning?",
+        "domain": "SLI",
+        "practice": [
+          "CI-US"
+        ]
+      },
+      {
+        "question": "Does your child sometimes only follow the first or last part of an instruction and miss out the rest?",
+        "domain": "SLI",
+        "practice": [
+          "CI-US"
+        ]
+      },
+      {
+        "question": "Does your child have trouble learning and using new words in everyday conversation?",
+        "domain": "SLI",
+        "practice": [
+          "CI-SW"
+        ]
+      },
+      {
+        "question": "Does your child know a word but forget it, or mix it up with a word that sounds similar?",
+        "domain": "SLI",
+        "practice": [
+          "CI-SW"
+        ]
+      },
+      {
+        "question": "Does your child find it hard to form longer sentences that make sense?",
+        "domain": "SLI",
+        "practice": [
+          "CI-SW"
+        ]
+      },
+      {
+        "question": "Does your child’s speech often sound muddled, with words or ideas getting mixed up?",
+        "domain": "SLI",
+        "practice": [
+          "CI-SW"
+        ]
+      },
+      {
+        "question": "Does your child pause a lot or restart their sentences frequently when they talk?",
+        "domain": "SLI",
+        "practice": [
+          "CI-SW"
+        ]
+      },
+      {
+        "question": "Does your child find it difficult to understand or create stories with a clear beginning, middle, and end?",
+        "domain": "SLI",
+        "practice": [
+          "CI-IM"
+        ]
+      },
+      {
+        "question": "Does your child struggle to join in games or activities that rely on following spoken directions?",
+        "domain": "SLI",
+        "practice": [
+          "CI-US"
+        ]
+      },
+      {
+        "question": "Does your child find it challenging to join in and keep up with conversations in a group?",
+        "domain": "SLI",
+        "practice": [
+          "CI-SC"
+        ]
+      },
+      {
+        "question": "Have you noticed your child getting frustrated and behaving badly because they can’t communicate as they would like to?",
+        "domain": "SLI",
+        "practice": [
+          "CI-SW"
+        ]
+      },
+      {
+        "question": "Does your child have reading or writing difficulties that seem linked to their language challenges?",
+        "domain": "SLI",
+        "practice": [
+          "CL-LN"
+        ]
+      },
+      {
+        "question": "Is your child often good at practical, hands-on tasks, even if they struggle with language?",
+        "domain": "SLI",
+        "practice": [
+          "CL-UP"
+        ]
+      }  
+  ],
+  "answerOptions":{
+      "Never": 0,
+      "Sometimes": 1,
+      "Often": 2
+  },
+  "practice_source":[
+      "oaip.json"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+    "questions":[
+        {
+            "question": "Do do you find it hard to concentrate for long periods?",
+            "domain": "Attention"
+        },
+        {
+            "question": "Do you often feel overwhelmed by sensory input?",
+            "domain": "Sensory"
+        },
+        {
+            "question": "Do you struggle to keep your belongings organized?",
+            "domain": "Organization"
+        },
+        {
+            "question": "Do you prefer routines and find it hard to adjust to changes?",
+            "domain": "Adaptability"
+        },
+        {
+            "question": "Do you find social interactions draining?",
+            "domain": "Social"
+        }
+    ],
+    "answerOptions":{
+        "Never": 0,
+        "Sometimes": 1,
+        "Often": 2
+    }
+}
