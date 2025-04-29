@@ -99,7 +99,7 @@ app = FastAPI(
 )
 
 # Mount static files using absolute path matching the Dockerfile
-app.mount("/c", StaticFiles(directory="/app/client", html=True), name="static")
+app.mount("/c", StaticFiles(directory="/client", html=True), name="static")
 
 # Redirect root to index.html
 @app.get("/")

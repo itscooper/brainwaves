@@ -31,7 +31,7 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 RUN pip install -e /app
 
 # Copy built client files from the Parcel build stage
-COPY --from=bwclient /app/dist /app/client
+COPY --from=bwclient /app/dist /client
 
 # Copy and set up startup script
 COPY fastapi/start.sh /app/start.sh
