@@ -19,10 +19,10 @@ services:
         fromDatabase:
           name: brainwaves-db
           property: host
-      - key: POSTGRES_PORT
-        fromDatabase:
-          name: brainwaves-db
-          property: port
+      #- key: POSTGRES_PORT
+      #  fromDatabase:
+      #    name: brainwaves-db
+      #    property: port
       - key: POSTGRES_PASSWORD
         fromDatabase:
           name: brainwaves-db
