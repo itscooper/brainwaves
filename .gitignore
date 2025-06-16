@@ -19,6 +19,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+pip.conf
 
 # Virtual Environment
 .env
@@ -58,3 +59,4 @@ Thumbs.db
 
 # Docker local development
 **/Dockerfile.local.env
+**/Dockerfile.local

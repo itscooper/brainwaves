@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: brainwaves-api
+    env: docker
+    dockerfilePath: fastapi/Dockerfile
+    rootDir: .
+    plan: starter
+    healthCheckPath: /docs
+    envVars:
+      - key: POSTGRES_USER
+        fromDatabase:
+          name: brainwaves-db
+          property: user
+      - key: POSTGRES_DB
+        fromDatabase:
+          name: brainwaves-db
+          property: database
+      - key: POSTGRES_HOST
+        fromDatabase:
+          name: brainwaves-db
+          property: host
+      #- key: POSTGRES_PORT
+      #  fromDatabase:
+      #    name: brainwaves-db
+      #    property: port
+      - key: POSTGRES_PASSWORD
+        fromDatabase:
+          name: brainwaves-db
+          property: password
+      - key: DATABASE_URL
+        fromDatabase:
+          name: brainwaves-db
+          property: connectionString
+      - key: INIT_DB
+        value: "true"
+    autoDeploy: false
+    region: frankfurt
+    
+databases:
+  - name: brainwaves-db
+    plan: free
+    ipAllowList: [] # Global allow all
+    region: frankfurt
