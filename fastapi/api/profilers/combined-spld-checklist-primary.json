@@ -1,7 +1,7 @@
 {
     "questions": [
       {
-        "question": "Do any of your family members share the same types of difficulties as your child?",
+        "question": "Do any of your family members share your child’s difficulties with reading or spelling (if any)?",
         "domain": "Dyslexia",
         "practice": [
           "CL-SL"
@@ -127,7 +127,7 @@
         ]
       },
       {
-        "question": "Do any of your family members share the same sorts of challenges your child faces?",
+        "question": "Do any of your family members share your child’s difficulties with coordination or motor skills (if any)?",
         "domain": "Dyspraxia",
         "practice": [
           "PS-DC"
@@ -253,7 +253,7 @@
         ]
       },
       {
-        "question": "Do any of your family members show similar difficulties to what your child experiences?",
+        "question": "Do any of your family members share your child’s difficulties with attention, hyperactivity, or impulsivity (if any)?",
         "domain": "ADHD",
         "practice": [
           "SE-AD"
@@ -379,7 +379,7 @@
         ]
       },
       {
-        "question": "Do any of your family members share similar challenges to your child?",
+        "question": "Do any of your family members share your child’s difficulties with social communication or sensory challenges (if any)?",
         "domain": "ASD",
         "practice": [
           "CI-SC"
@@ -505,7 +505,7 @@
         ]
       },
       {
-        "question": "Do any of your family members share your child’s difficulties with numbers or maths?",
+        "question": "Do any of your family members share your child’s difficulties with numbers or maths (if any)?",
         "domain": "Dyscalculia",
         "practice": [
           "CL-SN"
@@ -631,7 +631,7 @@
         ]
       },
       {
-        "question": "Do any of your family members share the same types of language or communication challenges as your child?",
+        "question": "Do any of your family members share your child’s difficulties with language or communication (if any)?",
         "domain": "SLI",
         "practice": [
           "CI-SW"
