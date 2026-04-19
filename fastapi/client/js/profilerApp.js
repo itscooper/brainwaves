@@ -17,6 +17,11 @@ function profilerApp() {
         currentQuestion: 0,
         showSkip: false,
 
+        // Teacher-responder mode properties
+        responderType: new URLSearchParams(window.location.search).get('responderType'),
+        teacherProfileId: new URLSearchParams(window.location.search).get('profileId'),
+        isTeacherResponder: false,
+
         /**
          * Get total number of questions including name input and submit button
          * @returns {number} Total question count plus 2
@@ -77,6 +82,13 @@ function profilerApp() {
          * Initialize the application
          */
         async init() {
+            // Check if this is teacher-responder mode (profileId + responderType in URL)
+            if (this.teacherProfileId && this.responderType) {
+                this.isTeacherResponder = true;
+                await this.initTeacherResponderMode();
+                return;
+            }
+
             // Watch for name changes
             this.$watch('profile.name', value => {
                 this.$nextTick(() => {
@@ -181,7 +193,11 @@ function profilerApp() {
          */
         async loadQuestions(profilerTypeName) {
             try {
-                const response = await fetch(`/api/profiler-type/${profilerTypeName}?profileToken=${this.profile.token}`);
+                // Teacher-responder mode: authenticate with JWT bearer token
+                // Parent mode: authenticate with the profile token
+                const response = this.isTeacherResponder
+                    ? await this.fetchWithAuth(`/api/profiler-type/${profilerTypeName}`)
+                    : await fetch(`/api/profiler-type/${profilerTypeName}?profileToken=${this.profile.token}`);
                 if (!response.ok) throw new Error('Failed to load questions.');
                 const data = await response.json();
                 this.questions = data.questions;
@@ -228,10 +244,25 @@ function profilerApp() {
                 const previousValue = this.answers[index];
                 this.answers[index] = value;
                 try {
-                    await fetch(`/api/profile/${this.profile.id}/answer?profileToken=${this.profile.token}`, {
+                    const body = { question: new String(index), score: value };
+                    if (this.responderType) {
+                        body.responderType = this.responderType;
+                    }
+
+                    let fetchFn;
+                    let url;
+                    if (this.isTeacherResponder) {
+                        url = `/api/profile/${this.profile.id}/answer`;
+                        fetchFn = (u, o) => this.fetchWithAuth(u, o);
+                    } else {
+                        url = `/api/profile/${this.profile.id}/answer?profileToken=${this.profile.token}`;
+                        fetchFn = fetch;
+                    }
+
+                    await fetchFn(url, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ question: new String(index), score: value }),
+                        body: JSON.stringify(body),
                     });
 
                     // Advance to the next question automatically if the next question is unanswered
@@ -262,9 +293,7 @@ function profilerApp() {
          * @returns {number} Number of unanswered questions
          */
         countUnansweredQuestions() {
-            const totalQuestions = this.questions.length;
-            const answeredCount = Object.keys(this.answers).filter(index => this.answers[index] !== undefined).length;
-            return totalQuestions - answeredCount;
+            return this.unansweredQuestions.length;
         },
 
         /**
@@ -274,7 +303,9 @@ function profilerApp() {
         get unansweredQuestions() {
             const unanswered = [];
             for (let i = 0; i < this.questions.length; i++) {
-                if (!(this.questions[i] in this.answers)) {
+                const q = this.questions[i];
+                const text = (typeof q === 'object' && q !== null) ? q.question : q;
+                if (!(text in this.answers)) {
                     unanswered.push(i);
                 }
             }
@@ -287,6 +318,8 @@ function profilerApp() {
          */
         async validateProfile() {
             this.validation.validating = true;
+            this.validation.fields.name_blank = !this.profile.name?.trim();
+            this.validation.fields.questions_unanswered = this.countUnansweredQuestions() > 0;
             return !Object.values(this.validation.fields).some(value => value);
         },
 
@@ -297,11 +330,17 @@ function profilerApp() {
             try {
                 const valid = await this.validateProfile();
                 if (valid) {
-                    await fetch(`/api/profile/${this.profile.id}/complete?profileToken=${this.profile.token}`, {
-                        method: 'PUT',
-                    });
-                    localStorage.removeItem(this.groupToken);
-                    this.showModal('Profile submitted successfully!');
+                    if (this.isTeacherResponder) {
+                        // Teacher-responder mode: don't change profile status, just confirm
+                        this.modal.showX = true;
+                        this.showModal(`School assessment complete for ${this.profile.name}! You can close this tab.`);
+                    } else {
+                        await fetch(`/api/profile/${this.profile.id}/complete?profileToken=${this.profile.token}`, {
+                            method: 'PUT',
+                        });
+                        localStorage.removeItem(this.groupToken);
+                        this.showModal('Profile submitted successfully!');
+                    }
                 }
             } catch (error) {
                 this.showModal(error.message);
@@ -317,6 +356,82 @@ function profilerApp() {
             this.modal.message = message;
             this.modal.active = true;
             this.modal.showX = false;
+        },
+
+        /**
+         * Fetch with teacher bearer auth
+         */
+        fetchWithAuth(url, options = {}) {
+            const token = localStorage.getItem('token');
+            if (!options.headers) options.headers = {};
+            options.headers['Authorization'] = `Bearer ${token}`;
+            if (!options.headers['Content-Type'] && options.body) {
+                options.headers['Content-Type'] = 'application/json';
+            }
+            return fetch(url, options);
+        },
+
+        /**
+         * Initialize teacher-responder mode
+         * Teacher fills out school scores for an existing profile
+         */
+        async initTeacherResponderMode() {
+            // Verify teacher is logged in
+            const userResponse = await this.fetchWithAuth('/users/me');
+            if (!userResponse.ok) {
+                window.location.href = '/c/login/';
+                return;
+            }
+
+            // Load the profile
+            try {
+                const response = await this.fetchWithAuth(`/api/profile/${this.teacherProfileId}`);
+                if (!response.ok) throw new Error('Failed to load profile.');
+                const data = await response.json();
+                this.profile.id = data.id;
+                this.profile.name = data.name;
+                this.groupDisplayAs = data.groupDisplayAs;
+
+                // Load existing answers for this responderType
+                for (const answer of data.answers) {
+                    if (answer.responderType === this.responderType) {
+                        this.answers[answer.question] = answer.score;
+                    }
+                }
+
+                await this.loadQuestions(data.profilerTypeName);
+            } catch (error) {
+                this.showModal(error.message);
+                console.error(error);
+                return;
+            }
+
+            // Watch for question changes (skip button)
+            this.$watch('currentQuestion', value => {
+                this.showSkip = false;
+                this.$nextTick(() => {
+                    sleep(1000).then(() => {
+                        if (this.currentQuestion === value) {
+                            const qIndex = this.currentQuestion - 1;
+                            if (this.questions[qIndex] in this.answers) {
+                                this.showSkip = true;
+                            }
+                        }
+                    });
+                });
+            });
+
+            // Skip name screen, go to first unanswered question
+            // In teacher mode, currentQuestion 0 is skipped (no name entry needed)
+            // Name is already set and readonly, validation.name_blank is false
+            this.validation.fields.name_blank = false;
+            await this.$nextTick(() => {
+                if (this.unansweredQuestions.length > 0) {
+                    this.currentQuestion = this.unansweredQuestions[0] + 1;
+                } else {
+                    this.currentQuestion = this.totalQuestions - 1;
+                }
+            });
         },
     };
 }

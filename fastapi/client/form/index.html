@@ -13,12 +13,16 @@
 
                         <section class="block">
                             <h1 class="title">🧠 Brainwaves</h1>
-                            <h2 class="subtitle">
+                            <h2 class="subtitle" x-show="!isTeacherResponder">
                                 A profiler that helps us to understand your child and how they learn best.
+                            </h2>
+                            <h2 class="subtitle" x-show="isTeacherResponder">
+                                School assessment for <strong x-text="profile.name"></strong>
+                                <span class="tag is-info is-medium ml-2" x-text="responderType"></span>
                             </h2>
                         </section>
 
-                        <section class="box" x-show="currentQuestion==0">
+                        <section class="box" x-show="currentQuestion==0 && !isTeacherResponder">
                             <div class="field">
                                 <h2 class="subtitle">Child's Name</h2>
                                 <div class="control">
