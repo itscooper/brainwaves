@@ -21,10 +21,9 @@ function profilerDashLogin() {
                 });
                 if (response.ok) {
                     const userData = await response.json();
-                    console.log('User is already logged in:', userData);
                     window.location.href = '../'; // Redirect 
                 } else if (response.status === 401) {
-                    console.log('User is not logged in. They\'re on the right page!');
+                    // User is not logged in - they're on the right page
                 } else {
                     console.error('Unexpected error during login check: ', response.status);
                 }

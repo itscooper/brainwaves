@@ -188,7 +188,7 @@ function profilerAdmin() {
         async resetPassword(userId) {
             try {
                 const response = await this.fetchWithAuth(`/users/${userId}/reset-password`, {
-                    method: 'POST'
+                    method: 'PUT'
                 });
 
                 if (!response.ok) {
