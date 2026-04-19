@@ -22,6 +22,14 @@
             <div class="level-right">
                 <div class="level-item">
                     <div class="field has-addons">
+                        <p class="control" x-show="profilerType?.responderTypes">
+                            <button class="button is-info is-light" @click="openSchoolAssessment">
+                                <span class="icon">
+                                    <i class="fas fa-school"></i>
+                                </span>
+                                <span>School Assessment</span>
+                            </button>
+                        </p>
                         <p class="control">
                             <button class="button is-light" @click="openEditModal">
                                 <span class="icon">
@@ -60,7 +68,7 @@
 
                 <!-- Practices Column -->
                 <div class="column">
-                    <h3 class="title is-4">Recommended <span class="tooltip" x-tooltip.raw.placement.bottom="Ordinarily Available Inclusive Practice">OAIP</span></h3>
+                    <h3 class="title is-4">Recommended <span class="tooltip" :x-tooltip.raw.placement.bottom="practiceTooltip || 'OAIP'" x-text="practiceLabel"></span></h3>
                     <div class="content">
                         <template x-if="isLoading">
                             <progress class="progress is-small is-primary" max="100">15%</progress>
@@ -123,6 +131,59 @@
                 </div>
             </div>
 
+            <!-- Domain scores breakdown (visible for ASCT-style profilers with subdomains) -->
+            <template x-if="subdomainScores.length > 0">
+                <div class="column is-full mt-5">
+                    <h3 class="title is-4">Domain Scores</h3>
+                    <template x-for="ds in domainScores" :key="ds.domain">
+                        <div class="box mb-4">
+                            <div class="level mb-2">
+                                <div class="level-left">
+                                    <span class="has-text-weight-bold" x-text="ds.domain"></span>
+                                </div>
+                                <div class="level-right">
+                                    <div class="tags has-addons">
+                                        <template x-if="hasSchoolResponder">
+                                            <span class="tag is-light is-size-7">Highest</span>
+                                        </template>
+                                        <span class="tag is-medium" :class="getRagClass(ds.percentage)"
+                                            x-text="ds.percentage + '%'"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <template x-if="profilerType?.domainDescriptions?.[ds.domain]">
+                                <p class="is-size-7 has-text-grey mb-3" x-text="profilerType.domainDescriptions[ds.domain]"></p>
+                            </template>
+                            <!-- Per-responder side-by-side scores for dual-responder profilers -->
+                            <template x-if="Object.keys(responderDomainScores).length > 0">
+                                <div class="columns is-mobile mb-2">
+                                    <template x-for="[rt, scores] in Object.entries(responderDomainScores)" :key="rt">
+                                        <div class="column">
+                                            <div class="notification is-light p-3" :class="getRagClass(scores.find(s => s.domain === ds.domain)?.percentage)">
+                                                <p class="is-size-7 has-text-weight-semibold" x-text="rt.charAt(0).toUpperCase() + rt.slice(1)"></p>
+                                                <p class="is-size-5 has-text-weight-bold" x-text="(scores.find(s => s.domain === ds.domain)?.percentage ?? '—') + (scores.find(s => s.domain === ds.domain) ? '%' : '')"></p>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </template>
+                            <!-- Subdomain breakdown -->
+                            <div class="columns is-multiline">
+                                <template x-for="sub in subdomainScores.filter(s => s.domain === ds.domain)" :key="sub.subdomain">
+                                    <div class="column is-one-third">
+                                        <div class="notification is-light p-3" :class="getRagClass(sub.percentage)">
+                                            <p class="is-size-7 has-text-weight-semibold" x-text="sub.subdomain"></p>
+                                            <p class="is-size-5 has-text-weight-bold" x-text="sub.percentage + '%'"></p>
+                                            <p class="is-size-7" x-text="sub.score + ' / ' + sub.maxScore"></p>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </template>
+
             <!-- Full width answers table -->
             <div class="column is-full mt-5">
                 <h3 class="title is-4">Answers</h3>
@@ -133,15 +194,23 @@
                         <table class="table is-striped is-fullwidth">
                             <thead>
                                 <tr>
+                                    <th>Domain</th>
+                                    <th x-show="pivotedAnswers.some(a => a.subdomain)">Subdomain</th>
                                     <th>Question</th>
-                                    <th>Answer</th>
+                                    <th x-show="!hasSchoolResponder">Answer</th>
+                                    <th x-show="hasSchoolResponder">Home</th>
+                                    <th x-show="hasSchoolResponder">School</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <template x-for="answer in profile.answers">
+                                <template x-for="answer in pivotedAnswers" :key="answer.question">
                                     <tr>
+                                        <td x-text="answer.domain"></td>
+                                        <td x-show="pivotedAnswers.some(a => a.subdomain)" x-text="answer.subdomain || ''"></td>
                                         <td x-text="answer.question"></td>
-                                        <td x-text="getAnswerText(answer.score)"></td>
+                                        <td x-show="!hasSchoolResponder" x-text="getAnswerText(answer.scores['default'])"></td>
+                                        <td x-show="hasSchoolResponder" x-text="answer.scores['home'] != null ? getAnswerText(answer.scores['home']) : '—'"></td>
+                                        <td x-show="hasSchoolResponder" x-text="answer.scores['school'] != null ? getAnswerText(answer.scores['school']) : '—'"></td>
                                     </tr>
                                 </template>
                             </tbody>

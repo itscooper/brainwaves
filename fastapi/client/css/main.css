@@ -55,3 +55,8 @@ span.tooltip {
     cursor: help;
     display: inline-block;  /* Ensure the border spans the full width */
 }
+
+/* RAG rating colors */
+.rag-green { background-color: #51CF66 !important; color: #fff; }
+.rag-amber { background-color: #FCC419 !important; color: #333; }
+.rag-red   { background-color: #FF6B6B !important; color: #fff; }

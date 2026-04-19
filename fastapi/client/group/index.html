@@ -98,6 +98,7 @@
                                 </span>
                             </th>
                         </template>
+                        <th x-show="profilerMeta?.responderTypes"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -105,8 +106,18 @@
                         <tr @click="navigateToProfile(profile.id)" class="is-clickable">
                             <td x-text="profile.name"></td>
                             <template x-for="domain in uniqueDomains" :key="domain">
-                                <td x-text="profile.domain_scores[domain] || '0'"></td>
+                                <td :class="getRagClass(profile.domain_scores[domain], domain)"
+                                    x-text="profilerMeta?.maxAnswerValue > 3 
+                                        ? (Math.round((profile.domain_scores[domain] || 0) / ((profilerMeta.domainQuestionCounts?.[domain] || 1) * profilerMeta.maxAnswerValue) * 100)) + '%'
+                                        : (profile.domain_scores[domain] || '0')"></td>
                             </template>
+                            <td x-show="profilerMeta?.responderTypes" @click.stop>
+                                <button class="button is-small is-info is-light" 
+                                    @click="openSchoolAssessment(profile.id)"
+                                    :title="'Fill school scores for ' + profile.name">
+                                    <span class="icon is-small"><i class="fas fa-school"></i></span>
+                                </button>
+                            </td>
                         </tr>
                     </template>
                 </tbody>
@@ -132,7 +143,7 @@
 
                 <!-- Practices Column -->
                 <div class="column">
-                    <h3 class="title is-4">Recommended <span class="tooltip" x-tooltip.raw.placement.bottom="Ordinarily Available Inclusive Practice">OAIP</span></h3>
+                    <h3 class="title is-4">Recommended <span class="tooltip" :x-tooltip.raw.placement.bottom="practiceTooltip || 'OAIP'" x-text="practiceLabel"></span></h3>
                     <div class="content">
                         <template x-if="practiceItems.length > 0">
                             <div>

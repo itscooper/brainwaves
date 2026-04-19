@@ -9,6 +9,7 @@ function profilerGroup() {
         group: {},
         profiles: [],
         uniqueDomains: [],
+        profilerMeta: null,
         sortColumn: null,
         sortDirection: 'asc',
         showEditIcon: false,
@@ -22,6 +23,8 @@ function profilerGroup() {
         width: 400,
         height: 400,
         practiceItems: [],
+        practiceLabel: 'OAIP',
+        practiceTooltip: '',
         showAllPractices: false,
 
         /**
@@ -69,6 +72,9 @@ function profilerGroup() {
                 this.profiles = data.profiles || [];
                 this.uniqueDomains = [...new Set(this.profiles.flatMap(profile => Object.keys(profile.domain_scores || {})))];
                 this.practiceItems = data.practice_recommendations || [];
+                this.profilerMeta = data.profiler_meta || null;
+                this.practiceLabel = data.profiler_meta?.practiceLabel || 'OAIP';
+                this.practiceTooltip = data.profiler_meta?.labelTooltip || '';
                 
                 // Initialize the radar chart
                 this.$nextTick(() => {
@@ -113,10 +119,36 @@ function profilerGroup() {
         },
 
         /**
+         * Get RAG (Red/Amber/Green) CSS class for a domain score
+         * @param {number} score - Raw score
+         * @param {string} domain - Domain name
+         * @returns {string} CSS class name
+         */
+        getRagClass(score, domain) {
+            if (!this.profilerMeta || !score) return '';
+            const maxVal = this.profilerMeta.maxAnswerValue || 0;
+            const qCount = this.profilerMeta.domainQuestionCounts?.[domain] || 0;
+            if (!maxVal || !qCount) return '';
+            const maxScore = maxVal * qCount;
+            const pct = (score / maxScore) * 100;
+            const t = this.profilerMeta.ragThresholds || { green: 33, amber: 66 };
+            if (pct > t.amber) return 'rag-red';
+            if (pct > t.green) return 'rag-amber';
+            return 'rag-green';
+        },
+
+        /**
+         * Open school assessment form for a profile in a new tab
+         * @param {string} profileId - Profile ID
+         */
+        openSchoolAssessment(profileId) {
+            window.open(`/c/form/?profileId=${profileId}&responderType=school`, '_blank');
+        },
+
+        /**
          * Open emoji picker modal
          */
         openEmojiModal() {
-            console.log('Opening emoji picker modal');
             this.isEmojiModalVisible = true;
 
             // Initialize emoji picker if not already done
@@ -156,7 +188,6 @@ function profilerGroup() {
                     throw new Error(await response.text());
                 }
 
-                console.log('Emoji updated successfully');
                 this.group.emoji = newEmoji;
                 this.notify('New emoji set', 'is-success', 3000);
             } catch (error) {
@@ -170,7 +201,7 @@ function profilerGroup() {
          */
         async toggleArchive() {
             try {
-                const response = await this.fetchWithAuth(`/api/groups/${this.group.name}/archive`, {
+                const response = await this.fetchWithAuth(`/api/groups/${this.group.name}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
@@ -322,13 +353,27 @@ function profilerGroup() {
             if (!this.uniqueDomains || this.uniqueDomains.length === 0) return;
 
             const ctx = document.getElementById('groupRadar');
+            const meta = this.profilerMeta;
+            const usePercentage = meta && meta.maxAnswerValue > 3;
+            const profileCount = this.profiles.length || 1;
+
+            const chartData = this.uniqueDomains.map(domain => {
+                const rawAvg = (domainScores[domain] || 0) / profileCount;
+                if (usePercentage) {
+                    const qCount = meta.domainQuestionCounts?.[domain] || 1;
+                    const maxScore = meta.maxAnswerValue * qCount;
+                    return Math.round((rawAvg / maxScore) * 100);
+                }
+                return rawAvg;
+            });
+
             new Chart(ctx, {
                 type: 'radar',
                 data: {
                     labels: this.uniqueDomains,
                     datasets: [{
-                        label: 'Average Score',
-                        data: this.uniqueDomains.map(domain => domainScores[domain] || 0),
+                        label: usePercentage ? 'Average Score (%)' : 'Average Score',
+                        data: chartData,
                         backgroundColor: 'rgba(54, 162, 235, 0.2)',
                         borderColor: 'rgb(54, 162, 235)',
                         pointBackgroundColor: 'rgb(54, 162, 235)',
@@ -343,8 +388,10 @@ function profilerGroup() {
                     scales: {
                         r: {
                             min: 0,
+                            max: usePercentage ? 100 : undefined,
                             ticks: {
-                                stepSize: 1
+                                stepSize: usePercentage ? 20 : 1,
+                                callback: usePercentage ? (v) => v + '%' : undefined
                             }
                         }
                     }
