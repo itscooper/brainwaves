@@ -53,6 +53,7 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-$$(cat .env | grep POSTGRES_PASSWORD | cut -d '=' -f2)}
       - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-$$(cat .env | grep POSTGRES_PASSWORD | cut -d '=' -f2)}@postgres:5432/${POSTGRES_DB:-fastapi_db}
       - INIT_DB=${INIT_DB:-false}
+      - FORCE_INIT_DB=${FORCE_INIT_DB:-false}
     ports:
       - "8000:8000"
     depends_on:

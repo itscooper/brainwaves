@@ -113,24 +113,40 @@ async def create_user(
         print(f"User {email} already exists")
         raise
 
-def init_db() -> None:
+def init_db(force: bool = False) -> None:
     """Initialize the database with default data.
     
-    This function:
-    1. Drops all existing tables
-    2. Creates new tables
-    3. Inserts initial data for groups, profiler types, profiles, and answers
-    4. Creates a default superuser admin account
+    If force=True, drops all tables and recreates them (destructive).
+    Otherwise, only creates tables if they don't already exist (idempotent).
     """
-    # Drop all tables
-    metadata = MetaData()
-    metadata.reflect(bind=engine)
-    metadata.drop_all(bind=engine)
+    inspector = inspect(engine)
+    existing_tables = inspector.get_table_names()
+    
+    if force:
+        print("INIT_DB: Force mode — dropping all tables...")
+        metadata = MetaData()
+        metadata.reflect(bind=engine)
+        metadata.drop_all(bind=engine)
+        existing_tables = []
+
+    if "user" in existing_tables and "groups" in existing_tables:
+        print("INIT_DB: Tables already exist. Skipping initialization.")
+        print(f"INIT_DB: Existing tables: {existing_tables}")
+        return
 
     # Create all tables
     Base.metadata.create_all(bind=engine)
 
     with SessionLocal() as session:
+        session.execute(
+            ProfilerType.__table__.insert(),
+            [
+                {"name": "KS1 Assessment", "filename":"ks1.json"},
+                {"name": "KS2 Assessment", "filename":"ks2.json"},
+                {"name": "Combined SpLD Checklist: Primary Level (ages 6-11)", "filename":"combined-spld-checklist-primary.json"},
+                {"name": "ASCT Individual Sensory Checklist", "filename":"asct-sensory-checklist.json"},
+            ],
+        )
         session.execute(
             Group.__table__.insert(),
             [
@@ -152,14 +168,6 @@ def init_db() -> None:
                     "hasProfiles":False,
                     "emoji":"🧠"
                 }
-            ],
-        )
-        session.execute(
-            ProfilerType.__table__.insert(),
-            [
-                {"name": "KS1 Assessment", "filename":"ks1.json"},
-                {"name": "KS2 Assessment", "filename":"ks2.json"},
-                {"name": "Combined SpLD Checklist: Primary Level (ages 6-11)", "filename":"combined-spld-checklist-primary.json"},
             ],
         )
         session.execute(
@@ -283,8 +291,9 @@ def init_db() -> None:
 
 if __name__ == "__main__":
     init_db_value = os.getenv('INIT_DB', '').lower().strip()
+    force_init = os.getenv('FORCE_INIT_DB', '').lower().strip() in ('true', '1', 'yes')
     if init_db_value in ('true', '1', 'yes'):
         print("INIT_DB.PY: Starting database initialization...")
-        init_db()
+        init_db(force=force_init)
     else:
         print(f"INIT_DB.PY: Skipping initialization (INIT_DB={init_db_value})")
