@@ -1,0 +1,24 @@
+{
+  "name": "brainwaves",
+  "version": "1.0.0",
+  "description": "Brainwaves is an intelligent profiling system designed to help educators understand and support learners through data-driven insights and personalized practice recommendations. The system collects structured profile data via online forms and provides targeted recommendations from educational frameworks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itscooper/brainwaves.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itscooper/brainwaves/issues"
+  },
+  "homepage": "https://github.com/itscooper/brainwaves#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

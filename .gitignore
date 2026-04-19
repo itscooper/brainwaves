@@ -60,3 +60,11 @@ Thumbs.db
 # Docker local development
 **/Dockerfile.local.env
 **/Dockerfile.local
+
+# Node / Playwright
+node_modules/
+test-results/
+playwright-report/
+
+# Parcel build cache
+.parcel-cache/
