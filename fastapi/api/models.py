@@ -7,8 +7,8 @@ for the application's PostgreSQL database.
 import os
 from fastapi import Depends
 from typing import AsyncGenerator, Optional
-from sqlalchemy import Column, String, Boolean, create_engine, Integer, Text, Engine
-from sqlalchemy.orm import declarative_base, Mapped, relationship, sessionmaker
+from sqlalchemy import Column, String, Boolean, create_engine, Integer, Text, Engine, ForeignKey
+from sqlalchemy.orm import declarative_base, Mapped, relationship, sessionmaker, mapped_column
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from fastapi_users.db import (
     SQLAlchemyBaseUserTableUUID,
@@ -65,7 +65,7 @@ class Group(Base):
     displayAs: Mapped[str] = Column(String, index=True)
     token: Mapped[str] = Column(String, index=True, unique=True)
     archived: Mapped[bool] = Column(Boolean, index=True)
-    profilerTypeName: Mapped[str] = Column(String, index=True)
+    profilerTypeName: Mapped[str] = Column(String, ForeignKey("profilerTypes.name"), index=True)
     hasProfiles: Mapped[bool] = Column(Boolean, index=True)
     emoji: Mapped[str] = Column(String, index=True)
 
@@ -84,9 +84,11 @@ class Profile(Base):
     
     id: Mapped[str] = Column(String, primary_key=True, index=True)
     name: Mapped[str] = Column(String, index=True)
-    groupName: Mapped[str] = Column(String, index=True)
-    profilerTypeName: Mapped[str] = Column(String, index=True)
+    groupName: Mapped[str] = Column(String, ForeignKey("groups.name", onupdate="CASCADE", ondelete="CASCADE"), index=True)
+    profilerTypeName: Mapped[str] = Column(String, ForeignKey("profilerTypes.name"), index=True)
     status: Mapped[str] = Column(String, index=True)
+
+    answers = relationship("Answer", backref="profile", cascade="all, delete-orphan", passive_deletes=True)
 
 class Answer(Base):
     """
@@ -102,10 +104,12 @@ class Answer(Base):
     __tablename__ = "answers"
     
     id: Mapped[str] = Column(String, primary_key=True, index=True)
-    profileId: Mapped[str] = Column(String, index=True)
+    profileId: Mapped[str] = Column(String, ForeignKey("profiles.id", ondelete="CASCADE"), index=True)
     question: Mapped[str] = Column(String, index=True)
     score: Mapped[int] = Column(Integer, index=True)
     domain: Mapped[str] = Column(String, index=True)
+    subdomain: Mapped[Optional[str]] = Column(String, nullable=True, index=True)
+    responderType: Mapped[Optional[str]] = Column(String, nullable=True, index=True)
 
 class Configuration(Base):
     """
