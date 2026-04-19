@@ -88,11 +88,13 @@ def generateRandomPassword(length: int = 8) -> str:
     password = ''.join(secrets.choice(character_pool) for _ in range(length))
     return password
 
-async def SuperCreateUser(email: str, password: str = generateRandomPassword(), is_superuser: bool = False) -> Dict[str, Union[str, bool]]:
+async def SuperCreateUser(email: str, password: str = None, is_superuser: bool = False) -> Dict[str, Union[str, bool]]:
     """
     Create a superuser with the given email and password.
     If no password is provided, a random password is generated.
     """
+    if password is None:
+        password = generateRandomPassword()
     try:
         async with get_async_session_context() as session:
             async with get_user_db_context(session) as user_db:

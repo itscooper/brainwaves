@@ -19,11 +19,10 @@ and asynchronous database sessions as needed.
 # Standard library imports
 import json
 import os
-import random
+import secrets
 import string
 import sys
 import uuid
-from pprint import pprint
 from typing import Final, List, Optional
 
 # Third-party imports
@@ -114,6 +113,10 @@ SessionLocal = SyncSessionLocal
 # API Router
 api_router = APIRouter()
 
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
 @api_router.get("/")
 async def root():
     return {"message": "Welcome to the Brainwaves API!"}
@@ -181,7 +184,7 @@ def get_profile(
             "profilerTypeName": profile.profilerTypeName,
             "status": profile.status,
             "answers": [
-                {"id": answer.id, "question": answer.question, "score": answer.score, "domain": answer.domain}
+                {"id": answer.id, "question": answer.question, "score": answer.score, "domain": answer.domain, "subdomain": answer.subdomain, "responderType": answer.responderType}
                 for answer in answers
             ]
         }
@@ -242,13 +245,15 @@ def create_profile(request: CreateProfileRequest):
 class AnswerRequest(BaseModel):
     question: str
     score: int
+    responderType: Optional[str] = None
 
 @api_router.post("/profile/{profileID}/answer", tags=["profiles"],
     summary="Add or Update Answer",
     description="""
     Submit an answer for a specific question in a profile.
     If an answer for the question already exists, it will be updated.
-    Only works for profiles with 'Incomplete' status.
+    Works for profiles with 'Incomplete' status (parent via profileToken)
+    or for teacher-submitted responder scores on any profile (via bearer auth).
     """,
     responses={
         200: {"description": "Answer created or updated successfully"},
@@ -258,23 +263,35 @@ class AnswerRequest(BaseModel):
 def add_answer(
     profileID: str = Path(..., description="The unique identifier of the profile"),
     answer_request: AnswerRequest = Body(..., description="The answer details"),
-    profileToken: str = Query(..., description="JWT token for profile authentication")
+    profileToken: str = Query(None, description="JWT token for profile authentication"),
+    user=Depends(opt_current_user_valid_pw)
 ):
-    # Verify the JWT
-    try:
-        jwt_payload = verifyJwt(profileToken)
-    except Exception as e:
-        raise HTTPException(status_code=401, detail="Invalid profile token")
-
-    # Ensure the profileID matches the JWT subject
-    if jwt_payload.get("sub") != profileID:
-        raise HTTPException(status_code=401, detail="Token does not match profile")
+    # Authenticate: either profileToken (parent) or logged-in teacher with responderType
+    userType = None
+    if profileToken:
+        userType = 'parent'
+        try:
+            jwt_payload = verifyJwt(profileToken)
+        except Exception as e:
+            raise HTTPException(status_code=401, detail="Invalid profile token")
+        if jwt_payload.get("sub") != profileID:
+            raise HTTPException(status_code=401, detail="Token does not match profile")
+    elif user is not None and answer_request.responderType:
+        userType = 'teacher'
+    else:
+        raise HTTPException(status_code=401, detail="Unauthorised! Provide profileToken or login with a responderType.")
 
     with SessionLocal() as db:
         # Check that the profile can still be edited
-        profile = db.query(Profile).filter(Profile.id == profileID,Profile.status == "Incomplete").first()
-        if not profile:
-            raise HTTPException(status_code=400, detail="Cannot find an editable profile with this ID")
+        if userType == 'parent':
+            profile = db.query(Profile).filter(Profile.id == profileID, Profile.status == "Incomplete").first()
+            if not profile:
+                raise HTTPException(status_code=400, detail="Cannot find an editable profile with this ID")
+        else:
+            # Teacher can submit responder answers on any profile
+            profile = db.query(Profile).filter(Profile.id == profileID).first()
+            if not profile:
+                raise HTTPException(status_code=400, detail="Profile not found")
         
         # Lookup the profilerType associated with the profile
         profiler_type = (
@@ -311,13 +328,30 @@ def add_answer(
                 detail="Question not found in the associated profiler file",
             )
         domain = question_data["domain"]
+        subdomain = question_data.get("subdomain", None)
 
-        # Check if the question already exists for this profileID
-        existing_answer = (
-            db.query(Answer)
-            .filter(Answer.profileId == profileID, Answer.question == answer_request.question)
-            .first()
+        # Determine effective responderType
+        effective_responder_type = answer_request.responderType
+        if userType == 'parent' and effective_responder_type is None:
+            # Check if profiler defines responderTypes — default parent to "home"
+            if "responderTypes" in profiler_data:
+                effective_responder_type = "home"
+
+        # Validate responderType if profiler requires it
+        if "responderTypes" in profiler_data and effective_responder_type:
+            if effective_responder_type not in profiler_data["responderTypes"]:
+                raise HTTPException(status_code=400, detail=f"Invalid responderType: {effective_responder_type}")
+
+        # Check if the question already exists for this profileID and responderType
+        answer_query = db.query(Answer).filter(
+            Answer.profileId == profileID,
+            Answer.question == answer_request.question
         )
+        if effective_responder_type:
+            answer_query = answer_query.filter(Answer.responderType == effective_responder_type)
+        else:
+            answer_query = answer_query.filter(Answer.responderType.is_(None))
+        existing_answer = answer_query.first()
         if existing_answer:
             # Overwrite the existing answer's score
             existing_answer.score = answer_request.score
@@ -339,6 +373,8 @@ def add_answer(
                 question=answer_request.question,
                 score=answer_request.score,
                 domain=domain,
+                subdomain=subdomain,
+                responderType=effective_responder_type,
             )
 
             # Add and commit the new answer
@@ -553,6 +589,8 @@ def get_profiler_type(
                 "question": item["question"],
                 "domain": item["domain"]
             }
+            if "subdomain" in item:
+                question_ext["subdomain"] = item["subdomain"]
             if "practice" in item:
                 question_ext["practice"] = item["practice"]
             questions_extended.append(question_ext)
@@ -576,6 +614,15 @@ def get_profiler_type(
             "domains": unique_domains,
             "practiceSource": practice_source
         }
+
+        # Include optional profiler features if present
+        if "responderTypes" in data:
+            response["responderTypes"] = data["responderTypes"]
+        if "domainDescriptions" in data:
+            response["domainDescriptions"] = data["domainDescriptions"]
+        if "ragThresholds" in data:
+            response["ragThresholds"] = data["ragThresholds"]
+
         return response
 
 @api_router.get("/groups", tags=["groups"],
@@ -648,14 +695,13 @@ def read_group(
             (Profile.groupName == group_name) & (Profile.status == "Complete")
         ).all()
 
-        print(f"Found {len(profiles)} completed profiles for group {group_name}")
-
         # Count the number of profiles
         profile_count = len(profiles)
 
         # For each profile, aggregate scores by domain
         profile_data = []
         aggregated_domain_scores = {}
+        aggregated_subdomain_scores = {}
         aggregated_question_scores = {}
 
         for profile in profiles:
@@ -666,35 +712,94 @@ def read_group(
                 .all()
             )
 
-            print(f"Found {len(answers)} answers for profile {profile.id}")
-
             # Aggregate domain scores for this profile
             domain_scores = {}
+            subdomain_scores = {}
+            responder_domain_scores = {}
+            responder_subdomain_scores = {}
+            # Per-question, per-responder scores for practice scoring
+            q_responder_scores = {}
             for answer in answers:
-                # Add to profile's domain scores
-                domain_scores[answer.domain] = domain_scores.get(answer.domain, 0) + answer.score
-                
-                # Add to group's aggregated domain scores
-                aggregated_domain_scores[answer.domain] = aggregated_domain_scores.get(answer.domain, 0) + answer.score
-                
-                # Add to aggregated question scores
-                if answer.question not in aggregated_question_scores:
-                    aggregated_question_scores[answer.question] = {
+                responder = answer.responderType or "default"
+
+                # Per-responder domain scores for this profile
+                if responder not in responder_domain_scores:
+                    responder_domain_scores[responder] = {}
+                responder_domain_scores[responder][answer.domain] = responder_domain_scores[responder].get(answer.domain, 0) + answer.score
+
+                # Per-responder subdomain scores for this profile
+                if answer.subdomain:
+                    key = f"{answer.domain}|{answer.subdomain}"
+                    if responder not in responder_subdomain_scores:
+                        responder_subdomain_scores[responder] = {}
+                    responder_subdomain_scores[responder][key] = responder_subdomain_scores[responder].get(key, 0) + answer.score
+
+                # Per-question per-responder tracking for practice scoring
+                q = answer.question
+                if q not in q_responder_scores:
+                    q_responder_scores[q] = {'domain': answer.domain}
+                q_responder_scores[q][responder] = q_responder_scores[q].get(responder, 0) + answer.score
+
+            # Determine if this profile has multiple responders (e.g. school + home)
+            has_multiple_responders = (
+                len(responder_domain_scores) > 1
+                or (len(responder_domain_scores) == 1 and "default" not in responder_domain_scores)
+            )
+
+            if has_multiple_responders:
+                # Use the highest score across responders per domain/subdomain
+                all_domains = set(d for scores in responder_domain_scores.values() for d in scores)
+                for domain in all_domains:
+                    domain_scores[domain] = max(
+                        scores.get(domain, 0) for scores in responder_domain_scores.values()
+                    )
+                all_sd_keys = set(k for scores in responder_subdomain_scores.values() for k in scores)
+                for key in all_sd_keys:
+                    subdomain_scores[key] = max(
+                        scores.get(key, 0) for scores in responder_subdomain_scores.values()
+                    )
+            else:
+                # Single responder - use raw totals
+                for scores in responder_domain_scores.values():
+                    for domain, score in scores.items():
+                        domain_scores[domain] = domain_scores.get(domain, 0) + score
+                for scores in responder_subdomain_scores.values():
+                    for key, score in scores.items():
+                        subdomain_scores[key] = subdomain_scores.get(key, 0) + score
+
+            # Add to group's aggregated domain scores (using max-based per-profile scores)
+            for domain, score in domain_scores.items():
+                aggregated_domain_scores[domain] = aggregated_domain_scores.get(domain, 0) + score
+
+            # Add to group's aggregated subdomain scores
+            for key, score in subdomain_scores.items():
+                aggregated_subdomain_scores[key] = aggregated_subdomain_scores.get(key, 0) + score
+
+            # Add to aggregated question scores using best (max) score per question per profile
+            for q, data in q_responder_scores.items():
+                domain = data['domain']
+                scores_by_responder = {k: v for k, v in data.items() if k != 'domain'}
+                best_score = max(scores_by_responder.values()) if scores_by_responder else 0
+                if q not in aggregated_question_scores:
+                    aggregated_question_scores[q] = {
                         'total_score': 0,
                         'count': 0,
-                        'domain': answer.domain
+                        'domain': domain
                     }
-                aggregated_question_scores[answer.question]['total_score'] += answer.score
-                aggregated_question_scores[answer.question]['count'] += 1
+                aggregated_question_scores[q]['total_score'] += best_score
+                aggregated_question_scores[q]['count'] += 1
 
             # Append profile data
-            profile_data.append({
+            profile_entry = {
                 "id": profile.id,
                 "name": profile.name,
                 "domain_scores": domain_scores,
-            })
-
-        print(f"Aggregated domain scores: {aggregated_domain_scores}")
+            }
+            if subdomain_scores:
+                profile_entry["subdomain_scores"] = subdomain_scores
+            if len(responder_domain_scores) > 1 or "default" not in responder_domain_scores:
+                profile_entry["responder_domain_scores"] = responder_domain_scores
+            profile_data.append(profile_entry)
 
         practice_recommendations = []
         if profile_count > 0 and len(profiles) > 0:
@@ -702,15 +807,11 @@ def read_group(
             first_profile = profiles[0]
             profiler_type = db.query(ProfilerType).filter(ProfilerType.name == first_profile.profilerTypeName).first()
             
-            print(f"Using profiler type: {profiler_type.name} from file {profiler_type.filename}")
-            
             if profiler_type and profiler_type.filename:
                 try:
                     # Read the profiler file to get question mappings
                     with open(f"/app/api/profilers/{profiler_type.filename}", "r") as file:
                         profiler_data = json.load(file)
-                    
-                    print(f"Loaded profiler data from {profiler_type.filename}")
                     
                     # Map questions to their practices
                     practice_scores = {}
@@ -718,7 +819,6 @@ def read_group(
                         if 'practice' in question:
                             # Get practice IDs (could be string or array)
                             practice_ids = question['practice'] if isinstance(question['practice'], list) else [question['practice']]
-                            print(f"Question '{question['question']}' maps to practices: {practice_ids}")
                             
                             # Get average score for this question
                             if question['question'] in aggregated_question_scores:
@@ -735,28 +835,28 @@ def read_group(
                                     practice_scores[practice_id]['total_score'] += q_score['total_score']
                                     practice_scores[practice_id]['count'] += 1
 
-                    print(f"Calculated practice scores: {practice_scores}")
-                    
                     # Get practice source file
                     practice_source = None
+                    practice_label = None
+                    practice_label_tooltip = None
                     if 'practice_source' in profiler_data and len(profiler_data['practice_source']) > 0:
                         practice_source = profiler_data['practice_source'][0]
                         if practice_source.endswith('.json'):
                             practice_source = practice_source[:-5]
                         
-                        print(f"Using practice source: {practice_source}")
-                        
                         # Read the practice data
                         practice_file_path = f"/app/api/practice/{practice_source}.json"
-                        print(f"Loading practice data from: {practice_file_path}")
                         
                         with open(practice_file_path, "r") as file:
                             practice_data = json.load(file)
                         
-                        print(f"Successfully loaded practice data")
-                        
+                        # Support both plain array and wrapped {label, items} format
+                        practice_items = practice_data.get("items", practice_data) if isinstance(practice_data, dict) else practice_data
+                        practice_label = practice_data.get("label", "OAIP") if isinstance(practice_data, dict) else "OAIP"
+                        practice_label_tooltip = practice_data.get("labelTooltip", "Ordinarily Available Inclusive Practice") if isinstance(practice_data, dict) else "Ordinarily Available Inclusive Practice"
+
                         # Find and sort practices
-                        for category in practice_data:
+                        for category in practice_items:
                             for subcategory in category.get('children', []):
                                 # Use the subcategory ID directly since it already includes the category prefix
                                 practice_id = subcategory['id']
@@ -773,18 +873,51 @@ def read_group(
                                             'strategies': [child.get('text') for child in subcategory.get('children', [])]
                                         }
                                         practice_recommendations.append(recommendation)
-                                        print(f"Added recommendation for {practice_id} with score {total_score}")
 
                         # Sort recommendations by score
                         practice_recommendations.sort(key=lambda x: x['score'], reverse=True)
-                        print(f"Generated {len(practice_recommendations)} practice recommendations")
 
-                except (FileNotFoundError, json.JSONDecodeError, KeyError) as e:
-                    print(f"Error processing practice recommendations: {str(e)}")
+                except (FileNotFoundError, json.JSONDecodeError, KeyError):
                     # Continue without practice recommendations if there's an error
                     pass
 
-        return {
+        # Build profiler metadata for frontend percentage calculations
+        profiler_meta = {}
+        if profile_count > 0 and len(profiles) > 0:
+            first_profile = profiles[0]
+            pt = db.query(ProfilerType).filter(ProfilerType.name == first_profile.profilerTypeName).first()
+            if pt and pt.filename:
+                try:
+                    with open(f"/app/api/profilers/{pt.filename}", "r") as file:
+                        pdata = json.load(file)
+                    max_answer = max(pdata.get("answerOptions", {}).values()) if pdata.get("answerOptions") else 0
+                    profiler_meta["answerOptions"] = pdata.get("answerOptions", {})
+                    profiler_meta["maxAnswerValue"] = max_answer
+                    if "responderTypes" in pdata:
+                        profiler_meta["responderTypes"] = pdata["responderTypes"]
+                    if "domainDescriptions" in pdata:
+                        profiler_meta["domainDescriptions"] = pdata["domainDescriptions"]
+                    # Compute question counts per domain and subdomain
+                    domain_question_counts = {}
+                    subdomain_question_counts = {}
+                    for q in pdata.get("questions", []):
+                        d = q["domain"]
+                        domain_question_counts[d] = domain_question_counts.get(d, 0) + 1
+                        sd = q.get("subdomain")
+                        if sd:
+                            key = f"{d}|{sd}"
+                            subdomain_question_counts[key] = subdomain_question_counts.get(key, 0) + 1
+                    profiler_meta["domainQuestionCounts"] = domain_question_counts
+                    profiler_meta["subdomainQuestionCounts"] = subdomain_question_counts
+                    if "ragThresholds" in pdata:
+                        profiler_meta["ragThresholds"] = pdata["ragThresholds"]
+                    if practice_label:
+                        profiler_meta["practiceLabel"] = practice_label
+                        profiler_meta["labelTooltip"] = practice_label_tooltip
+                except (FileNotFoundError, json.JSONDecodeError, KeyError):
+                    pass
+
+        result = {
             "name": group.name,
             "displayAs": group.displayAs,
             "emoji": group.emoji,
@@ -795,6 +928,11 @@ def read_group(
             "aggregated_domain_scores": aggregated_domain_scores,
             "practice_recommendations": practice_recommendations
         }
+        if aggregated_subdomain_scores:
+            result["aggregated_subdomain_scores"] = aggregated_subdomain_scores
+        if profiler_meta:
+            result["profiler_meta"] = profiler_meta
+        return result
     
 class GroupCreate(BaseModel):
     name: str
@@ -1017,7 +1155,7 @@ async def create_user(
     Create a new user with a random password. Only superusers can create new users.
     """
     # Generate random 8-char password with letters and digits
-    password = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
+    password = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(8))
     
     try:
         result = await SuperCreateUser(
@@ -1051,7 +1189,7 @@ async def reset_user_password(
     The user will be required to change their password on next login.
     """
     # Generate random 8-char password with letters and digits
-    password = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
+    password = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(8))
     
     async with AsyncSessionLocal() as db:
         # Find the user
