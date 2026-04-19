@@ -1,0 +1,782 @@
+{
+  "label": "Strategies",
+  "labelTooltip": "Sensory strategies recommended for this child's sensory profile",
+  "items": [
+    {
+      "id": "INT",
+      "name": "Interoception",
+      "children": [
+        {
+          "id": "INT-HY",
+          "name": "Over (hyper) sensitive interoceptive sense",
+          "children": [
+            {
+              "id": "INT-HY-1",
+              "text": "Provide regular, scheduled sensory breaks throughout the day to help the CYP manage heightened internal signals"
+            },
+            {
+              "id": "INT-HY-2",
+              "text": "Use visual supports such as body maps or emotion scales to help the CYP identify and label internal body signals"
+            },
+            {
+              "id": "INT-HY-3",
+              "text": "Offer a calm, low-stimulation area where the CYP can go when feeling overwhelmed by internal sensations"
+            },
+            {
+              "id": "INT-HY-4",
+              "text": "Teach and practise regulation strategies such as deep breathing, progressive muscle relaxation, or grounding techniques"
+            },
+            {
+              "id": "INT-HY-5",
+              "text": "Provide predictable routines around eating, drinking, and toileting to reduce anxiety about internal sensations"
+            },
+            {
+              "id": "INT-HY-6",
+              "text": "Use social stories to help the CYP understand and manage their responses to internal signals such as hunger, pain, or temperature changes"
+            },
+            {
+              "id": "INT-HY-7",
+              "text": "Work with the CYP to create a personalised regulation toolkit that includes preferred calming strategies"
+            },
+            {
+              "id": "INT-HY-8",
+              "text": "Allow flexible access to water, snacks, and toilet facilities to reduce distress from heightened awareness of internal needs"
+            }
+          ]
+        },
+        {
+          "id": "INT-HP",
+          "name": "Under (hypo) sensitive interoceptive sense",
+          "children": [
+            {
+              "id": "INT-HP-1",
+              "text": "Implement scheduled prompts for toileting, eating, and drinking rather than relying on the CYP to recognise their own needs"
+            },
+            {
+              "id": "INT-HP-2",
+              "text": "Use visual timetables or timers as prompts for regular hydration and meal breaks"
+            },
+            {
+              "id": "INT-HP-3",
+              "text": "Teach the CYP to use a body check-in routine at regular intervals to notice internal sensations"
+            },
+            {
+              "id": "INT-HP-4",
+              "text": "Use the Zones of Regulation or similar programme to develop emotional awareness and link feelings to body signals"
+            },
+            {
+              "id": "INT-HP-5",
+              "text": "Monitor the CYP during physical activity and set boundaries to prevent over-exertion as they may not feel fatigue"
+            },
+            {
+              "id": "INT-HP-6",
+              "text": "Provide explicit teaching about what different internal signals feel like using concrete examples and visuals"
+            },
+            {
+              "id": "INT-HP-7",
+              "text": "Use co-regulation strategies such as modelling your own awareness of internal states aloud"
+            }
+          ]
+        },
+        {
+          "id": "INT-DI",
+          "name": "Difficulty identifying interoceptive sensations",
+          "children": [
+            {
+              "id": "INT-DI-1",
+              "text": "Use structured interoception activities such as mindful body scans to build awareness of internal signals"
+            },
+            {
+              "id": "INT-DI-2",
+              "text": "Teach the CYP to discriminate between different internal signals using visual supports and concrete language"
+            },
+            {
+              "id": "INT-DI-3",
+              "text": "Provide support to link internal body signals to actions, e.g. 'When your tummy growls, that means you are hungry'"
+            },
+            {
+              "id": "INT-DI-4",
+              "text": "Use resources from Kelly Mahler's interoception curriculum to develop body-signal awareness"
+            },
+            {
+              "id": "INT-DI-5",
+              "text": "Partner with parents/carers to reinforce interoception awareness at home using consistent language and strategies"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PROP",
+      "name": "Proprioception",
+      "children": [
+        {
+          "id": "PROP-HY",
+          "name": "Over (hyper) sensitive proprioceptive sense",
+          "children": [
+            {
+              "id": "PROP-HY-1",
+              "text": "Allow for flexible seating and positioning options so the CYP can find comfortable positions"
+            },
+            {
+              "id": "PROP-HY-2",
+              "text": "Provide activities that offer gentle, graded proprioceptive input such as yoga or stretching"
+            },
+            {
+              "id": "PROP-HY-3",
+              "text": "Offer adapted tools for fine motor tasks such as thicker pencils or pencil grips to reduce proprioceptive demand"
+            },
+            {
+              "id": "PROP-HY-4",
+              "text": "Allow the CYP to stand or move during tasks if sitting is uncomfortable"
+            },
+            {
+              "id": "PROP-HY-5",
+              "text": "Avoid forcing the CYP into positions or movements that cause distress"
+            }
+          ]
+        },
+        {
+          "id": "PROP-HP",
+          "name": "Under (hypo) sensitive proprioceptive sense",
+          "children": [
+            {
+              "id": "PROP-HP-1",
+              "text": "Provide regular heavy work activities such as carrying books, pushing, pulling, or wall press-ups"
+            },
+            {
+              "id": "PROP-HP-2",
+              "text": "Use weighted lap pads, weighted blankets, or compression clothing to provide additional proprioceptive input"
+            },
+            {
+              "id": "PROP-HP-3",
+              "text": "Incorporate movement breaks with resistive activities into the daily routine"
+            },
+            {
+              "id": "PROP-HP-4",
+              "text": "Offer chewy items or crunchy snacks as an oral proprioceptive input strategy"
+            },
+            {
+              "id": "PROP-HP-5",
+              "text": "Use a wobble cushion, therapy ball, or move-n-sit cushion for seating to increase proprioceptive feedback"
+            },
+            {
+              "id": "PROP-HP-6",
+              "text": "Encourage the CYP to help with physical classroom tasks such as stacking chairs or moving equipment"
+            }
+          ]
+        },
+        {
+          "id": "PROP-SK",
+          "name": "Sensory seeking — proprioception",
+          "children": [
+            {
+              "id": "PROP-SK-1",
+              "text": "Provide planned opportunities for deep pressure activities throughout the day"
+            },
+            {
+              "id": "PROP-SK-2",
+              "text": "Allow access to fidget tools, resistance bands on chair legs, or textured items"
+            },
+            {
+              "id": "PROP-SK-3",
+              "text": "Schedule regular movement breaks involving pushing, pulling, jumping, or climbing"
+            },
+            {
+              "id": "PROP-SK-4",
+              "text": "Provide a body sock, lycra tunnel, or den space for the CYP to access calming deep pressure"
+            },
+            {
+              "id": "PROP-SK-5",
+              "text": "Offer chew toys or chewable necklaces as a safe alternative to chewing on clothing or objects"
+            },
+            {
+              "id": "PROP-SK-6",
+              "text": "Use firm touch or deep pressure when interacting with the CYP rather than light touch"
+            },
+            {
+              "id": "PROP-SK-7",
+              "text": "Allow the CYP to wrap themselves in blankets or use a weighted blanket during calm times"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VEST",
+      "name": "Vestibular",
+      "children": [
+        {
+          "id": "VEST-HY",
+          "name": "Over (hyper) sensitive vestibular sense",
+          "children": [
+            {
+              "id": "VEST-HY-1",
+              "text": "Offer choices during PE and physical activities so the CYP can participate at a level that feels safe"
+            },
+            {
+              "id": "VEST-HY-2",
+              "text": "Provide advance warning of any activities involving movement, changes of direction, or heights"
+            },
+            {
+              "id": "VEST-HY-3",
+              "text": "Allow the CYP to keep their feet on the ground during activities where possible"
+            },
+            {
+              "id": "VEST-HY-4",
+              "text": "Use graded exposure to help the CYP gradually build tolerance to movement activities"
+            },
+            {
+              "id": "VEST-HY-5",
+              "text": "Position the CYP near the edge of group activities so they are less affected by others' movement"
+            },
+            {
+              "id": "VEST-HY-6",
+              "text": "Avoid spinning or swinging activities unless the CYP chooses to participate"
+            },
+            {
+              "id": "VEST-HY-7",
+              "text": "Provide stability aids such as a stable chair (not a swivel chair) and ensure feet can touch the floor"
+            }
+          ]
+        },
+        {
+          "id": "VEST-HP",
+          "name": "Under (hypo) sensitive vestibular sense",
+          "children": [
+            {
+              "id": "VEST-HP-1",
+              "text": "Provide regular opportunities for controlled movement activities such as rocking, swinging, or bouncing"
+            },
+            {
+              "id": "VEST-HP-2",
+              "text": "Use a wobble cushion, rocking chair, or therapy ball for seating to provide vestibular input"
+            },
+            {
+              "id": "VEST-HP-3",
+              "text": "Build movement breaks into the daily routine to meet the CYP's need for vestibular stimulation"
+            },
+            {
+              "id": "VEST-HP-4",
+              "text": "Incorporate spinning, rolling, and direction-change activities into PE and break times"
+            },
+            {
+              "id": "VEST-HP-5",
+              "text": "Teach the CYP to recognise when they need movement and provide appropriate outlets"
+            },
+            {
+              "id": "VEST-HP-6",
+              "text": "Allow the CYP to stand or move while working if remaining still is difficult"
+            }
+          ]
+        },
+        {
+          "id": "VEST-SK",
+          "name": "Sensory seeking — vestibular",
+          "children": [
+            {
+              "id": "VEST-SK-1",
+              "text": "Schedule regular movement breaks with spinning, swinging, or bouncing activities"
+            },
+            {
+              "id": "VEST-SK-2",
+              "text": "Provide safe climbing opportunities during break times"
+            },
+            {
+              "id": "VEST-SK-3",
+              "text": "Use a sit-and-spin, swing, or rocking horse at designated times"
+            },
+            {
+              "id": "VEST-SK-4",
+              "text": "Allow the CYP to run errands that involve walking or moving around the school"
+            },
+            {
+              "id": "VEST-SK-5",
+              "text": "Incorporate rhythmic movement such as marching, skipping, or dancing into transitions"
+            },
+            {
+              "id": "VEST-SK-6",
+              "text": "Provide a fidget tool or allow rocking during seated activities to safely meet vestibular needs"
+            },
+            {
+              "id": "VEST-SK-7",
+              "text": "Ensure the CYP has safe spaces for high-energy movement to reduce risk of injury"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "TACT",
+      "name": "Tactility (touch)",
+      "children": [
+        {
+          "id": "TACT-HY",
+          "name": "Over (hyper) sensitive to touch",
+          "children": [
+            {
+              "id": "TACT-HY-1",
+              "text": "Position the CYP at the end of a line or on the edge of a group to reduce unexpected touch"
+            },
+            {
+              "id": "TACT-HY-2",
+              "text": "Use firm, predictable touch rather than light or unexpected touch"
+            },
+            {
+              "id": "TACT-HY-3",
+              "text": "Give advance warning before any physical contact, including during activities like PE or art"
+            },
+            {
+              "id": "TACT-HY-4",
+              "text": "Allow the CYP to remove clothing labels, wear seamless socks, or choose clothing that feels comfortable"
+            },
+            {
+              "id": "TACT-HY-5",
+              "text": "Offer alternatives to messy play activities or provide tools such as paintbrushes or gloves"
+            },
+            {
+              "id": "TACT-HY-6",
+              "text": "Provide the CYP with their own clearly defined space using a mat, tape, or desk divider"
+            },
+            {
+              "id": "TACT-HY-7",
+              "text": "Use a 'hands-up' approach when gaining the CYP's attention rather than tapping their shoulder"
+            }
+          ]
+        },
+        {
+          "id": "TACT-HP",
+          "name": "Under (hypo) sensitive to touch",
+          "children": [
+            {
+              "id": "TACT-HP-1",
+              "text": "Provide opportunities for messy play, water play, and tactile exploration"
+            },
+            {
+              "id": "TACT-HP-2",
+              "text": "Use vibrating pens or textured grips to increase tactile feedback during writing"
+            },
+            {
+              "id": "TACT-HP-3",
+              "text": "Offer clothing with a tighter fit or compression garments if preferred by the CYP"
+            },
+            {
+              "id": "TACT-HP-4",
+              "text": "Provide tactile prompts for self-care routines, such as visual reminders to check if face or hands are clean"
+            },
+            {
+              "id": "TACT-HP-5",
+              "text": "Include tactile elements in learning activities, such as textured letters, sand trays, or modelling clay"
+            }
+          ]
+        },
+        {
+          "id": "TACT-SK",
+          "name": "Sensory seeking — tactile",
+          "children": [
+            {
+              "id": "TACT-SK-1",
+              "text": "Provide a box of tactile items (koosh balls, putty, textured fabrics) for the CYP to access during lessons"
+            },
+            {
+              "id": "TACT-SK-2",
+              "text": "Teach the CYP about personal space and boundaries using social stories and role play"
+            },
+            {
+              "id": "TACT-SK-3",
+              "text": "Offer fidget tools that provide tactile input such as tangles, putty, or textured fidgets"
+            },
+            {
+              "id": "TACT-SK-4",
+              "text": "Provide regular opportunities for deep pressure activities as an alternative to touching others"
+            },
+            {
+              "id": "TACT-SK-5",
+              "text": "Include sensory exploration activities in the curriculum, such as sensory bins or feely bags"
+            },
+            {
+              "id": "TACT-SK-6",
+              "text": "Allow barefoot activities in safe environments if the CYP prefers this"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VIS",
+      "name": "Vision (sight)",
+      "children": [
+        {
+          "id": "VIS-HY",
+          "name": "Over (hyper) sensitive to visual input",
+          "children": [
+            {
+              "id": "VIS-HY-1",
+              "text": "Reduce visual clutter in the classroom — use neutral colours, minimal displays, and organised storage"
+            },
+            {
+              "id": "VIS-HY-2",
+              "text": "Seat the CYP away from windows and bright lights, or allow them to wear a cap or sunglasses indoors"
+            },
+            {
+              "id": "VIS-HY-3",
+              "text": "Use pastel or cream-coloured paper instead of white to reduce glare"
+            },
+            {
+              "id": "VIS-HY-4",
+              "text": "Provide advance warning of any changes to the classroom layout"
+            },
+            {
+              "id": "VIS-HY-5",
+              "text": "Use blinds or curtains to control natural light and reduce flickering"
+            },
+            {
+              "id": "VIS-HY-6",
+              "text": "Position the CYP's desk to minimise distracting visual stimuli from other pupils' movement"
+            },
+            {
+              "id": "VIS-HY-7",
+              "text": "Allow the CYP to use a reading window or line guide to reduce visual overload when reading"
+            },
+            {
+              "id": "VIS-HY-8",
+              "text": "Offer visual breaks — allow the CYP to look away from the board or close their eyes briefly"
+            }
+          ]
+        },
+        {
+          "id": "VIS-HP",
+          "name": "Under (hypo) sensitive to visual input",
+          "children": [
+            {
+              "id": "VIS-HP-1",
+              "text": "Use high-contrast materials and bold, clear fonts for written work"
+            },
+            {
+              "id": "VIS-HP-2",
+              "text": "Highlight key information using colour coding or bold text"
+            },
+            {
+              "id": "VIS-HP-3",
+              "text": "Allow the CYP to sit closer to the board or screen"
+            },
+            {
+              "id": "VIS-HP-4",
+              "text": "Use enlarged text and images where necessary"
+            },
+            {
+              "id": "VIS-HP-5",
+              "text": "Provide additional verbal description alongside visual materials"
+            },
+            {
+              "id": "VIS-HP-6",
+              "text": "Use tactile or multi-sensory approaches to supplement visual learning tasks"
+            },
+            {
+              "id": "VIS-HP-7",
+              "text": "Provide hand-over-hand guidance for tasks requiring hand-eye coordination"
+            }
+          ]
+        },
+        {
+          "id": "VIS-SK",
+          "name": "Sensory seeking — vision",
+          "children": [
+            {
+              "id": "VIS-SK-1",
+              "text": "Provide access to light-up toys, lava lamps, or fibre-optic lights at designated times"
+            },
+            {
+              "id": "VIS-SK-2",
+              "text": "Allow access to visually stimulating fidget tools such as glitter jars or liquid motion timers"
+            },
+            {
+              "id": "VIS-SK-3",
+              "text": "Redirect visual seeking behaviour towards functional visual tasks or activities"
+            },
+            {
+              "id": "VIS-SK-4",
+              "text": "Use visual schedules and colour-coded systems to channel the CYP's visual interest productively"
+            },
+            {
+              "id": "VIS-SK-5",
+              "text": "Provide a visual sensory box with items like kaleidoscopes, spinning tops, or reflective materials"
+            },
+            {
+              "id": "VIS-SK-6",
+              "text": "Seat the CYP where they can observe the room without needing to turn around frequently"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "AUD",
+      "name": "Auditory (hearing)",
+      "children": [
+        {
+          "id": "AUD-HY",
+          "name": "Over (hyper) sensitive to sound",
+          "children": [
+            {
+              "id": "AUD-HY-1",
+              "text": "Provide ear defenders or noise-cancelling headphones for use in noisy environments"
+            },
+            {
+              "id": "AUD-HY-2",
+              "text": "Give advance warning of any expected loud noises such as fire alarms, bells, or assemblies"
+            },
+            {
+              "id": "AUD-HY-3",
+              "text": "Allow the CYP to leave noisy environments or arrive/leave slightly early to avoid busy transition times"
+            },
+            {
+              "id": "AUD-HY-4",
+              "text": "Seat the CYP away from sources of background noise such as fans, open windows, or doorways"
+            },
+            {
+              "id": "AUD-HY-5",
+              "text": "Reduce unnecessary noise in the classroom by using soft furnishings, tennis balls on chair legs, or felt pads"
+            },
+            {
+              "id": "AUD-HY-6",
+              "text": "Provide a quiet, low-stimulation space for the CYP to retreat to when overwhelmed"
+            },
+            {
+              "id": "AUD-HY-7",
+              "text": "Use visual cues and instructions alongside verbal communication to reduce auditory demand"
+            }
+          ]
+        },
+        {
+          "id": "AUD-HP",
+          "name": "Under (hypo) sensitive to sound",
+          "children": [
+            {
+              "id": "AUD-HP-1",
+              "text": "Use the CYP's name before giving instructions to gain their attention"
+            },
+            {
+              "id": "AUD-HP-2",
+              "text": "Pair verbal instructions with visual supports to ensure understanding"
+            },
+            {
+              "id": "AUD-HP-3",
+              "text": "Check understanding by asking the CYP to repeat back instructions"
+            },
+            {
+              "id": "AUD-HP-4",
+              "text": "Allow the CYP to sit close to the speaker during input to improve auditory access"
+            },
+            {
+              "id": "AUD-HP-5",
+              "text": "Provide auditory enrichment activities such as music or sound-based games to promote engagement"
+            }
+          ]
+        },
+        {
+          "id": "AUD-SK",
+          "name": "Sensory seeking — sound",
+          "children": [
+            {
+              "id": "AUD-SK-1",
+              "text": "Provide headphones with music during independent work if this supports focus"
+            },
+            {
+              "id": "AUD-SK-2",
+              "text": "Offer access to musical instruments or sound-making toys at appropriate times"
+            },
+            {
+              "id": "AUD-SK-3",
+              "text": "Allow the CYP to hum or make quiet sounds if this helps self-regulation, where possible"
+            },
+            {
+              "id": "AUD-SK-4",
+              "text": "Incorporate rhythm and music into learning activities"
+            },
+            {
+              "id": "AUD-SK-5",
+              "text": "Redirect disruptive noise-making into appropriate channels such as drumming on a pad or using a fidget with sound"
+            },
+            {
+              "id": "AUD-SK-6",
+              "text": "Use a 'noise meter' visual to help the CYP self-monitor their volume level"
+            },
+            {
+              "id": "AUD-SK-7",
+              "text": "Provide a designated space where louder activities are acceptable, such as a music corner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GUST",
+      "name": "Gustatory (taste)",
+      "children": [
+        {
+          "id": "GUST-HY",
+          "name": "Over (hyper) sensitive to taste",
+          "children": [
+            {
+              "id": "GUST-HY-1",
+              "text": "Avoid placing pressure on the CYP to try new foods — use a gradual exposure approach"
+            },
+            {
+              "id": "GUST-HY-2",
+              "text": "Allow the CYP to bring preferred foods from home for mealtimes and snacks"
+            },
+            {
+              "id": "GUST-HY-3",
+              "text": "Provide a calm, low-stimulation environment for eating to reduce anxiety around mealtimes"
+            },
+            {
+              "id": "GUST-HY-4",
+              "text": "Work with parents/carers and consider referral to a feeding specialist if the limited diet is impacting health"
+            },
+            {
+              "id": "GUST-HY-5",
+              "text": "Use food exploration activities (touching, smelling, looking) before expecting the CYP to taste new foods"
+            },
+            {
+              "id": "GUST-HY-6",
+              "text": "Respect the CYP's food preferences and avoid using food as a reward or punishment"
+            }
+          ]
+        },
+        {
+          "id": "GUST-HP",
+          "name": "Under (hypo) sensitive to taste",
+          "children": [
+            {
+              "id": "GUST-HP-1",
+              "text": "Supervise the CYP closely to prevent mouthing or eating non-food items (pica risk)"
+            },
+            {
+              "id": "GUST-HP-2",
+              "text": "Provide safe oral motor tools such as chew tubes or chewable jewellery as alternatives"
+            },
+            {
+              "id": "GUST-HP-3",
+              "text": "Monitor food intake and provide prompts for eating and drinking at regular intervals"
+            },
+            {
+              "id": "GUST-HP-4",
+              "text": "Present food in an appealing way and offer varied textures and flavours to support engagement with eating"
+            }
+          ]
+        },
+        {
+          "id": "GUST-SK",
+          "name": "Sensory seeking — taste",
+          "children": [
+            {
+              "id": "GUST-SK-1",
+              "text": "Provide crunchy, chewy, or strong-flavoured snacks at planned break times"
+            },
+            {
+              "id": "GUST-SK-2",
+              "text": "Offer safe chewing alternatives such as chew necklaces, chew tubes, or crunchy raw vegetables"
+            },
+            {
+              "id": "GUST-SK-3",
+              "text": "Ensure non-food items are kept out of reach and redirect mouthing to safe alternatives"
+            },
+            {
+              "id": "GUST-SK-4",
+              "text": "Plan oral sensory activities such as blowing bubbles, using whistles, or drinking through straws"
+            },
+            {
+              "id": "GUST-SK-5",
+              "text": "Work with the CYP and their family to establish a balanced approach to food seeking"
+            },
+            {
+              "id": "GUST-SK-6",
+              "text": "Teach the CYP about appropriate portion sizes using visual supports"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OLF",
+      "name": "Olfactory (smell)",
+      "children": [
+        {
+          "id": "OLF-HY",
+          "name": "Over (hyper) sensitive to smell",
+          "children": [
+            {
+              "id": "OLF-HY-1",
+              "text": "Avoid using strong-scented cleaning products, air fresheners, or perfumes in the CYP's environment"
+            },
+            {
+              "id": "OLF-HY-2",
+              "text": "Seat the CYP away from potential odour sources such as kitchens, toilets, or bins"
+            },
+            {
+              "id": "OLF-HY-3",
+              "text": "Allow the CYP to use a preferred scent on a handkerchief or wristband to mask unpleasant smells"
+            },
+            {
+              "id": "OLF-HY-4",
+              "text": "Provide a low-odour, well-ventilated eating environment for mealtimes"
+            },
+            {
+              "id": "OLF-HY-5",
+              "text": "Give advance warning if an activity will involve strong smells, such as cooking or science experiments"
+            }
+          ]
+        },
+        {
+          "id": "OLF-HP",
+          "name": "Under (hypo) sensitive to smell",
+          "children": [
+            {
+              "id": "OLF-HP-1",
+              "text": "Implement a structured personal hygiene routine with visual prompts and reminders"
+            },
+            {
+              "id": "OLF-HP-2",
+              "text": "Monitor toileting and provide appropriate support and prompts"
+            },
+            {
+              "id": "OLF-HP-3",
+              "text": "Use strong or distinctive scents in learning activities to enhance engagement"
+            },
+            {
+              "id": "OLF-HP-4",
+              "text": "Address any smearing behaviour with medical and sensory support — consider underlying sensory need"
+            },
+            {
+              "id": "OLF-HP-5",
+              "text": "Sensitively support the CYP with personal hygiene while maintaining their dignity"
+            }
+          ]
+        },
+        {
+          "id": "OLF-SK",
+          "name": "Sensory seeking — smell",
+          "children": [
+            {
+              "id": "OLF-SK-1",
+              "text": "Provide a scent kit with a range of safe, pleasant scents for the CYP to access at agreed times"
+            },
+            {
+              "id": "OLF-SK-2",
+              "text": "Incorporate scented materials into learning activities, such as scented markers or scratch-and-sniff resources"
+            },
+            {
+              "id": "OLF-SK-3",
+              "text": "Redirect inappropriate smelling behaviour to accepted alternatives"
+            },
+            {
+              "id": "OLF-SK-4",
+              "text": "Use aromatherapy or scented oils in a calm area to provide a safe outlet for olfactory seeking"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

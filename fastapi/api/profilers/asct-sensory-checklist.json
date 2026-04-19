@@ -1,0 +1,1176 @@
+{
+  "questions": [
+    {
+      "question": "Needs to go to the toilet very frequently",
+      "domain": "Interoception",
+      "subdomain": "Over (hyper) sensitive interoceptive sense",
+      "practice": [
+        "INT-HY"
+      ]
+    },
+    {
+      "question": "Regularly complains of feeling unwell or having aches and pains. (More often than would be expected)",
+      "domain": "Interoception",
+      "subdomain": "Over (hyper) sensitive interoceptive sense",
+      "practice": [
+        "INT-HY"
+      ]
+    },
+    {
+      "question": "Displays an intense or seemingly extreme reaction to, what appears to be, a minor injury or ailment",
+      "domain": "Interoception",
+      "subdomain": "Over (hyper) sensitive interoceptive sense",
+      "practice": [
+        "INT-HY"
+      ]
+    },
+    {
+      "question": "Always seems to be hungry or thirsty",
+      "domain": "Interoception",
+      "subdomain": "Over (hyper) sensitive interoceptive sense",
+      "practice": [
+        "INT-HY"
+      ]
+    },
+    {
+      "question": "Wears more layers of clothing than would seem to be needed for the weather conditions or is reluctant to remove their coat, hat, etc. when coming in from outside",
+      "domain": "Interoception",
+      "subdomain": "Over (hyper) sensitive interoceptive sense",
+      "practice": [
+        "INT-HY"
+      ]
+    },
+    {
+      "question": "Panics or appears distressed following periods of activity which may have caused their pulse rate to rise",
+      "domain": "Interoception",
+      "subdomain": "Over (hyper) sensitive interoceptive sense",
+      "practice": [
+        "INT-HY"
+      ]
+    },
+    {
+      "question": "Is able to report many internal signals but is unable to determine their emotional state as the signals are too overwhelming",
+      "domain": "Interoception",
+      "subdomain": "Over (hyper) sensitive interoceptive sense",
+      "practice": [
+        "INT-HY"
+      ]
+    },
+    {
+      "question": "Is late with being toilet trained or has ‘accidents’ and does not tell adults they need to go to the toilet",
+      "domain": "Interoception",
+      "subdomain": "Under (hypo) sensitive interoceptive sense",
+      "practice": [
+        "INT-HP"
+      ]
+    },
+    {
+      "question": "Leaves it until the last minute to go to the toilet and then needs to go in a great hurry or says they are not able to wait",
+      "domain": "Interoception",
+      "subdomain": "Under (hypo) sensitive interoceptive sense",
+      "practice": [
+        "INT-HP"
+      ]
+    },
+    {
+      "question": "Never appears to be hungry or thirsty and appears to need prompting to eat or drink",
+      "domain": "Interoception",
+      "subdomain": "Under (hypo) sensitive interoceptive sense",
+      "practice": [
+        "INT-HP"
+      ]
+    },
+    {
+      "question": "Suffers an injury or ailment which appears as though it is significant or would be painful but does not complain or remark on it",
+      "domain": "Interoception",
+      "subdomain": "Under (hypo) sensitive interoceptive sense",
+      "practice": [
+        "INT-HP"
+      ]
+    },
+    {
+      "question": "During P.E. or at break times, does not take a break from physical activity until exhausted",
+      "domain": "Interoception",
+      "subdomain": "Under (hypo) sensitive interoceptive sense",
+      "practice": [
+        "INT-HP"
+      ]
+    },
+    {
+      "question": "Has difficulty picking up on early signals for developing emotions and instead seems to reach extremes of emotions quickly as result",
+      "domain": "Interoception",
+      "subdomain": "Under (hypo) sensitive interoceptive sense",
+      "practice": [
+        "INT-HP"
+      ]
+    },
+    {
+      "question": "Says that they are hungry or thirsty but then eats or drinks very little when given food or drink",
+      "domain": "Interoception",
+      "subdomain": "Difficulty identifying interoceptive sensations",
+      "practice": [
+        "INT-DI"
+      ]
+    },
+    {
+      "question": "Says that they are unwell but cannot say what any of their symptoms are",
+      "domain": "Interoception",
+      "subdomain": "Difficulty identifying interoceptive sensations",
+      "practice": [
+        "INT-DI"
+      ]
+    },
+    {
+      "question": "Cannot say whether or not they need to go to the toilet when asked",
+      "domain": "Interoception",
+      "subdomain": "Difficulty identifying interoceptive sensations",
+      "practice": [
+        "INT-DI"
+      ]
+    },
+    {
+      "question": "Is not always able to interpret subtle differences in internal bodily signals and, therefore, expresses they are fine when they appear to be angry for example",
+      "domain": "Interoception",
+      "subdomain": "Difficulty identifying interoceptive sensations",
+      "practice": [
+        "INT-DI"
+      ]
+    },
+    {
+      "question": "May sit or lie in strange positions",
+      "domain": "Proprioception",
+      "subdomain": "Over (hyper) proprioceptive sense",
+      "practice": [
+        "PROP-HY"
+      ]
+    },
+    {
+      "question": "May turn whole body, not just head, to look at something",
+      "domain": "Proprioception",
+      "subdomain": "Over (hyper) proprioceptive sense",
+      "practice": [
+        "PROP-HY"
+      ]
+    },
+    {
+      "question": "May have difficulty doing up buttons or manipulating small objects",
+      "domain": "Proprioception",
+      "subdomain": "Over (hyper) proprioceptive sense",
+      "practice": [
+        "PROP-HY"
+      ]
+    },
+    {
+      "question": "May walk on toes",
+      "domain": "Proprioception",
+      "subdomain": "Over (hyper) proprioceptive sense",
+      "practice": [
+        "PROP-HY"
+      ]
+    },
+    {
+      "question": "Appears slouched or lethargic",
+      "domain": "Proprioception",
+      "subdomain": "Under (hypo) proprioceptive sense",
+      "practice": [
+        "PROP-HP"
+      ]
+    },
+    {
+      "question": "Seems to have weak muscles",
+      "domain": "Proprioception",
+      "subdomain": "Under (hypo) proprioceptive sense",
+      "practice": [
+        "PROP-HP"
+      ]
+    },
+    {
+      "question": "Has difficulty navigating and avoiding objects and people when moving around",
+      "domain": "Proprioception",
+      "subdomain": "Under (hypo) proprioceptive sense",
+      "practice": [
+        "PROP-HP"
+      ]
+    },
+    {
+      "question": "Chews regularly on objects, bites or sucks fingers",
+      "domain": "Proprioception",
+      "subdomain": "Under (hypo) proprioceptive sense",
+      "practice": [
+        "PROP-HP"
+      ]
+    },
+    {
+      "question": "Tires easily especially when standing or has poor endurance",
+      "domain": "Proprioception",
+      "subdomain": "Under (hypo) proprioceptive sense",
+      "practice": [
+        "PROP-HP"
+      ]
+    },
+    {
+      "question": "Presses too hard when writing",
+      "domain": "Proprioception",
+      "subdomain": "Under (hypo) proprioceptive sense",
+      "practice": [
+        "PROP-HP"
+      ]
+    },
+    {
+      "question": "Appears to seek out movement, pressure or physical contact with others",
+      "domain": "Proprioception",
+      "subdomain": "Sensory Seeking - proprioception",
+      "practice": [
+        "PROP-SK"
+      ]
+    },
+    {
+      "question": "Stomps feet when walking",
+      "domain": "Proprioception",
+      "subdomain": "Sensory Seeking - proprioception",
+      "practice": [
+        "PROP-SK"
+      ]
+    },
+    {
+      "question": "Prefers clothes to be as tight as possible",
+      "domain": "Proprioception",
+      "subdomain": "Sensory Seeking - proprioception",
+      "practice": [
+        "PROP-SK"
+      ]
+    },
+    {
+      "question": "Kicks feet on the floor or chair when seated at their desk",
+      "domain": "Proprioception",
+      "subdomain": "Sensory Seeking - proprioception",
+      "practice": [
+        "PROP-SK"
+      ]
+    },
+    {
+      "question": "Enjoys ‘bear hugs’",
+      "domain": "Proprioception",
+      "subdomain": "Sensory Seeking - proprioception",
+      "practice": [
+        "PROP-SK"
+      ]
+    },
+    {
+      "question": "Loves being wrapped in blankets etc",
+      "domain": "Proprioception",
+      "subdomain": "Sensory Seeking - proprioception",
+      "practice": [
+        "PROP-SK"
+      ]
+    },
+    {
+      "question": "Needs to lean and prop to support self e.g. during carpet time",
+      "domain": "Proprioception",
+      "subdomain": "Sensory Seeking - proprioception",
+      "practice": [
+        "PROP-SK"
+      ]
+    },
+    {
+      "question": "Squeezes into small or tight spaces",
+      "domain": "Proprioception",
+      "subdomain": "Sensory Seeking - proprioception",
+      "practice": [
+        "PROP-SK"
+      ]
+    },
+    {
+      "question": "Frequently chews on inedible objects such as clothing or toys",
+      "domain": "Proprioception",
+      "subdomain": "Sensory Seeking - proprioception",
+      "practice": [
+        "PROP-SK"
+      ]
+    },
+    {
+      "question": "May be overly cautious about movement and may avoids situation or become anxious e.g. during P.E.",
+      "domain": "Vestibular",
+      "subdomain": "Over (hyper) sensitive vestibular sense",
+      "practice": [
+        "VEST-HY"
+      ]
+    },
+    {
+      "question": "Becomes anxious when feet leave the ground",
+      "domain": "Vestibular",
+      "subdomain": "Over (hyper) sensitive vestibular sense",
+      "practice": [
+        "VEST-HY"
+      ]
+    },
+    {
+      "question": "Fears falling or heights",
+      "domain": "Vestibular",
+      "subdomain": "Over (hyper) sensitive vestibular sense",
+      "practice": [
+        "VEST-HY"
+      ]
+    },
+    {
+      "question": "Dislikes being upside down in play e.g. cartwheels or in gym",
+      "domain": "Vestibular",
+      "subdomain": "Over (hyper) sensitive vestibular sense",
+      "practice": [
+        "VEST-HY"
+      ]
+    },
+    {
+      "question": "Experiences motion sickness. (Could be on swings and slides)",
+      "domain": "Vestibular",
+      "subdomain": "Over (hyper) sensitive vestibular sense",
+      "practice": [
+        "VEST-HY"
+      ]
+    },
+    {
+      "question": "Has difficulty walking on uneven surfaces and/or with depth perception",
+      "domain": "Vestibular",
+      "subdomain": "Over (hyper) sensitive vestibular sense",
+      "practice": [
+        "VEST-HY"
+      ]
+    },
+    {
+      "question": "Becomes distracted by the movement of others close by",
+      "domain": "Vestibular",
+      "subdomain": "Over (hyper) sensitive vestibular sense",
+      "practice": [
+        "VEST-HY"
+      ]
+    },
+    {
+      "question": "Needs more movement to feel stimulated",
+      "domain": "Vestibular",
+      "subdomain": "Under (hypo) sensitive vestibular sense",
+      "practice": [
+        "VEST-HP"
+      ]
+    },
+    {
+      "question": "Likes swings and roundabouts",
+      "domain": "Vestibular",
+      "subdomain": "Under (hypo) sensitive vestibular sense",
+      "practice": [
+        "VEST-HP"
+      ]
+    },
+    {
+      "question": "Frequently jumps on furniture, spins on swivel chairs etc",
+      "domain": "Vestibular",
+      "subdomain": "Under (hypo) sensitive vestibular sense",
+      "practice": [
+        "VEST-HP"
+      ]
+    },
+    {
+      "question": "Frequently twirls and spins",
+      "domain": "Vestibular",
+      "subdomain": "Under (hypo) sensitive vestibular sense",
+      "practice": [
+        "VEST-HP"
+      ]
+    },
+    {
+      "question": "Rocks back and forth",
+      "domain": "Vestibular",
+      "subdomain": "Under (hypo) sensitive vestibular sense",
+      "practice": [
+        "VEST-HP"
+      ]
+    },
+    {
+      "question": "Struggles with stopping movement or changing direction when playing",
+      "domain": "Vestibular",
+      "subdomain": "Under (hypo) sensitive vestibular sense",
+      "practice": [
+        "VEST-HP"
+      ]
+    },
+    {
+      "question": "Finds it hard to adjust speed and direction of movements",
+      "domain": "Vestibular",
+      "subdomain": "Under (hypo) sensitive vestibular sense",
+      "practice": [
+        "VEST-HP"
+      ]
+    },
+    {
+      "question": "Climbs as high as they can",
+      "domain": "Vestibular",
+      "subdomain": "Sensory Seeking - vestibular",
+      "practice": [
+        "VEST-SK"
+      ]
+    },
+    {
+      "question": "Seeks out opportunities to spin",
+      "domain": "Vestibular",
+      "subdomain": "Sensory Seeking - vestibular",
+      "practice": [
+        "VEST-SK"
+      ]
+    },
+    {
+      "question": "Always moving and running, ‘on the go’ all the time",
+      "domain": "Vestibular",
+      "subdomain": "Sensory Seeking - vestibular",
+      "practice": [
+        "VEST-SK"
+      ]
+    },
+    {
+      "question": "Never seems to get dizzy",
+      "domain": "Vestibular",
+      "subdomain": "Sensory Seeking - vestibular",
+      "practice": [
+        "VEST-SK"
+      ]
+    },
+    {
+      "question": "Enjoys being upside down, rolling or changing direction",
+      "domain": "Vestibular",
+      "subdomain": "Sensory Seeking - vestibular",
+      "practice": [
+        "VEST-SK"
+      ]
+    },
+    {
+      "question": "Loves high speed whilst playing",
+      "domain": "Vestibular",
+      "subdomain": "Sensory Seeking - vestibular",
+      "practice": [
+        "VEST-SK"
+      ]
+    },
+    {
+      "question": "Finds it difficult to sit still for, what might be thought of as, developmentally appropriate amounts of time",
+      "domain": "Vestibular",
+      "subdomain": "Sensory Seeking - vestibular",
+      "practice": [
+        "VEST-SK"
+      ]
+    },
+    {
+      "question": "Experiences anxiety and distress during grooming or around self-care e.g. cutting finger nails and hair cuts",
+      "domain": "Tactility (touch)",
+      "subdomain": "Over (hyper) sensitive to touch",
+      "practice": [
+        "TACT-HY"
+      ]
+    },
+    {
+      "question": "Avoids unpredictable tactile experiences e.g. splashing water or messy activities",
+      "domain": "Tactility (touch)",
+      "subdomain": "Over (hyper) sensitive to touch",
+      "practice": [
+        "TACT-HY"
+      ]
+    },
+    {
+      "question": "Avoids going barefoot, especially in sand or grass",
+      "domain": "Tactility (touch)",
+      "subdomain": "Over (hyper) sensitive to touch",
+      "practice": [
+        "TACT-HY"
+      ]
+    },
+    {
+      "question": "Reacts emotionally or aggressively to touch",
+      "domain": "Tactility (touch)",
+      "subdomain": "Over (hyper) sensitive to touch",
+      "practice": [
+        "TACT-HY"
+      ]
+    },
+    {
+      "question": "Has difficulty lining up for assembly and after playtimes etc.  Dislikes being close to peers or touching objects in the environment",
+      "domain": "Tactility (touch)",
+      "subdomain": "Over (hyper) sensitive to touch",
+      "practice": [
+        "TACT-HY"
+      ]
+    },
+    {
+      "question": "Seems overly sensitive to touch- will complain they are hurt after the slightest knock",
+      "domain": "Tactility (touch)",
+      "subdomain": "Over (hyper) sensitive to touch",
+      "practice": [
+        "TACT-HY"
+      ]
+    },
+    {
+      "question": "Becomes upset or distressed by the feel of clothes, rubbing of labels, seams etc",
+      "domain": "Tactility (touch)",
+      "subdomain": "Over (hyper) sensitive to touch",
+      "practice": [
+        "TACT-HY"
+      ]
+    },
+    {
+      "question": "Unware when their face or hands are messy",
+      "domain": "Tactility (touch)",
+      "subdomain": "Under (hypo) sensitive to touch",
+      "practice": [
+        "TACT-HP"
+      ]
+    },
+    {
+      "question": "Likes the feeling of pressure or wearing tight clothes",
+      "domain": "Tactility (touch)",
+      "subdomain": "Under (hypo) sensitive to touch",
+      "practice": [
+        "TACT-HP"
+      ]
+    },
+    {
+      "question": "Likes to engage in ‘messy’ play",
+      "domain": "Tactility (touch)",
+      "subdomain": "Under (hypo) sensitive to touch",
+      "practice": [
+        "TACT-HP"
+      ]
+    },
+    {
+      "question": "Hugs tightly",
+      "domain": "Tactility (touch)",
+      "subdomain": "Under (hypo) sensitive to touch",
+      "practice": [
+        "TACT-HP"
+      ]
+    },
+    {
+      "question": "Struggles with getting dressed, toileting etc",
+      "domain": "Tactility (touch)",
+      "subdomain": "Under (hypo) sensitive to touch",
+      "practice": [
+        "TACT-HP"
+      ]
+    },
+    {
+      "question": "Constantly touching people and objects in their environment",
+      "domain": "Tactility (touch)",
+      "subdomain": "Sensory Seeking – tactile",
+      "practice": [
+        "TACT-SK"
+      ]
+    },
+    {
+      "question": "May appear to engage in play that is ‘rough’ and accidently hurt others during play",
+      "domain": "Tactility (touch)",
+      "subdomain": "Sensory Seeking – tactile",
+      "practice": [
+        "TACT-SK"
+      ]
+    },
+    {
+      "question": "May appear to fiddle constantly with objects or clothing",
+      "domain": "Tactility (touch)",
+      "subdomain": "Sensory Seeking – tactile",
+      "practice": [
+        "TACT-SK"
+      ]
+    },
+    {
+      "question": "May have difficulty understanding and respecting personal boundaries",
+      "domain": "Tactility (touch)",
+      "subdomain": "Sensory Seeking – tactile",
+      "practice": [
+        "TACT-SK"
+      ]
+    },
+    {
+      "question": "May explore new environments with their hands or mouths rather than by eye",
+      "domain": "Tactility (touch)",
+      "subdomain": "Sensory Seeking – tactile",
+      "practice": [
+        "TACT-SK"
+      ]
+    },
+    {
+      "question": "Prefers to walk bare foot",
+      "domain": "Tactility (touch)",
+      "subdomain": "Sensory Seeking – tactile",
+      "practice": [
+        "TACT-SK"
+      ]
+    },
+    {
+      "question": "Is sensitive to bright lights",
+      "domain": "Vision (sight)",
+      "subdomain": "Over (hyper) sensitive",
+      "practice": [
+        "VIS-HY"
+      ]
+    },
+    {
+      "question": "Watches everyone when they move around the room",
+      "domain": "Vision (sight)",
+      "subdomain": "Over (hyper) sensitive",
+      "practice": [
+        "VIS-HY"
+      ]
+    },
+    {
+      "question": "Covers eyes or squints to protect eyes from light",
+      "domain": "Vision (sight)",
+      "subdomain": "Over (hyper) sensitive",
+      "practice": [
+        "VIS-HY"
+      ]
+    },
+    {
+      "question": "Appears frightened if they see flashes of light or lightening",
+      "domain": "Vision (sight)",
+      "subdomain": "Over (hyper) sensitive",
+      "practice": [
+        "VIS-HY"
+      ]
+    },
+    {
+      "question": "Is fascinated by small particles or dust",
+      "domain": "Vision (sight)",
+      "subdomain": "Over (hyper) sensitive",
+      "practice": [
+        "VIS-HY"
+      ]
+    },
+    {
+      "question": "Spends a lot of time looking down",
+      "domain": "Vision (sight)",
+      "subdomain": "Over (hyper) sensitive",
+      "practice": [
+        "VIS-HY"
+      ]
+    },
+    {
+      "question": "Can become distracted by pattern, colour or movement",
+      "domain": "Vision (sight)",
+      "subdomain": "Over (hyper) sensitive",
+      "practice": [
+        "VIS-HY"
+      ]
+    },
+    {
+      "question": "Appears to over react to changes in their environment such a change in the layout or seating plan of the classroom",
+      "domain": "Vision (sight)",
+      "subdomain": "Over (hyper) sensitive",
+      "practice": [
+        "VIS-HY"
+      ]
+    },
+    {
+      "question": "Is attracted to light",
+      "domain": "Vision (sight)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "VIS-HP"
+      ]
+    },
+    {
+      "question": "Has difficulties with tasks requiring hand/eye coordination",
+      "domain": "Vision (sight)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "VIS-HP"
+      ]
+    },
+    {
+      "question": "Appears fascinated by bright coloured objects or reflections",
+      "domain": "Vision (sight)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "VIS-HP"
+      ]
+    },
+    {
+      "question": "Runs their hand around the edge of objects",
+      "domain": "Vision (sight)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "VIS-HP"
+      ]
+    },
+    {
+      "question": "Finds it difficult to identify small details in visual media",
+      "domain": "Vision (sight)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "VIS-HP"
+      ]
+    },
+    {
+      "question": "Has difficulties with depth perception",
+      "domain": "Vision (sight)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "VIS-HP"
+      ]
+    },
+    {
+      "question": "Finds it hard to complete a task using only visual information due to not having enough information",
+      "domain": "Vision (sight)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "VIS-HP"
+      ]
+    },
+    {
+      "question": "Seeks out, and appears to prefer, toys with bright, reflective or shiny surfaces",
+      "domain": "Vision (sight)",
+      "subdomain": "Sensory Seeking – vision",
+      "practice": [
+        "VIS-SK"
+      ]
+    },
+    {
+      "question": "Stares at bright lights",
+      "domain": "Vision (sight)",
+      "subdomain": "Sensory Seeking – vision",
+      "practice": [
+        "VIS-SK"
+      ]
+    },
+    {
+      "question": "Wants to wear clothes with specific shapes, colours or patterns (not due to tactile properties of clothing)",
+      "domain": "Vision (sight)",
+      "subdomain": "Sensory Seeking – vision",
+      "practice": [
+        "VIS-SK"
+      ]
+    },
+    {
+      "question": "Moves objects or fingers in front of their eyes",
+      "domain": "Vision (sight)",
+      "subdomain": "Sensory Seeking – vision",
+      "practice": [
+        "VIS-SK"
+      ]
+    },
+    {
+      "question": "Holds text or screen close to their face",
+      "domain": "Vision (sight)",
+      "subdomain": "Sensory Seeking – vision",
+      "practice": [
+        "VIS-SK"
+      ]
+    },
+    {
+      "question": "Stares at people, objects or out of the window",
+      "domain": "Vision (sight)",
+      "subdomain": "Sensory Seeking – vision",
+      "practice": [
+        "VIS-SK"
+      ]
+    },
+    {
+      "question": "Is alarmed by unexpected loud noises such as hand dryers",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Over (hyper) sensitive to sound",
+      "practice": [
+        "AUD-HY"
+      ]
+    },
+    {
+      "question": "Holds hands over ears to protect from sound",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Over (hyper) sensitive to sound",
+      "practice": [
+        "AUD-HY"
+      ]
+    },
+    {
+      "question": "Is a very light sleeper",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Over (hyper) sensitive to sound",
+      "practice": [
+        "AUD-HY"
+      ]
+    },
+    {
+      "question": "Dislikes situations/experiences where there is a lot of noise e.g. thunderstorms, crowds etc and may seek to avoid these",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Over (hyper) sensitive to sound",
+      "practice": [
+        "AUD-HY"
+      ]
+    },
+    {
+      "question": "Makes repetitive noises or hums to block out other sounds",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Over (hyper) sensitive to sound",
+      "practice": [
+        "AUD-HY"
+      ]
+    },
+    {
+      "question": "Distracted by noises that others may not notice",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Over (hyper) sensitive to sound",
+      "practice": [
+        "AUD-HY"
+      ]
+    },
+    {
+      "question": "Tears or crumples paper",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "AUD-HP"
+      ]
+    },
+    {
+      "question": "Bangs doors or other objects",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "AUD-HP"
+      ]
+    },
+    {
+      "question": "Delayed reaction to auditory stimulation",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "AUD-HP"
+      ]
+    },
+    {
+      "question": "Presents as though they may have a hearing impairment",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "AUD-HP"
+      ]
+    },
+    {
+      "question": "Does not follow verbal instructions or requests very well",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Under (hypo) sensitive",
+      "practice": [
+        "AUD-HP"
+      ]
+    },
+    {
+      "question": "Noisy - likes making noise and seeks out noise",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Sensory seeking - sound",
+      "practice": [
+        "AUD-SK"
+      ]
+    },
+    {
+      "question": "Loves to be in noisy environments",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Sensory seeking - sound",
+      "practice": [
+        "AUD-SK"
+      ]
+    },
+    {
+      "question": "Makes repetitive sounds e.g. clapping, tapping or clicking",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Sensory seeking - sound",
+      "practice": [
+        "AUD-SK"
+      ]
+    },
+    {
+      "question": "Prefers to hum, make a noise or have some auditory stimulation, such as background music, to listen to when focusing on a task",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Sensory seeking - sound",
+      "practice": [
+        "AUD-SK"
+      ]
+    },
+    {
+      "question": "Appears to frequently shout or speak very loudly",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Sensory seeking - sound",
+      "practice": [
+        "AUD-SK"
+      ]
+    },
+    {
+      "question": "Likes the television or music to be on a loud volume or will sit very close to speakers when listening",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Sensory seeking - sound",
+      "practice": [
+        "AUD-SK"
+      ]
+    },
+    {
+      "question": "Stamps or stomps feet when walking",
+      "domain": "Auditory (hearing)",
+      "subdomain": "Sensory seeking - sound",
+      "practice": [
+        "AUD-SK"
+      ]
+    },
+    {
+      "question": "Avoids certain tastes - will wretch and gag",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Over (hyper) sensitive taste",
+      "practice": [
+        "GUST-HY"
+      ]
+    },
+    {
+      "question": "Will only eat certain food",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Over (hyper) sensitive taste",
+      "practice": [
+        "GUST-HY"
+      ]
+    },
+    {
+      "question": "Limited diet around certain textures and temperature",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Over (hyper) sensitive taste",
+      "practice": [
+        "GUST-HY"
+      ]
+    },
+    {
+      "question": "Has anxiety around eating or mealtimes",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Over (hyper) sensitive taste",
+      "practice": [
+        "GUST-HY"
+      ]
+    },
+    {
+      "question": "Uses the tip of their tongue for tasting",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Over (hyper) sensitive taste",
+      "practice": [
+        "GUST-HY"
+      ]
+    },
+    {
+      "question": "Can only cope with small amounts of food in their mouth",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Over (hyper) sensitive taste",
+      "practice": [
+        "GUST-HY"
+      ]
+    },
+    {
+      "question": "Frequently mouths or licks objects",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Under (hypo) sensitive taste",
+      "practice": [
+        "GUST-HP"
+      ]
+    },
+    {
+      "question": "Eats anything, including non-food items",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Under (hypo) sensitive taste",
+      "practice": [
+        "GUST-HP"
+      ]
+    },
+    {
+      "question": "CYP has a reduced appetite or lacks interest in food",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Under (hypo) sensitive taste",
+      "practice": [
+        "GUST-HP"
+      ]
+    },
+    {
+      "question": "Appears to have an unusually large appetite",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Sensory seeking - taste",
+      "practice": [
+        "GUST-SK"
+      ]
+    },
+    {
+      "question": "Prefers food with specific textures e.g. crunchy, chewy or mushy",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Sensory seeking - taste",
+      "practice": [
+        "GUST-SK"
+      ]
+    },
+    {
+      "question": "Chews on inedible objects, clothing or toys appearing to seek specific tastes or oral stimulation",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Sensory seeking - taste",
+      "practice": [
+        "GUST-SK"
+      ]
+    },
+    {
+      "question": "Prefers or craves food that is very spicy, bitter or salty",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Sensory seeking - taste",
+      "practice": [
+        "GUST-SK"
+      ]
+    },
+    {
+      "question": "Crams their mouth very full with food when eating",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Sensory seeking - taste",
+      "practice": [
+        "GUST-SK"
+      ]
+    },
+    {
+      "question": "Regurgitates food to gain additional feedback",
+      "domain": "Gustatory (taste)",
+      "subdomain": "Sensory seeking - taste",
+      "practice": [
+        "GUST-SK"
+      ]
+    },
+    {
+      "question": "Avoids certain food smells - will wretch and gag",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Over (hyper) sensitive to smell",
+      "practice": [
+        "OLF-HY"
+      ]
+    },
+    {
+      "question": "Reacts negatively to smells that others may not be aware of",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Over (hyper) sensitive to smell",
+      "practice": [
+        "OLF-HY"
+      ]
+    },
+    {
+      "question": "Refuses to eat some foods due to their smell",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Over (hyper) sensitive to smell",
+      "practice": [
+        "OLF-HY"
+      ]
+    },
+    {
+      "question": "Dislikes how some people smell and will move away from them",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Over (hyper) sensitive to smell",
+      "practice": [
+        "OLF-HY"
+      ]
+    },
+    {
+      "question": "Toileting differences",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Over (hyper) sensitive to smell",
+      "practice": [
+        "OLF-HY"
+      ]
+    },
+    {
+      "question": "Smears or plays with faeces",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Under (hypo) sensitive to smell",
+      "practice": [
+        "OLF-HP"
+      ]
+    },
+    {
+      "question": "Prefers specific food with strong odours",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Under (hypo) sensitive to smell",
+      "practice": [
+        "OLF-HP"
+      ]
+    },
+    {
+      "question": "Bedwetting",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Under (hypo) sensitive to smell",
+      "practice": [
+        "OLF-HP"
+      ]
+    },
+    {
+      "question": "Poor personal hygiene awareness",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Under (hypo) sensitive to smell",
+      "practice": [
+        "OLF-HP"
+      ]
+    },
+    {
+      "question": "Unable to smell even strong odours",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Under (hypo) sensitive to smell",
+      "practice": [
+        "OLF-HP"
+      ]
+    },
+    {
+      "question": "Seeks out strong odours",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Sensory Seeking - smell",
+      "practice": [
+        "OLF-SK"
+      ]
+    },
+    {
+      "question": "Smells objects, themselves and other people",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Sensory Seeking - smell",
+      "practice": [
+        "OLF-SK"
+      ]
+    },
+    {
+      "question": "Actively smells everything, even if an unpleasant odour",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Sensory Seeking - smell",
+      "practice": [
+        "OLF-SK"
+      ]
+    },
+    {
+      "question": "Smells food before eating it",
+      "domain": "Olfactory (smell)",
+      "subdomain": "Sensory Seeking - smell",
+      "practice": [
+        "OLF-SK"
+      ]
+    }
+  ],
+  "answerOptions": {
+    "Never": 1,
+    "Rarely": 2,
+    "Occasionally": 3,
+    "Frequently": 4,
+    "Always": 5
+  },
+  "responderTypes": [
+    "school",
+    "home"
+  ],
+  "domainDescriptions": {
+    "Interoception": "Helps us to know what is going on within our bodies, to identify if we are hungry, thirsty, hot/cold, in pain or needing the toilet etc. We can be over or under sensitive or have difficulty with discrimination. Interoception links very closely to our ability to self-regulate and to alexithymia (Identifying and understanding our emotions).",
+    "Proprioception": "Body awareness, tells us where the different parts of our body are without looking at them. Also helps us to know how much pressure or force we need to use for different activities. It is more uncommon for someone to be over responsive to proprioceptive input.",
+    "Vestibular": "The movement, balance and gravity sense. Allows us to move smoothly, maintain balance and stay upright.",
+    "Tactility (touch)": "Tactile receptors are mainly found in the skin and are important for identifying touch, pressure, pain, temperature and texture.",
+    "Vision (sight)": "Sight is processed through the visual sense. Visual receptors located in the eye pick up visual stimuli. They are stimulated by light colour and movement. A  CYP can feels unsafe or unsure in the environment if over stimulated visually or can feel anxious if they cannot interpret their environment.",
+    "Auditory (hearing)": "The ability to detect and process sound. A CYP may be over-sensitive to noise, easily distracted by background sounds, or under-sensitive and seek louder or more intense auditory input.",
+    "Gustatory (taste)": "The sense of taste. A CYP may be strongly avoidant of certain flavours or textures in the mouth, or may seek intense tastes and show little sensitivity to what they eat.",
+    "Olfactory (smell)": "The sense of smell. A CYP may be overly sensitive to everyday odours, finding them overwhelming or distressing, or may seek out strong smells and show little reaction to unpleasant ones."
+  },
+  "practice_source": [
+    "asct-sensory-strategies.json"
+  ],
+  "ragThresholds": {
+    "green": 33,
+    "amber": 66
+  }
+}
